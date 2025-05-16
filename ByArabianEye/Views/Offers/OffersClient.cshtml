@@ -1,0 +1,28 @@
+﻿@model List<ByArabianEye.Models.Offer>
+@{
+    ViewData["Title"] = "العروض السياحية | Travel Offers";
+}
+
+<div class="container my-5">
+    <h2 class="mb-4 text-center fw-bold">🎁 العروض السياحية المتوفرة | Available Travel Offers</h2>
+
+    <div class="row g-4">
+        @foreach (var offer in Model)
+        {
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="@offer.ImageUrl" class="card-img-top" alt="Offer Image" style="height: 200px; object-fit: cover;" />
+                    <div class="card-body text-center">
+                        <h5 class="card-title">@offer.Title</h5>
+                        <p class="text-muted">@offer.Country</p>
+                        <p class="card-text">@offer.Description</p>
+                        <p><strong>💰 السعر:</strong> $@offer.Price | <strong>⏳ الأيام:</strong> @offer.Days</p>
+                        <a asp-controller="Bookings" asp-action="Create" asp-route-country="@offer.Country" asp-route-hotel="@offer.Title" class="btn btn-success">
+                            احجز الآن | Book Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

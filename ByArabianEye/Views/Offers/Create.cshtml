@@ -1,0 +1,63 @@
+﻿@model ByArabianEye.Models.Offer
+@{
+    ViewData["Title"] = "Create Offer";
+}
+
+<div class="container my-5">
+    <h2 class="mb-4 text-center fw-bold">📝 إضافة عرض جديد | New Offer</h2>
+
+    <form asp-action="Create" method="post" enctype="multipart/form-data">
+        <div class="mb-3">
+            <label class="form-label">عنوان العرض / Offer Title</label>
+            <input asp-for="Title" class="form-control" />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">الوصف / Description</label>
+            <textarea asp-for="Description" class="form-control" rows="3"></textarea>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">الدولة / Country</label>
+            <select asp-for="Country" class="form-select">
+                <option>Azerbaijan</option>
+                <option>Georgia</option>
+                <option>Russia</option>
+                <option>Albania</option>
+                <option>Kazakhstan</option>
+                <option>Uzbekistan</option>
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">نوع العرض / Offer Type</label>
+            <select asp-for="OfferType" class="form-select">
+                <option>Hotel</option>
+                <option>Tour</option>
+                <option>Transport</option>
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">عدد الأيام / Days</label>
+            <input asp-for="Days" class="form-control" type="number" min="1" />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">السعر / Price</label>
+            <input asp-for="Price" class="form-control" type="number" step="0.01" />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">تاريخ الانتهاء / Expiry Date</label>
+            <input asp-for="ExpiryDate" class="form-control" type="date" />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">الصورة / Upload Image</label>
+            <input type="file" name="ImageFile" class="form-control" />
+        </div>
+
+        <button type="submit" class="btn btn-success w-100">إضافة العرض | Submit Offer</button>
+    </form>
+</div>

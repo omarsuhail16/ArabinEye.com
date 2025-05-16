@@ -1,0 +1,183 @@
+﻿@{
+    ViewData["Title"] = "Russia";
+}
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+
+<style>
+    .section {
+        margin-bottom: 60px;
+    }
+
+        .section h3 {
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+    .card-img-top {
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .carousel {
+        max-width: 700px; /* عرض السلايدر كامل */
+        margin: auto;
+    }
+
+    .carousel-item img {
+        width:640px;
+        height:427px;
+        object-fit: cover;
+        border-radius: 15px;
+        margin: auto;
+    }
+
+
+</style>
+
+<div class="container mt-5">
+
+    <!-- 🇷🇺 مقدمة -->
+    <div class="section text-center">
+        <h3>🇷🇺 روسيا | Russia</h3>
+        <p class="fs-5">روسيا هي أرض التاريخ والثقافة، تمتد من أوروبا إلى آسيا وتضم معالم مبهرة ومدن نابضة بالحياة.</p>
+    </div>
+
+    <!-- 📸 سلايدر صور -->
+    <div class="section">
+        <div id="russiaCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="~/img/slider_russia2_main.jpg.jpg" class="d-block w-100" alt="Moscow" />
+                </div>
+                <div class="carousel-item">
+                    <img src="~/img/_russia2.jpg.jpg" class="d-block w-100" alt="Saint Petersburg" />
+                </div>
+                <div class="carousel-item">
+                    <img src="~/img/_russia3.jpg.jpg" class="d-block w-100" alt="Kazan" />
+                </div>
+                <div class="carousel-item">
+                    <img src="~/img/_russia4.jpg.jpg" class="d-block w-100" alt="Nature in Russia" />
+                </div> <!-- ← هذه هي الصورة الرابعة -->
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#russiaCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon bg-dark rounded-circle"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#russiaCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon bg-dark rounded-circle"></span>
+            </button>
+        </div>
+    </div>
+
+    <!-- 🏙️ المدن -->
+    <div class="section">
+        <h3 class="text-center">🏙️ المدن السياحية</h3>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img src="~/img/moscow.jpg" class="card-img-top" alt="Moscow" />
+                    <div class="card-body text-center">
+                        <h5 class="card-title">موسكو | Moscow</h5>
+                        <p>العاصمة النابضة بالحياة، مليئة بالقصور والمتاحف التاريخية.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img src="~/img/kazan.jpg" class="card-img-top" alt="Kazan" />
+                    <div class="card-body text-center">
+                        <h5 class="card-title">قازان | Kazan</h5>
+                        <p>مزيج من الثقافة الإسلامية والروسية، مع عمارة فريدة.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img src="~/img/saintpetersburg.jpg" class="card-img-top" alt="Saint Petersburg" />
+                    <div class="card-body text-center">
+                        <h5 class="card-title">سانت بطرسبرغ | Saint Petersburg</h5>
+                        <p>مدينة القصور الرائعة والقنوات المائية والفن الكلاسيكي.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 🏨 الفنادق -->
+    <div class="section">
+        <h3 class="text-center">🏨 أفضل الفنادق</h3>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img src="~/img/fourseasons.jpg" class="card-img-top" alt="Four Seasons Hotel" />
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Four Seasons Hotel Moscow</h5>
+                        <a href="https://www.fourseasons.com/moscow/" target="_blank" class="btn btn-outline-primary btn-sm">Visit Hotel</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img src="~/img/ritzmoscow.jpeg" class="card-img-top" alt="Ritz" />
+                    <div class="card-body text-center">
+                        <h5 class="card-title">The Ritz-Carlton Moscow</h5>
+                        <a href="https://www.ritzcarlton.com/en/hotels/europe/moscow" target="_blank" class="btn btn-outline-primary btn-sm">Visit Hotel</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img src="~/img/metropol.jpg" class="card-img-top" alt="Metropol" />
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Hotel Metropol Moscow</h5>
+                        <a href="https://metropol-moscow.ru" target="_blank" class="btn btn-outline-primary btn-sm">Visit Hotel</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 🎁 العرض السياحي الخاص بروسيا -->
+    <div class="section">
+        <h3 class="text-center">🎁 العرض السياحي الخاص بروسيا | Special Offer</h3>
+        <div class="row justify-content-center align-items-center">
+            <!-- صورة العرض -->
+            <div class="col-lg-6 text-center mb-4 mb-lg-0">
+                <img src="~/img/russia_offer.jpg.png"
+                     alt="Russia Offer"
+                     style="width: 660px; height: 427px; object-fit: cover; border-radius: 15px;"
+                     class="shadow" />
+            </div>
+
+            <!-- شرح العرض وزر الحجز -->
+            <div class="col-lg-6">
+                <div class="card shadow border-0 p-4">
+                    <div class="card-body text-center">
+                        <h5 class="card-title mb-3">
+                            رحلة 5 أيام إلى موسكو وسانت بطرسبرغ
+                            <br />5-day trip to Moscow & Saint Petersburg
+                        </h5>
+                        <p class="card-text fs-5">
+                            يشمل الإقامة بفندق 5 نجوم، وجولات سياحية ومواصلات داخلية
+                            <br />Includes 5-star hotel, city tours, and internal transport
+                        </p>
+                        <a href="/Bookings/Create?country=Russia&hotel=The Ritz-Carlton Moscow" class="btn btn-primary btn-lg mt-3">
+                            احجز الآن | Book Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- 📸 إنستقرام وزر تواصل -->
+    <div class="section text-center">
+        <a href="https://www.instagram.com/russia_by_arabian_eye" target="_blank" class="btn btn-danger btn-lg">
+            📸 زورونا على إنستقرام
+        </a>
+        <br /><br />
+        <a href="tel:+994999009002" class="btn btn-outline-success btn-lg">📞 تواصل معنا</a>
+    </div>
+</div>

@@ -1,0 +1,71 @@
+﻿@model List<ByArabianEye.Models.Booking>
+
+@{
+    ViewData["Title"] = "Bookings";
+    int index = 1;
+}
+
+@if (Context.Session.GetString("Role") != "admin")
+{
+    <div class="alert alert-danger text-center mt-5">
+        🚫 هذه الصفحة مخصصة للمسؤولين فقط. | This page is for admins only.
+    </div>
+    return;
+}
+
+<div class="container my-5">
+    <h2 class="mb-4 text-center fw-bold">📅 حجوزات العملاء | Client Bookings</h2>
+
+    <!-- 🔹 زر إضافة حجز جديد -->
+    <div class="text-end mb-3">
+        <a asp-action="Create" class="btn btn-primary">➕ Add New Booking</a>
+    </div>
+
+    <table class="table table-bordered table-hover shadow-sm">
+        <thead class="table-primary">
+            <tr>
+                <th>#</th>
+                <th>Client Name</th>
+                <th>Country</th>
+                <th>Hotel</th>
+                <th>Package</th>
+                <th>Date</th>
+                <th>People</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model != null && Model.Any())
+            {
+                foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@index</td>
+                        <td>@item.ClientName</td>
+                        <td>@item.Country</td>
+                        <td>@item.Hotel</td>
+                        <td>@item.PackageType</td>
+                        <td>@item.Date.ToShortDateString()</td>
+                        <td>@item.PeopleCount</td>
+                        <td>
+                            <span class="badge bg-success">Confirmed</span>
+                        </td>
+                        <td>
+                            <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-sm btn-outline-info">View</a>
+                            <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-outline-warning">Edit</a>
+                            <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-outline-danger">Delete</a>
+                        </td>
+                    </tr>
+                    index++;
+                }
+            }
+            else
+            {
+                <tr>
+                    <td colspan="9" class="text-center">لا توجد حجوزات حالياً</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

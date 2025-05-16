@@ -1,0 +1,56 @@
+﻿@model ByArabianEye.Models.Booking
+
+@{
+    ViewData["Title"] = "إضافة حجز | Create Booking";
+}
+
+<div class="container my-5" style="max-width: 600px;">
+    <h2 class="text-center mb-4 fw-bold">➕ إضافة حجز جديد | Add New Booking</h2>
+
+    <form asp-action="Create" method="post">
+        <!-- اسم العميل -->
+        <div class="mb-3">
+            <label class="form-label">اسم العميل | Client Name</label>
+            <input asp-for="ClientName" class="form-control" placeholder="أدخل اسم العميل" required />
+        </div>
+
+        <!-- الدولة -->
+        <div class="mb-3">
+            <label class="form-label">الدولة | Country</label>
+            <input asp-for="Country" class="form-control" value="@ViewBag.Country" placeholder="أدخل الدولة" required />
+        </div>
+
+        <!-- الفندق -->
+        <div class="mb-3">
+            <label class="form-label">الفندق | Hotel</label>
+            <input asp-for="Hotel" class="form-control" value="@ViewBag.Hotel" placeholder="اسم الفندق" required />
+        </div>
+
+        <!-- نوع الباقة -->
+        <div class="mb-3">
+            <label class="form-label">نوع الباقة | Package Type</label>
+            <select asp-for="PackageType" class="form-select" required>
+                <option value="">اختر الباقة</option>
+                <option>Family</option>
+                <option>Youth</option>
+                <option>Luxury</option>
+                <option>Group</option>
+            </select>
+        </div>
+
+        <!-- التاريخ -->
+        <div class="mb-3">
+            <label class="form-label">📅 التاريخ | Date</label>
+            <input asp-for="Date" class="form-control" type="date" required />
+        </div>
+
+        <!-- عدد الأشخاص -->
+        <div class="mb-3">
+            <label class="form-label">👥 عدد الأشخاص | People</label>
+            <input asp-for="PeopleCount" class="form-control" type="number" min="1" required />
+        </div>
+
+        <!-- زر الإرسال -->
+        <button type="submit" class="btn btn-success w-100">✔️ تأكيد الحجز | Confirm Booking</button>
+    </form>
+</div>

@@ -1,0 +1,27 @@
+﻿@model ByArabianEye.Models.Booking
+
+@{
+    ViewData["Title"] = "Delete Booking";
+}
+
+<div class="container my-5">
+    <h2 class="text-center mb-4 text-danger fw-bold">🗑️ هل أنت متأكد من حذف هذا الحجز؟</h2>
+
+    <div class="card border-danger shadow-sm">
+        <div class="card-body">
+            <p><strong>Client:</strong> @Model.ClientName</p>
+            <p><strong>Country:</strong> @Model.Country</p>
+            <p><strong>Package:</strong> @Model.PackageType</p>
+            <p><strong>Date:</strong> @Model.Date.ToShortDateString()</p>
+            <p><strong>People:</strong> @Model.PeopleCount</p>
+
+            <form asp-action="ConfirmDelete" method="post">
+                <input type="hidden" name="id" value="@Model.Id" />
+                <div class="d-flex justify-content-between mt-4">
+                    <a asp-action="Index" class="btn btn-secondary">🔙 إلغاء</a>
+                    <button type="submit" class="btn btn-danger">🗑️ تأكيد الحذف</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

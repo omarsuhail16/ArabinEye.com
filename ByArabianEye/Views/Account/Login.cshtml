@@ -1,0 +1,97 @@
+﻿@{
+    ViewData["Title"] = "Login";
+    Layout = null; // صفحة مستقلة بدون شريط التنقل
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Login | By Arabian Eye</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <style>
+        body {
+            background: url('/img/bg-login.jpg.png') no-repeat center center fixed;
+            background-size: cover;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        .login-box {
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.2);
+            padding: 40px;
+            width: 100%;
+            max-width: 1000px;
+        }
+
+        h2 {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container login-box">
+
+        @* ✅ رسائل الخطأ أو النجاح *@
+        @if (ViewBag.Error != null)
+        {
+            <div class="alert alert-danger text-center mb-3">
+                @ViewBag.Error
+            </div>
+        }
+
+        @if (ViewBag.Success != null)
+        {
+            <div class="alert alert-success text-center mb-3">
+                @ViewBag.Success
+            </div>
+        }
+
+
+        <div class="row">
+            <!-- Admin Login -->
+            <div class="col-md-6 border-end">
+                <h2 class="text-center text-primary mb-4">👨‍💼 Admin Login</h2>
+                <form method="post" asp-action="Login">
+                    <div class="mb-3">
+                        <label class="form-label">Username</label>
+                        <input type="text" name="username" class="form-control" placeholder="Admin" required />
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Password</label>
+                        <input type="password" name="password" class="form-control" placeholder="••••••••" required />
+                    </div>
+                    <button type="submit" class="btn btn-outline-primary w-100">Login as Admin</button>
+                </form>
+            </div>
+
+            <!-- Client Login -->
+            <div class="col-md-6">
+                <h2 class="text-center text-success mb-4">🧍‍♂️ Client Login</h2>
+                <form method="post" asp-action="Login">
+                    <div class="mb-3">
+                        <label class="form-label">👤 اسم المستخدم | Username</label>
+                        <input type="text" name="username" class="form-control" placeholder="ادخل اسم المستخدم" required />
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">🔒 كلمة المرور | Password</label>
+                        <input type="password" name="password" class="form-control" placeholder="********" required />
+                    </div>
+                    <button type="submit" class="btn btn-outline-success w-100 mb-2">دخول | Login</button>
+                    <div class="text-center">
+                        <a asp-action="Register" class="text-decoration-none">🔓 إنشاء حساب جديد | Create Account</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

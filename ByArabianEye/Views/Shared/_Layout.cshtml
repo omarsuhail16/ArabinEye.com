@@ -1,0 +1,162 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewData["Title"] - By Arabian Eye</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <style>
+        .navbar-custom {
+            background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+        }
+
+        .navbar-brand img {
+            height: 60px; /* حجم الشعار فقط */
+            width: auto;
+        }
+
+        .navbar {
+            min-height: 70px; /* ارتفاع الشريط ما يتغير */
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+
+
+        .nav-link {
+            color: #f1f1f1 !important;
+            transition: 0.3s;
+        }
+
+            .nav-link:hover {
+                color: #ffd700 !important;
+                transform: scale(1.05);
+            }
+
+        .btn-logout {
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 5px;
+        }
+
+            .btn-logout:hover {
+                background-color: #c82333;
+            }
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25D366;
+            color: white;
+            font-weight: bold;
+            padding: 12px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 16px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            z-index: 1000;
+            transition: 0.3s ease;
+        }
+
+            .whatsapp-float:hover {
+                background-color: #1ebea5;
+                transform: scale(1.05);
+            }
+
+            .whatsapp-float i {
+                margin-left: 8px;
+                font-size: 20px;
+            }
+
+    </style>
+</head>
+<a href="https://wa.me/994708008007" target="_blank" class="whatsapp-float">
+    <i class="fab fa-whatsapp"></i> تواصلوا معنا-Contact us
+</a>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom shadow-sm">
+        <div class="container-fluid d-flex align-items-center justify-content-between">
+            <!-- Logo لوحده -->
+            <a class="navbar-brand" asp-controller="Home" asp-action="Index">
+                <img src="~/img/1.gif" alt="Logo" style="height: 60px;">
+            </a>
+
+            <!-- النص منفصل عن اللوقو -->
+            <div class="text-light text-center" style="line-height: 1.2;">
+                <span class="fw-bold" style="font-size: 1.1rem;">By Arabian Eye Group</span><br />
+                <small style="font-size: 0.8rem;">Since 2016 | أكثر من 10 سنوات خبرة</small>
+            </div>
+
+            <!-- Toggle -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" asp-controller="Home" asp-action="Index">🏠 Home</a></li>
+                    <li class="nav-item"><a class="nav-link" asp-controller="Home" asp-action="Services">🛎️ Services</a></li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarCountries" role="button" data-bs-toggle="dropdown">
+                            🌍 Countries
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarCountries">
+                            <li><a class="dropdown-item" asp-controller="Countries" asp-action="Azerbaijan">Azerbaijan</a></li>
+                            <li><a class="dropdown-item" asp-controller="Countries" asp-action="Georgia">Georgia</a></li>
+                            <li><a class="dropdown-item" asp-controller="Countries" asp-action="Albania">Albania</a></li>
+                            <li><a class="dropdown-item" asp-controller="Countries" asp-action="Kazakhstan">Kazakhstan</a></li>
+                            <li><a class="dropdown-item" asp-controller="Countries" asp-action="Russia">Russia</a></li>
+                            <li><a class="dropdown-item" asp-controller="Countries" asp-action="Uzbekistan">Uzbekistan</a></li>
+                        </ul>
+                    </li>
+
+                    @if (Context.Session.GetString("Role") == "admin")
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Bookings" asp-action="Index">📅 Bookings</a>
+                        </li>
+                    }
+
+
+                    @* ✅ إظهار Dashboard & عروض الأدمن فقط إذا كان المستخدم Admin *@
+                    @if (Context.Session.GetString("Role") == "admin")
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Dashboard" asp-action="Index">📊 Dashboard</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Offers" asp-action="Index">🎁 Offers</a>
+                        </li>
+                    }
+                    else
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Offers" asp-action="OffersClient">🎁 Offers</a>
+                        </li>
+                    }
+
+                    <!-- Logout -->
+                    <li class="nav-item">
+                        <form method="post" asp-controller="Account" asp-action="Logout" class="d-flex">
+                            <button type="submit" class="btn btn-logout">🚪 Logout</button>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        @RenderBody()
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

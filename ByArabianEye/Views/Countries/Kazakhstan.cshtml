@@ -1,0 +1,189 @@
+﻿@{
+    ViewData["Title"] = "Kazakhstan";
+}
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+
+<style>
+    .section {
+        margin-bottom: 60px;
+    }
+
+        .section h3 {
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+    .card-img-top {
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .carousel {
+        max-width: 700px;
+        margin: auto;
+    }
+
+    .carousel-item img {
+        width: 640px;
+        height: 427px;
+        object-fit: cover;
+        border-radius: 15px;
+        margin: auto;
+    }
+</style>
+
+<div class="container mt-5">
+
+    <!-- 🇰🇿 مقدمة -->
+    <div class="section text-center">
+        <h3>🇰🇿 كازاخستان | Kazakhstan</h3>
+        <p class="fs-5">
+            كازاخستان دولة رائعة ذات تاريخ غني ومناظر طبيعية خلابة ومدن عصرية.
+            <br />Kazakhstan is a beautiful country with rich history, stunning nature, and modern cities.
+        </p>
+    </div>
+
+    <!-- 📸 سلايدر صور -->
+    <div class="section">
+        <div id="kazakhstanCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="~/img/almaty.jpg" class="d-block w-100" alt="Almaty" />
+                </div>
+                <div class="carousel-item">
+                    <img src="~/img/astana.jpg" class="d-block w-100" alt="Astana" />
+                </div>
+                <div class="carousel-item">
+                    <img src="~/img/shymkent.jpg" class="d-block w-100" alt="Shymkent" />
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#kazakhstanCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon bg-dark rounded-circle"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#kazakhstanCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon bg-dark rounded-circle"></span>
+            </button>
+        </div>
+    </div>
+
+    <!-- 🏙️ المدن السياحية -->
+    <div class="section">
+        <h3 class="text-center">🏙️ المدن السياحية | Famous Cities</h3>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img src="~/img/almaty.jpg" class="card-img-top" alt="Almaty" />
+                    <div class="card-body text-center">
+                        <h5 class="card-title">ألماتي | Almaty</h5>
+                        <p>
+                            أكبر مدينة في كازاخستان ومركز ثقافي وتجاري
+                            <br />Kazakhstan’s largest city, cultural and business hub.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img src="~/img/astana.jpg" class="card-img-top" alt="Astana" />
+                    <div class="card-body text-center">
+                        <h5 class="card-title">أستانا | Astana</h5>
+                        <p>
+                            العاصمة الحديثة، مشهورة بمعمارها المستقبلي
+                            <br />Modern capital with futuristic architecture.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img src="~/img/shymkent.jpg" class="card-img-top" alt="Shymkent" />
+                    <div class="card-body text-center">
+                        <h5 class="card-title">شيمكنت | Shymkent</h5>
+                        <p>
+                            مدينة تاريخية ذات ثقافة نابضة وأسواق تقليدية
+                            <br />Historic city with vibrant culture and markets.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 🏨 أفضل الفنادق -->
+    <div class="section">
+        <h3 class="text-center">🏨 أفضل الفنادق | Top Hotels</h3>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img src="~/img/ritz-almaty.jpg" class="card-img-top" alt="Ritz-Carlton Almaty" />
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Ritz-Carlton Almaty</h5>
+                        <a href="#" class="btn btn-outline-primary btn-sm">Visit Hotel</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img src="~/img/rixos-astana.jpg" class="card-img-top" alt="Rixos Astana" />
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Rixos President Hotel Astana</h5>
+                        <a href="#" class="btn btn-outline-primary btn-sm">Visit Hotel</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img src="~/img/rixos-shymkent.jpg" class="card-img-top" alt="Rixos Shymkent" />
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Rixos Khadisha Shymkent</h5>
+                        <a href="#" class="btn btn-outline-primary btn-sm">Visit Hotel</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 🎁 العرض السياحي الخاص بكازاخستان -->
+    <div class="section">
+        <h3 class="text-center">🎁 العرض السياحي الخاص بكازاخستان | Special Offer</h3>
+        <div class="row justify-content-center align-items-center">
+            <!-- صورة العرض -->
+            <div class="col-lg-6 text-center mb-4 mb-lg-0">
+                <img src="~/img/kazakhstan_offer.jpg.png"
+                     alt="Kazakhstan Offer"
+                     style="width: 640px; height: 550px; object-fit: cover; border-radius: 15px;"
+                     class="shadow" />
+            </div>
+
+            <!-- شرح العرض وزر الحجز -->
+            <div class="col-lg-6">
+                <div class="card shadow border-0 p-4">
+                    <div class="card-body text-center">
+                        <h5 class="card-title mb-3">
+                            رحلة 7 أيام إلى ألماتي وأستانا
+                            <br />7-day trip to Almaty & Astana
+                        </h5>
+                        <p class="card-text fs-5">
+                            يشمل الإقامة بفندق 5 نجوم، رحلات سياحية ومواصلات
+                            <br />Includes 5-star hotel stay, tours & transport
+                        </p>
+                        <a href="/Bookings/Create?country=Kazakhstan&hotel=The Ritz-Carlton Almaty" class="btn btn-primary btn-lg mt-3">
+                            احجز الآن | Book Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 📸 إنستقرام وزر تواصل -->
+    <div class="section text-center">
+        <a href="https://www.instagram.com/kazakhstan_by_arabian_eye?igsh=MXdqM3Vpazl2c3E0aQ==" target="_blank" class="btn btn-danger btn-lg">
+            📸 زورونا على إنستقرام | Visit us on Instagram
+        </a>
+        <br /><br />
+        <a href="tel:+994999009003" class="btn btn-outline-success btn-lg">📞 تواصل معنا | Contact Us</a>
+    </div>
+</div>

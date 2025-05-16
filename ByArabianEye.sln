@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33712.159
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ByArabianEye", "ByArabianEye\ByArabianEye.csproj", "{1EBA78AC-785B-4499-919B-420D155FEE5B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1EBA78AC-785B-4499-919B-420D155FEE5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EBA78AC-785B-4499-919B-420D155FEE5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EBA78AC-785B-4499-919B-420D155FEE5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EBA78AC-785B-4499-919B-420D155FEE5B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5A81218E-F458-421B-80E5-B5040A073430}
+	EndGlobalSection
+EndGlobal

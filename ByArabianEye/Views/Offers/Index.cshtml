@@ -1,0 +1,45 @@
+﻿@model List<ByArabianEye.Models.Offer>
+
+@{
+    ViewData["Title"] = "Offers";
+}
+
+@if (Context.Session.GetString("Role") != "admin")
+{
+    <div class="alert alert-danger text-center mt-5">
+        🚫 هذه الصفحة مخصصة للمسؤولين فقط. | This page is for admins only.
+    </div>
+    return;
+}
+
+<div class="container my-5">
+    <h2 class="text-center fw-bold mb-4">🎁 عروض الشركة | Company Offers</h2>
+
+    <div class="text-end mb-3">
+        <a asp-action="Create" class="btn btn-primary">➕ Add New Offer</a>
+    </div>
+
+    <div class="row">
+        @foreach (var offer in Model)
+        {
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="@offer.ImageUrl" class="card-img-top" style="height: 200px; object-fit: cover;" alt="Offer Image">
+                    <div class="card-body">
+                        <h5 class="card-title">@offer.Title</h5>
+                        <p class="card-text">@offer.Description</p>
+                        <p><strong>Country:</strong> @offer.Country</p>
+                        <p><strong>Type:</strong> @offer.OfferType</p>
+                        <p><strong>Days:</strong> @offer.Days</p>
+                        <p><strong>Price:</strong> $@offer.Price</p>
+                        <p><strong>Expiry:</strong> @offer.ExpiryDate.ToShortDateString()</p>
+                    </div>
+                    <div class="card-footer text-center">
+                        <a asp-action="Edit" asp-route-id="@offer.Id" class="btn btn-sm btn-outline-warning me-2">Edit</a>
+                        <a asp-action="Delete" asp-route-id="@offer.Id" class="btn btn-sm btn-outline-danger">Delete</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

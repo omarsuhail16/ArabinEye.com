@@ -1,0 +1,189 @@
+﻿@{
+    ViewData["Title"] = "Azerbaijan";
+}
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+
+<style>
+    .section {
+        margin-bottom: 60px;
+    }
+
+        .section h3 {
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+    .card-img-top {
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .carousel {
+        max-width: 700px;
+        margin: auto;
+    }
+
+    .carousel-item img {
+        width: 640px;
+        height: 427px;
+        object-fit: cover;
+        border-radius: 15px;
+        margin: auto;
+    }
+</style>
+
+<div class="container mt-5">
+
+    <!-- 🇦🇿 مقدمة -->
+    <div class="section text-center">
+        <h3>🇦🇿 أذربيجان | Azerbaijan</h3>
+        <p class="fs-5">
+            أذربيجان هي لؤلؤة القوقاز، تجمع بين الثقافة الإسلامية والحداثة مع طبيعة ساحرة.
+            <br />Azerbaijan is the pearl of the Caucasus, blending Islamic culture with modernity and nature.
+        </p>
+    </div>
+
+    <!-- 📸 سلايدر صور -->
+    <div class="section">
+        <div id="azerCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="~/img/azerbaijan1.jpg" class="d-block w-100" alt="Baku" />
+                </div>
+                <div class="carousel-item">
+                    <img src="~/img/azerbaijan2.jpg" class="d-block w-100" alt="Nature" />
+                </div>
+                <div class="carousel-item">
+                    <img src="~/img/azerbaijan3.jpg" class="d-block w-100" alt="Culture" />
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#azerCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon bg-dark rounded-circle"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#azerCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon bg-dark rounded-circle"></span>
+            </button>
+        </div>
+    </div>
+
+    <!-- 🏙️ المدن السياحية -->
+    <div class="section">
+        <h3 class="text-center">🏙️ المدن السياحية | Famous Cities</h3>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img src="~/img/baku.jpg" class="card-img-top" alt="Baku" />
+                    <div class="card-body text-center">
+                        <h5 class="card-title">باكو | Baku</h5>
+                        <p>
+                            العاصمة العصرية، تجمع بين الحداثة والتاريخ.
+                            <br />The modern capital combining history and innovation.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img src="~/img/qapala.jpg" class="card-img-top" alt="Gabala" />
+                    <div class="card-body text-center">
+                        <h5 class="card-title">غابالا | Gabala</h5>
+                        <p>
+                            الجبال والطبيعة الخلابة والأنشطة الممتعة.
+                            <br />Mountains, stunning nature, and outdoor fun.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img src="~/img/quba.jpg" class="card-img-top" alt="Quba" />
+                    <div class="card-body text-center">
+                        <h5 class="card-title">قوبا | Quba</h5>
+                        <p>
+                            مدينة هادئة بطبيعتها الخضراء.
+                            <br />A calm city with lush greenery and waterfalls.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 🏨 أفضل الفنادق -->
+    <div class="section">
+        <h3 class="text-center">🏨 أفضل الفنادق | Top Hotels</h3>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img src="~/img/hilton.jpg" class="card-img-top" alt="Hilton Hotel" />
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Hilton Baku</h5>
+                        <a href="https://www.hilton.com" target="_blank" class="btn btn-outline-primary btn-sm">Visit Hotel</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img src="~/img/ritz.jpg" class="card-img-top" alt="Ritz Baku" />
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Ritz-Carlton Baku</h5>
+                        <a href="https://www.ritzcarlton.com" target="_blank" class="btn btn-outline-primary btn-sm">Visit Hotel</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img src="~/img/sheraton.jpg" class="card-img-top" alt="Sheraton Baku" />
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Sheraton Baku</h5>
+                        <a href="https://www.marriott.com" target="_blank" class="btn btn-outline-primary btn-sm">Visit Hotel</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 🎁 العرض السياحي الخاص بأذربيجان -->
+    <div class="section">
+        <h3 class="text-center">🎁 العرض السياحي الخاص بأذربيجان | Special Offer</h3>
+        <div class="row justify-content-center align-items-center">
+            <!-- صورة العرض -->
+            <div class="col-lg-6 text-center mb-4 mb-lg-0">
+                <img src="~/img/Azerbaijan.offer.jpg.png"
+                     alt="Azerbaijan Offer"
+                     style="width: 640px; height: 427px; object-fit: cover; border-radius: 15px;"
+                     class="shadow" />
+            </div>
+
+            <!-- شرح العرض وزر الحجز -->
+            <div class="col-lg-6">
+                <div class="card shadow border-0 p-4">
+                    <div class="card-body text-center">
+                        <h5 class="card-title mb-3">
+                            رحلة 5 أيام إلى باكو وقوبا
+                            <br />5-day trip to Baku & Quba
+                        </h5>
+                        <p class="card-text fs-5">
+                            يشمل الإقامة بفندق 5 نجوم، جولات يومية ومواصلات
+                            <br />Includes 5-star stay, daily tours, and transport
+                        </p>
+                        <a href="/Bookings/Create?country=Azerbaijan&hotel=Hilton Baku" class="btn btn-primary btn-lg mt-3">
+                            احجز الآن | Book Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 📸 إنستقرام وزر تواصل -->
+    <div class="section text-center">
+        <a href="https://www.instagram.com/azerbaijan_by_arabian_eye" target="_blank" class="btn btn-danger btn-lg">
+            📸 زورونا على إنستقرام | Visit us on Instagram
+        </a>
+        <br /><br />
+        <a href="tel:+994999009001" class="btn btn-outline-success btn-lg">📞 تواصل معنا | Contact Us</a>
+    </div>
+</div>

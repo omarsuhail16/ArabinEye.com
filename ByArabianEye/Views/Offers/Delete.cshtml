@@ -1,0 +1,27 @@
+﻿@model ByArabianEye.Models.Offer
+@{
+    ViewData["Title"] = "Delete Offer";
+}
+
+<div class="container my-5">
+    <h2 class="text-center mb-4 text-danger fw-bold">🗑️ هل أنت متأكد من حذف هذا العرض؟</h2>
+
+    <div class="card border-danger shadow-sm">
+        <div class="card-body">
+            <p><strong>Title:</strong> @Model.Title</p>
+            <p><strong>Country:</strong> @Model.Country</p>
+            <p><strong>Type:</strong> @Model.OfferType</p>
+            <p><strong>Days:</strong> @Model.Days</p>
+            <p><strong>Price:</strong> $@Model.Price</p>
+            <p><strong>Expires:</strong> @Model.ExpiryDate.ToShortDateString()</p>
+
+            <div class="d-flex justify-content-between mt-4">
+                <a asp-action="Index" class="btn btn-secondary">🔙 إلغاء</a>
+                <form asp-action="ConfirmDelete" method="post">
+                    <input type="hidden" name="id" value="@Model.Id" />
+                    <button type="submit" class="btn btn-danger">🗑️ تأكيد الحذف</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

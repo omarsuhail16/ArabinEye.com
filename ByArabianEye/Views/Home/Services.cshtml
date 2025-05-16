@@ -1,0 +1,195 @@
+﻿@{
+    ViewData["Title"] = "Our Services";
+}
+
+<!-- AOS Animation CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+
+<style>
+    .card-img-top {
+        height: 280px;
+        object-fit: cover;
+    }
+
+    .card-body {
+        padding: 15px;
+    }
+
+    .card-title {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .card-text {
+        font-size: 0.9rem;
+    }
+
+    .card {
+        max-width: 600px;
+        margin: auto;
+    }
+
+    .col {
+        margin-bottom: 30px;
+    }
+</style>
+
+<!-- 🔄 Carousel Slider -->
+<div id="servicesCarousel" class="carousel slide mb-5" data-bs-ride="carousel" style="max-width: 700px; margin: auto;">
+    <div class="carousel-inner text-center">
+        <div class="carousel-item active">
+            <img src="~/img/service_travel.png" class="d-block mx-auto rounded" style="width: 100%; max-height: 350px;" alt="Travel">
+            <h5 class="mt-2">🧳 رحلات سياحية | Travel Packages</h5>
+        </div>
+        <div class="carousel-item">
+            <img src="~/img/luxury_car.jpg" class="d-block mx-auto rounded" style="width: 100%; max-height: 350px;" alt="Luxury Car">
+            <h5 class="mt-2">🚗 سيارة فخمة | Luxury Car</h5>
+        </div>
+        <div class="carousel-item">
+            <img src="~/img/family_car.jpg" class="d-block mx-auto rounded" style="width: 100%; max-height: 350px;" alt="Family Car">
+            <h5 class="mt-2">🚙 سيارة عائلية | Family Car</h5>
+        </div>
+        <div class="carousel-item">
+            <img src="~/img/group_bus.png" class="d-block mx-auto rounded" style="width: 100%; max-height: 350px;" alt="Group Bus">
+            <h5 class="mt-2">🚌 قروب سياحي | Group Tour Bus</h5>
+        </div>
+        <div class="carousel-item">
+            <img src="~/img/airport_transfer.png" class="d-block mx-auto rounded" style="width: 100%; max-height: 350px;" alt="Airport Transfer">
+            <h5 class="mt-2">✈️ استقبال وتوديع | Airport Transfers</h5>
+        </div>
+        <div class="carousel-item">
+            <img src="~/img/family_trip.jpg" class="d-block mx-auto rounded" style="width: 100%; max-height: 350px;" alt="Family Trip">
+            <h5 class="mt-2">👨‍👩‍👧‍👦 رحلات عائلية | Family Trips</h5>
+        </div>
+        <div class="carousel-item">
+            <img src="~/img/group_tour1.jpg" class="d-block mx-auto rounded" style="width: 100%; max-height: 350px;" alt="Group Tours">
+            <h5 class="mt-2">👥 جولات جماعية | Group Tours</h5>
+        </div>
+        <div class="carousel-item">
+            <img src="~/img/hotel_offer.png" class="d-block mx-auto rounded" style="width: 100%; max-height: 350px;" alt="Hotrl Offer">
+            <h5 class="mt-2">🛏️ عروض فنادق مختارة | Handpicked Hotel Offers</h5>
+        </div>
+        <div class="carousel-item">
+            <img src="~/img/support.png" class="d-block mx-auto rounded" style="width: 100%; max-height: 350px;" alt="Support">
+            <h5 class="mt-2">☎️ دعم واستفسارات | 24/7 Support</h5>
+        </div>
+
+      
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#servicesCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon bg-dark rounded-circle"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#servicesCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon bg-dark rounded-circle"></span>
+    </button>
+</div>
+
+<!-- 🔶 Services Cards -->
+<div class="container">
+    <h2 class="text-center mb-5 fw-bold">🌟 خدماتنا المميزة | Our Premium Services</h2>
+    <div class="row row-cols-1 g-4">
+        <div class="col" data-aos="fade-up">
+            <div class="card shadow-sm">
+                <img src="~/img/service_travel.png" class="card-img-top" alt="Travel Packages" />
+                <div class="card-body text-center">
+                    <h5 class="card-title">🧳 رحلات سياحية | Travel Packages</h5>
+                    <p class="card-text">استمتع برحلات فريدة ومغامرات مخصصة لجميع الأعمار. <br />Custom adventures for unforgettable memories.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col" data-aos="fade-up">
+            <div class="card shadow-sm">
+                <img src="~/img/luxury_car.jpg" class="card-img-top" alt="Luxury Car" />
+                <div class="card-body text-center">
+                    <h5 class="card-title">🚗 سيارة فخمة | Luxury Car</h5>
+                    <p class="card-text">رحلاتك معنا أكثر راحة وفخامة مع سيارات راقية وسائقين محترفين لضمان تجربة سلسة وآمنة. <br />Your journeys with us are more comfortable and luxurious with premium vehicles and professional drivers to ensure a smooth and safe experience..</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col" data-aos="fade-up">
+            <div class="card shadow-sm">
+                <img src="~/img/family_car.jpg" class="card-img-top" alt="Family Car" />
+                <div class="card-body text-center">
+                    <h5 class="card-title">🚙 سيارة عائلية | Family Car</h5>
+                    <p class="card-text">راحة للعائلة في كل رحلة. <br />Spacious cars for safe family journeys.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col" data-aos="fade-up">
+            <div class="card shadow-sm">
+                <img src="~/img/group_bus.png" class="card-img-top" alt="Group Tour Bus" />
+                <div class="card-body text-center">
+                    <h5 class="card-title">🚌 باص قروب سياحي | Group Tour Bus</h5>
+                    <p class="card-text">جولات جماعية منظمة مع مرشدين. <br />Enjoy guided group tours with full service.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col" data-aos="fade-up">
+            <div class="card shadow-sm">
+                <img src="~/img/airport_transfer.png" class="card-img-top" alt="Airport Transfer" />
+                <div class="card-body text-center">
+                    <h5 class="card-title">✈️ استقبال وتوديع | Airport Transfers</h5>
+                    <p class="card-text">خدمة استقبال وتوصيل سلسة وآمنة من وإلى المطار، لتبدأ وتختتم رحلتك بأعلى مستويات الراحة.. <br />Start and end your journey with the highest level of comfort through our smooth and secure airport pick-up and drop-off service..</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col" data-aos="fade-up">
+            <div class="card shadow-sm">
+                <img src="~/img/family_trip.jpg" class="card-img-top" alt="Family Trips" />
+                <div class="card-body text-center">
+                    <h5 class="card-title">👨‍👩‍👧‍👦 رحلات عائلية | Family Trips</h5>
+                    <p class="card-text">خطط مصممة خصيصًا للعائلات لتوثيق أجمل اللحظات مع عروض فريدة تلبي تطلعاتكم.. <br />Tailor-Made Plans for Families Create unforgettable memories with unique offers designed to meet your family’s expectations..</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col" data-aos="fade-up">
+            <div class="card shadow-sm">
+                <img src="~/img/group_tour1.jpg" class="card-img-top" alt="Group Tours" />
+                <div class="card-body text-center">
+                    <h5 class="card-title">👥  جولات جماعية منظمة  |Organized Group Tours</h5>
+                    <p class="card-text">اكتشف روعة العالم مع مجموعات مميزة وتجارب استثنائية تظل راسخة في الذاكرة.. <br />Discover the wonders of the world with exclusive groups and unforgettable experiences that leave lasting memories..</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col" data-aos="fade-up">
+            <div class="card shadow-sm">
+                <img src="~/img/hotel_offer.png" class="card-img-top" alt="Hotel Offers" />
+                <div class="card-body text-center">
+                    <h5 class="card-title">🛏️ عروض فنادق مختارة | Handpicked Hotel Offers</h5>
+                    <p class="card-text">
+                        إقامة مريحة في أفضل الفنادق وبأسعار تناسب ميزانيتك، مع توفير خيارات متعددة تناسب جميع الأذواق. <br />
+                        Enjoy comfortable stays at top hotels with a variety of budget-friendly options.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col" data-aos="fade-up">
+            <div class="card shadow-sm">
+                <img src="~/img/support.png" class="card-img-top" alt="Support 24/7" />
+                <div class="card-body text-center">
+                    <h5 class="card-title">☎️ دعم واستفسارات | 24/7 Support</h5>
+                    <p class="card-text">فريق دعم متخصص جاهز لخدمتك على مدار الساعة وطوال أيام الأسبوع لضمان راحتك ورضاك.. <br />Our specialized support team is available around the clock to ensure your comfort and satisfaction..</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- AOS JS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 1000,
+        once: true
+    });
+</script>
