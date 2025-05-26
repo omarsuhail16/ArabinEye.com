@@ -2,7 +2,6 @@
 
 @{
     ViewData["Title"] = "Bookings";
-    int index = 1;
 }
 
 @if (Context.Session.GetString("Role") != "admin")
@@ -13,59 +12,144 @@
     return;
 }
 
-<div class="container my-5">
-    <h2 class="mb-4 text-center fw-bold">📅 حجوزات العملاء | Client Bookings</h2>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
-    <!-- 🔹 زر إضافة حجز جديد -->
+<style>
+    body {
+        background: linear-gradient(to bottom right, #1b1f3b, #2b2d42);
+        font-family: 'Cairo', sans-serif;
+        color: white;
+    }
+
+    .table-container {
+        background-color: #2b2d42;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+
+    table {
+        color: white;
+        border-collapse: collapse;
+    }
+
+    th {
+        background-color: #1e3d59;
+        color: white;
+    }
+
+    td, th {
+        padding: 10px;
+        border: 1px solid #444;
+        vertical-align: middle;
+    }
+
+    td {
+        color: white;
+    }
+
+
+    .btn-outline-info, .btn-outline-warning, .btn-outline-danger {
+        color: white;
+        border-color: white;
+    }
+
+        .btn-outline-info:hover, .btn-outline-warning:hover, .btn-outline-danger:hover {
+            background-color: white;
+            color: black;
+        }
+
+    .badge {
+        padding: 5px 10px;
+        font-size: 0.85rem;
+        border-radius: 20px;
+        font-weight: 600;
+    }
+
+    .badge-success {
+        background-color: #28a745;
+    }
+
+    .badge-danger {
+        background-color: #dc3545;
+    }
+
+    .badge-warning {
+        background-color: #ffc107;
+        color: black;
+    }
+</style>
+
+<div class="container my-5">
+    <h2 class="mb-4 text-center fw-bold text-white">📅 حجوزات العملاء | Client Bookings</h2>
+
     <div class="text-end mb-3">
-        <a asp-action="Create" class="btn btn-primary">➕ Add New Booking</a>
+        <a asp-action="Create" class="btn btn-light">➕ Add New Booking</a>
     </div>
 
-    <table class="table table-bordered table-hover shadow-sm">
-        <thead class="table-primary">
-            <tr>
-                <th>#</th>
-                <th>Client Name</th>
-                <th>Country</th>
-                <th>Hotel</th>
-                <th>Package</th>
-                <th>Date</th>
-                <th>People</th>
-                <th>Status</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-            @if (Model != null && Model.Any())
-            {
-                foreach (var item in Model)
+    <div class="table-container">
+        <table class="table text-center table-hover">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Client Name</th>
+                    <th>Country</th>
+                    <th>Hotel</th>
+                    <th>Package</th>
+                    <th>Date</th>
+                    <th>People</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model != null && Model.Any())
+                {
+                    int index = 1;
+                    foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@index</td>
+                            <td>@item.ClientName</td>
+                            <td>@item.Country</td>
+                            <td>@item.Hotel</td>
+                            <td>@item.PackageType</td>
+                            <td>@item.Date.ToShortDateString()</td>
+                            <td>@item.PeopleCount</td>
+                            <td>
+                                @switch (item.Status.ToLower())
+                                {
+                                    case "confirmed":
+                                        <span class="badge badge-success">Confirmed</span>
+                                        ;
+                                        break;
+                                    case "cancelled":
+                                        <span class="badge badge-danger">Cancelled</span>
+                                        ;
+                                        break;
+                                    default:
+                                        <span class="badge badge-warning">Pending</span>
+                                        ;
+                                        break;
+                                }
+                            </td>
+                            <td>
+                                <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-sm btn-outline-info">View</a>
+                                <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-outline-warning">Edit</a>
+                                <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-outline-danger">Delete</a>
+                            </td>
+                        </tr>
+                        index++;
+                    }
+                }
+                else
                 {
                     <tr>
-                        <td>@index</td>
-                        <td>@item.ClientName</td>
-                        <td>@item.Country</td>
-                        <td>@item.Hotel</td>
-                        <td>@item.PackageType</td>
-                        <td>@item.Date.ToShortDateString()</td>
-                        <td>@item.PeopleCount</td>
-                        <td>
-                            <span class="badge bg-success">Confirmed</span>
-                        </td>
-                        <td>
-                            <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-sm btn-outline-info">View</a>
-                            <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-outline-warning">Edit</a>
-                            <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-outline-danger">Delete</a>
-                        </td>
+                        <td colspan="9" class="text-center text-white-50">لا توجد حجوزات حالياً</td>
                     </tr>
-                    index++;
                 }
-            }
-            else
-            {
-                <tr>
-                    <td colspan="9" class="text-center">لا توجد حجوزات حالياً</td>
-                </tr>
-            }
-        </tbody>
-    </table>
+            </tbody>
+        </table>
+    </div>
 </div>

@@ -1,107 +1,167 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using ByArabianEye.Data;
 using ByArabianEye.Models;
-using System.Text.Json;
+using Microsoft.AspNetCore.Http;
+using System.Linq;
 
 namespace ByArabianEye.Controllers
 {
     public class AccountController : Controller
     {
-        private readonly string dataPath;
+        private readonly ApplicationDbContext _context;
 
-        public AccountController(IWebHostEnvironment env)
+        public AccountController(ApplicationDbContext context)
         {
-            dataPath = Path.Combine(env.WebRootPath, "data", "clients.json");
+            _context = context;
         }
 
-        // صفحة تسجيل الدخول
+        // GET: /Account/Login
         public IActionResult Login()
         {
             if (TempData["Success"] != null)
                 ViewBag.Success = TempData["Success"];
+
             return View();
         }
 
-        // POST تسجيل الدخول
+        // POST: /Account/Login
         [HttpPost]
-        public IActionResult Login(string username, string password)
+        public IActionResult Login(string email, string password)
         {
-            // ✅ دخول المدير
-            if (username == "Admin" && password == "4654156")
+            var user = _context.Users.FirstOrDefault(u => u.Email == email && u.Password == password);
+            if (user != null)
             {
-                HttpContext.Session.SetString("Role", "admin");
-                HttpContext.Session.SetString("Username", username);
-                return RedirectToAction("Index", "Dashboard");
-            }
+                HttpContext.Session.SetString("UserId", user.UserId.ToString());
+                HttpContext.Session.SetString("FullName", user.FullName);
+                HttpContext.Session.SetString("Email", user.Email); // ✅ تم إضافته هنا
+                HttpContext.Session.SetString("Role", user.Role);
 
-            // ✅ دخول العميل
-            var clients = ReadClients();
-            var found = clients.FirstOrDefault(c => c.Username == username && c.Password == password);
+                if (user.Role == "admin")
+                    return RedirectToAction("Index", "Dashboard");
 
-            if (found != null)
-            {
-                HttpContext.Session.SetString("Role", "client");
-                HttpContext.Session.SetString("Username", username);
                 return RedirectToAction("Index", "Home");
             }
 
-            // ❌ بيانات غير صحيحة
-            ViewBag.Error = "❌ Incorrect username or password | ❌ اسم المستخدم أو كلمة المرور خاطئة";
+            ViewBag.Error = "❌ البريد الإلكتروني أو كلمة المرور غير صحيحة.";
             return View();
         }
 
-        [HttpPost]
-        public IActionResult Logout()
-        {
-            HttpContext.Session.Clear(); // 🧼 تنظيف الجلسة
-            return RedirectToAction("Login");
-        }
-
-        // صفحة التسجيل
+        // GET: /Account/Register
         public IActionResult Register()
         {
             return View();
         }
 
-        // POST التسجيل
+        // POST: /Account/Register
         [HttpPost]
-        public IActionResult Register(string username, string password, string confirmPassword)
+        public IActionResult Register(string fullName, string email, string password, string confirmPassword)
         {
             if (password != confirmPassword)
             {
-                ViewBag.Error = "❌ Passwords do not match | ❌ كلمات المرور غير متطابقة";
+                ViewBag.Error = "❌ كلمات المرور غير متطابقة.";
                 return View();
             }
 
-            var clients = ReadClients();
-
-            if (clients.Any(c => c.Username == username))
+            var existingUser = _context.Users.FirstOrDefault(u => u.Email == email);
+            if (existingUser != null)
             {
-                ViewBag.Error = "❌ Username already exists | ❌ اسم المستخدم موجود مسبقاً";
+                ViewBag.Error = "❌ البريد الإلكتروني مستخدم مسبقًا.";
                 return View();
             }
 
-            // ✅ إضافة تاريخ التسجيل
-            clients.Add(new Client
+            var newUser = new User
             {
-                Username = username,
+                FullName = fullName,
+                Email = email,
                 Password = password,
-                RegistrationDate = DateTime.Now
-            });
+                Role = "client"
+            };
 
-            System.IO.File.WriteAllText(dataPath, JsonSerializer.Serialize(clients));
+            _context.Users.Add(newUser);
+            _context.SaveChanges();
 
-            TempData["Success"] = "✅ Registration successful! | ✅ تم التسجيل بنجاح";
+            TempData["Success"] = "✅ تم إنشاء الحساب بنجاح، يمكنك الآن تسجيل الدخول.";
             return RedirectToAction("Login");
         }
 
-        // قراءة بيانات العملاء من clients.json
-        private List<Client> ReadClients()
+        // POST: /Account/Logout
+        [HttpPost]
+        public IActionResult Logout()
         {
-            if (!System.IO.File.Exists(dataPath))
-                return new List<Client>();
+            HttpContext.Session.Clear();
+            return RedirectToAction("Login", "Account");
+        }
 
-            var json = System.IO.File.ReadAllText(dataPath);
-            return JsonSerializer.Deserialize<List<Client>>(json) ?? new List<Client>();
+        // GET: /Account/MyProfile
+        public IActionResult MyProfile()
+        {
+            var email = HttpContext.Session.GetString("Email");
+            if (string.IsNullOrEmpty(email))
+                return RedirectToAction("Login");
+
+            var user = _context.Users.FirstOrDefault(u => u.Email == email);
+            if (user == null)
+                return NotFound();
+
+            var bookings = _context.Bookings
+                .Where(b => b.ClientName == user.FullName)
+                .ToList();
+
+            ViewBag.Bookings = bookings;
+
+            return View(user);
+        }
+
+        // GET
+        public IActionResult EditProfile()
+        {
+            var email = HttpContext.Session.GetString("Email");
+            if (string.IsNullOrEmpty(email))
+                return RedirectToAction("Login");
+
+            var user = _context.Users.FirstOrDefault(u => u.Email == email);
+            if (user == null)
+                return NotFound();
+
+            return View(user);
+        }
+
+        // POST
+        [HttpPost]
+        public IActionResult EditProfile(User updatedUser)
+        {
+            var email = HttpContext.Session.GetString("Email");
+            if (string.IsNullOrEmpty(email))
+                return RedirectToAction("Login");
+
+            var user = _context.Users.FirstOrDefault(u => u.Email == email);
+            if (user == null)
+                return NotFound();
+
+            // تحقق من البريد الجديد ما يكون مستخدم من غير هذا المستخدم
+            bool emailExists = _context.Users.Any(u => u.Email == updatedUser.Email && u.UserId != user.UserId);
+            if (emailExists)
+            {
+                ModelState.AddModelError("Email", "This email is already used by another user.");
+                return View(user);
+            }
+
+            // تحديث الاسم والبريد الإلكتروني
+            user.FullName = updatedUser.FullName;
+            user.Email = updatedUser.Email;
+
+            // تحديث كلمة المرور إذا كتبها
+            if (!string.IsNullOrEmpty(updatedUser.Password))
+                user.Password = updatedUser.Password;
+
+            _context.SaveChanges();
+
+            // تحديث الجلسة
+            HttpContext.Session.SetString("FullName", user.FullName);
+            HttpContext.Session.SetString("Email", user.Email);
+
+            TempData["Success"] = "✅ Profile updated successfully.";
+            return RedirectToAction("MyProfile");
         }
     }
 }

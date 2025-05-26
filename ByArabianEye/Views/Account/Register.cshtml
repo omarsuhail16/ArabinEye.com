@@ -1,8 +1,8 @@
-﻿@{
+﻿
+@{
     ViewData["Title"] = "Register";
-    Layout = null; // ✅ إلغاء شريط التنقل
+    Layout = null;
 }
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,73 +12,112 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <style>
         body {
-            background: url('/img/bg-login.jpg.png') no-repeat center center fixed;
-            background-size: cover;
+            background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+            margin: 0;
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
             font-family: 'Segoe UI', sans-serif;
+            animation: fadeIn 1.2s ease-in-out;
+        }
+
+        keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.97); }
+            to { opacity: 1; transform: scale(1); }
         }
 
         .register-box {
-            background-color: rgba(255, 255, 255, 0.95);
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.2);
-            padding: 40px;
             width: 100%;
-            max-width: 500px;
+            max-width: 450px;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(15px);
+            border-radius: 15px;
+            padding: 50px;
+            color: white;
+            box-shadow: 0 0 25px rgba(0,0,0,0.4);
+            animation: slideUp 1s ease-out;
         }
 
-        h2 {
+        keyframes slideUp {
+            0% { transform: translateY(30px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+
+        .form-control {
+            background-color: rgba(255, 255, 255, 0.15);
+            border: none;
+            color: #fff;
+            transition: 0.3s ease-in-out;
+        }
+
+        .form-control::placeholder {
+            color: #ccc;
+        }
+
+        .form-control:focus {
+            background-color: rgba(255, 255, 255, 0.25);
+            color: #fff;
+            box-shadow: none;
+        }
+
+        .btn-success {
+            background: linear-gradient(to right, #00c6ff, #0072ff);
+            border: none;
             font-weight: bold;
+            transition: 0.3s ease;
+        }
+
+        .btn-success:hover {
+            background: linear-gradient(to right, #0072ff, #00c6ff);
+        }
+
+        .text-link {
+            color: #00c6ff;
+            text-decoration: none;
+        }
+
+        .text-link:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    <div class="container register-box">
+    <div class="register-box">
+        <h3 class="text-center mb-4">📝 Create Your Account</h3>
 
-        @* ✅ رسائل التنبيه *@
         @if (ViewBag.Error != null)
         {
-            <div class="alert alert-danger text-center mb-3">
-                @ViewBag.Error
-            </div>
+            <div class="alert alert-danger text-center">@ViewBag.Error</div>
         }
-
-        @if (ViewBag.Success != null)
-        {
-            <div class="alert alert-success text-center mb-3">
-                @ViewBag.Success
-            </div>
-        }
-
-        <h2 class="text-center text-success mb-4">📝 إنشاء حساب جديد | Register</h2>
 
         <form method="post" asp-action="Register">
             <div class="mb-3">
-                <label class="form-label">👤 اسم المستخدم | Username</label>
-                <input type="text" name="username" class="form-control" placeholder="اسم المستخدم" required />
+                <label class="form-label">Full Name</label>
+                <input type="text" name="fullName" class="form-control" placeholder="Ali Alsaud" required />
             </div>
 
             <div class="mb-3">
-                <label class="form-label">🔒 كلمة المرور | Password</label>
+                <label class="form-label">Email</label>
+                <input type="email" name="email" class="form-control" placeholder="you@example.com" required />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Password</label>
                 <input type="password" name="password" class="form-control" placeholder="********" required />
             </div>
 
             <div class="mb-3">
-                <label class="form-label">🔁 تأكيد كلمة المرور | Confirm Password</label>
+                <label class="form-label">Confirm Password</label>
                 <input type="password" name="confirmPassword" class="form-control" placeholder="********" required />
             </div>
 
-            <button type="submit" class="btn btn-success w-100">إنشاء الحساب | Register</button>
+            <button type="submit" class="btn btn-success w-100 mb-3">Sign Up</button>
+
+            <div class="text-center">
+                Already have an account? <a href="/Account/Login" class="text-link">Sign In</a>
+            </div>
         </form>
-
-        <div class="text-center mt-3">
-            <a asp-controller="Account" asp-action="Login" class="text-decoration-none">🔙 العودة لتسجيل الدخول</a>
-        </div>
     </div>
-
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

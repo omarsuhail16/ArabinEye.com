@@ -1,241 +1,89 @@
 ﻿@{
     ViewData["Title"] = "Home";
 }
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 
 <style>
     body {
-        background-color: #f7f8fa;
-        font-family: 'Segoe UI', sans-serif;
+        background: linear-gradient(to bottom right, #1b1f3b, #2b2d42);
+        font-family: 'Cairo', sans-serif;
+        color: white;
     }
 
-    
-    
+    #map {
+        height: 360px;
+        border-radius: 12px;
+        margin-bottom: 40px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
 
-
-    .carousel-item {
+    .leaflet-popup-content {
         text-align: center;
-        padding: 40px 20px;
     }
 
-        .carousel-item img {
-            max-height: 220px;
-            object-fit: cover;
-            border-radius: 10px;
-            margin-bottom: 15px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        .leaflet-popup-content img {
+            width: 60px;
+            height: auto;
+            margin-bottom: 8px;
+            border-radius: 6px;
+            box-shadow: 0 0 4px rgba(0,0,0,0.2);
         }
 
-    .carousel-control-prev-icon,
-    .carousel-control-next-icon {
-        background-color: rgba(30, 60, 90, 0.8 /* لون غامق شفاف */
-        border-radius: 50%;
-        padding: 20px;
-        background-size: 50% 50%;
+    .accordion-body {
+        background-color: #fff;
+        color: #1b1f3b;
+        padding: 15px;
+        border-radius: 8px;
     }
 
-
-    .carousel-caption h5 {
-        font-size: 1.5rem;
-        font-weight: bold;
-        color: #333;
-    }
-
-    .carousel-caption p {
-        color: #555;
-    }
-
-    .carousel-caption a {
-        margin-top: 10px;
-    }
-
-    .section-about {
-        background-color: #ffffff;
+    .section-about, .testimonial {
+        background-color: #ffffff10;
         border-radius: 10px;
-        padding: 40px 20px;
-        box-shadow: 0 0 15px rgba(0,0,0,0.08);
-        margin-top: 60px;
+        padding: 30px;
         margin-bottom: 40px;
     }
 
-        .section-about h3 {
-            color: #333;
-            font-weight: bold;
-            margin-bottom: 15px;
+        .testimonial img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
         }
 
-        .section-about p {
-            font-size: 1.1rem;
-            color: #555;
-        }
+    .accordion-button {
+        font-weight: bold;
+    }
 </style>
 
 <!-- Header -->
 <div class="container text-center mt-5 mb-4">
-    <h1 class="display-5 fw-bold">🌍 Welcome to <span class="text-primary">By Arabian Eye</span></h1>
-    <p class="typewriter text-muted fs-5 fw-semibold mb-3" style="min-height: 30px;"></p>
+    <h1 class="display-5 fw-bold">🌍 Welcome to <span class="text-info">By Arabian Eye</span></h1>
+    <p class="typewriter fs-5 fw-semibold mb-3" style="min-height: 30px;"></p>
 </div>
 
-<!-- Carousel Section -->
-<div id="countryCarousel" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
-
-        <!-- Country Slide -->
-        <div class="carousel-item active">
-            <div class="text-center">
-                <img src="~/img/azerbaijan.jpg.png" class="d-block mx-auto rounded shadow" style="max-height: 240px;" alt="Azerbaijan">
-                <div class="mt-3">
-                    <h4 class="fw-bold">🇦🇿 Azerbaijan</h4>
-                    <p>Nature, history and hospitality in the Caucasus.</p>
-                    <a asp-controller="Countries" asp-action="Azerbaijan" class="btn btn-primary">Explore</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Repeat same structure for other countries -->
-        <div class="carousel-item">
-            <div class="text-center">
-                <img src="~/img/georgia.jpg.png" class="d-block mx-auto rounded shadow" style="max-height: 240px;" alt="Georgia">
-                <div class="mt-3">
-                    <h4 class="fw-bold">🇬🇪 Georgia</h4>
-                    <p>Mountains, wine and ancient culture.</p>
-                    <a asp-controller="Countries" asp-action="Georgia" class="btn btn-primary">Explore</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="carousel-item">
-            <div class="text-center">
-                <img src="~/img/albania.jpg.png.png" class="d-block mx-auto rounded shadow" style="max-height: 240px;" alt="Albania">
-                <div class="mt-3">
-                    <h4 class="fw-bold">🇦🇱 Albania</h4>
-                    <p>Hidden beaches and Mediterranean charm.</p>
-                    <a asp-controller="Countries" asp-action="Albania" class="btn btn-primary">Explore</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="carousel-item">
-            <div class="text-center">
-                <img src="~/img/kazakhstan.jpg.png" class="d-block mx-auto rounded shadow" style="max-height: 240px;" alt="Kazakhstan">
-                <div class="mt-3">
-                    <h4 class="fw-bold">🇰🇿 Kazakhstan</h4>
-                    <p>Steppe beauty and futuristic cities.</p>
-                    <a asp-controller="Countries" asp-action="Kazakhstan" class="btn btn-primary">Explore</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="carousel-item">
-            <div class="text-center">
-                <img src="~/img/russia.jpg.png" class="d-block mx-auto rounded shadow" style="max-height: 240px;" alt="Russia">
-                <div class="mt-3">
-                    <h4 class="fw-bold">🇷🇺 Russia</h4>
-                    <p>Imperial architecture and deep heritage.</p>
-                    <a asp-controller="Countries" asp-action="Russia" class="btn btn-primary">Explore</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="carousel-item">
-            <div class="text-center">
-                <img src="~/img/uzbekistan.jpg.png" class="d-block mx-auto rounded shadow" style="max-height: 240px;" alt="Uzbekistan">
-                <div class="mt-3">
-                    <h4 class="fw-bold">🇺🇿 Uzbekistan</h4>
-                    <p>Silk Road magic and Islamic architecture.</p>
-                    <a asp-controller="Countries" asp-action="Uzbekistan" class="btn btn-primary">Explore</a>
-                </div>
-            </div>
-        </div>
-
-    </div>
-
-    <!-- Controls -->
-    <button class="carousel-control-prev" type="button" data-bs-target="#countryCarousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" style="background-color: rgba(0,0,0,0.6); border-radius: 50%; padding: 20px;"></span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#countryCarousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon" style="background-color: rgba(0,0,0,0.6); border-radius: 50%; padding: 20px;"></span>
-    </button>
+<!-- Map Section -->
+<div class="container">
+    <div id="map"></div>
 </div>
 
-<!-- About Section -->
+<!-- About Us Section -->
 <div class="container mt-5 mb-5">
     <div class="row g-4">
-        <div class="col-md-6">
-            <div class="p-4 bg-white shadow rounded text-end">
-                <h4 class="fw-bold mb-3">من نحن</h4>
-                <p>
-                    نقدم خدمات سياحية مميزة بخبرة تفوق 10 سنوات، مع دعم 24/7 وأسعار تنافسية وتجارب مخصصة للسياح من الخليج.<br />
-                    تواجدنا في: أذربيجان، روسيا، جورجيا، ألبانيا، كازاخستان، أوزبكستان.
-                </p>
-            </div>
+        <div class="col-md-6 section-about text-end">
+            <h4 class="fw-bold mb-3 text-info">من نحن</h4>
+            <p>
+                نقدم خدمات سياحية مميزة بخبرة تفوق 10 سنوات، مع دعم 24/7 وأسعار تنافسية وتجارب مخصصة للسياح من الخليج.<br />
+                تواجدنا في: أذربيجان، روسيا، جورجيا، ألبانيا، كازاخستان، أوزبكستان.
+            </p>
         </div>
-        <div class="col-md-6">
-            <div class="p-4 bg-white shadow rounded">
-                <h4 class="fw-bold mb-3">About Us</h4>
-                <p>
-                    We provide exceptional tourism services with over 10 years of experience, 24/7 support, competitive prices, and customized experiences for Gulf tourists.<br />
-                    Countries we operate in: Azerbaijan, Russia, Georgia, Albania, Kazakhstan, Uzbekistan.
-                </p>
-            </div>
+        <div class="col-md-6 section-about">
+            <h4 class="fw-bold mb-3 text-info">About Us</h4>
+            <p>
+                We provide exceptional tourism services with over 10 years of experience, 24/7 support, competitive prices, and customized experiences for Gulf tourists.<br />
+                Countries we operate in: Azerbaijan, Russia, Georgia, Albania, Kazakhstan, Uzbekistan.
+            </p>
         </div>
-    </div>
-</div>
-<!-- Testimonials Section -->
-<div class="container mb-5">
-    <h3 class="text-center fw-bold mb-4">✨ آراء العملاء | Client Testimonials</h3>
-    <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-
-            <div class="carousel-item active">
-                <div class="row justify-content-center">
-                    <div class="col-md-5">
-                        <div class="p-4 bg-white shadow rounded text-center">
-                            <img src="~/img/client1.jpg" alt="Client 1" class="rounded-circle mb-3" style="width:70px;height:70px;">
-                            <h5 class="fw-bold">أحمد المطيري</h5>
-                            <p>خدمة احترافية واهتمام بالتفاصيل، كانت رحلة لا تنسى!</p>
-                        </div>
-                    </div>
-                    <div class="col-md-5">
-                        <div class="p-4 bg-white shadow rounded text-center">
-                            <img src="~/img/mohammed.client.jpg" alt="Client 2" class="rounded-circle mb-3" style="width:70px;height:70px;">
-                            <h5 class="fw-bold">محمد عبود</h5>
-                            <p>أشكر الفريق الرائع، كل شيء كان منظم وبأسعار رائعة!</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="carousel-item">
-                <div class="row justify-content-center">
-                    <div class="col-md-5">
-                        <div class="p-4 bg-white shadow rounded text-center">
-                            <img src="~/img/client3.jpg" alt="Client 3" class="rounded-circle mb-3" style="width:70px;height:70px;">
-                            <h5 class="fw-bold">John Smith</h5>
-                            <p>One of the best trips of my life. Great support and beautiful locations.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-5">
-                        <div class="p-4 bg-white shadow rounded text-center">
-                            <img src="~/img/client4.jpg" alt="Client 4" class="rounded-circle mb-3" style="width:70px;height:70px;">
-                            <h5 class="fw-bold">omar</h5>
-                            <p>Wonderful experience with top-notch service. Highly recommended!</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-
-
-        <!-- Controls -->
-        <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" style="background-color: rgba(0,0,0,0.6); border-radius: 50%; padding: 15px;"></span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon" style="background-color: rgba(0,0,0,0.6); border-radius: 50%; padding: 15px;"></span>
-        </button>
     </div>
 </div>
 
@@ -243,131 +91,145 @@
 <div class="container my-5">
     <div class="section-about p-4">
         <h3 class="text-center mb-4 fw-bold">❓ الأسئلة الشائعة | Frequently Asked Questions</h3>
-
         <div class="accordion" id="faqAccordion">
-
-            <!-- سؤال 1 -->
-            <div class="accordion-item mb-3 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="accordion-item mb-3">
                 <h2 class="accordion-header" id="faqHeading1">
-                    <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="false" aria-controls="faq1">
+                    <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
                         كيف أقدر أحجز رحلتي معاكم؟ | How can I book my trip?
                     </button>
                 </h2>
-                <div id="faq1" class="accordion-collapse collapse" aria-labelledby="faqHeading1" data-bs-parent="#faqAccordion">
+                <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                        تواصل معانا على واتساب، وخلك جاهز، فريقنا بيخدمك ويوفر لك كل تفاصيل الحجز بكل سهولة وسرعة.
-                        <br><br>
-                        Contact us via WhatsApp and our team will help you arrange all booking details easily and quickly.
+                        تواصل معنا عبر الواتساب وسنقوم بخدمتك على الفور.<br>
+                        Contact us via WhatsApp and we’ll arrange everything smoothly.
                     </div>
                 </div>
             </div>
-
-            <!-- سؤال 2 -->
-            <div class="accordion-item mb-3 wow fadeInUp" data-wow-delay="0.2s">
+            <div class="accordion-item mb-3">
                 <h2 class="accordion-header" id="faqHeading2">
-                    <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
-                        عندكم عروض خاصة للرحلات؟ | Do you offer special trip deals?
+                    <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                        هل عندكم عروض؟ | Do you offer discounts?
                     </button>
                 </h2>
-                <div id="faq2" class="accordion-collapse collapse" aria-labelledby="faqHeading2" data-bs-parent="#faqAccordion">
+                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                        أكيد، عندنا عروض متجددة طول الوقت على موقعنا، لا تفوت الفرصة وشوف آخر العروض اللي تناسبك.
-                        <br><br>
-                        Absolutely! We constantly have updated offers on our website — don’t miss out!
+                        نعم لدينا عروض مستمرة داخل الموقع.<br>
+                        Yes! We always have updated offers.
                     </div>
                 </div>
             </div>
-
-            <!-- سؤال 3 -->
-            <div class="accordion-item mb-3 wow fadeInUp" data-wow-delay="0.3s">
+            <div class="accordion-item mb-3">
                 <h2 class="accordion-header" id="faqHeading3">
-                    <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
-                        تساعدون باستخراج الفيزا؟ | Do you help with visa applications?
+                    <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                        هل تساعدون بالفيزا؟ | Do you help with visa?
                     </button>
                 </h2>
-                <div id="faq3" class="accordion-collapse collapse" aria-labelledby="faqHeading3" data-bs-parent="#faqAccordion">
+                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                        ايه نعم، نوفر لك خدمة استخراج الفيزا ونرتب لك كل الإجراءات بدون تعب راس.
-                        <br><br>
-                        Yes, we help you with visa processing and take care of all the steps — just provide the required documents.
+                        نعم نوفر لك استخراج الفيزا بكل سهولة.<br>
+                        Yes, we assist you with visa processing.
                     </div>
                 </div>
             </div>
-
-            <!-- سؤال 4 -->
-            <div class="accordion-item mb-3 wow fadeInUp" data-wow-delay="0.4s">
+            <div class="accordion-item mb-3">
                 <h2 class="accordion-header" id="faqHeading4">
-                    <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
-                        لأي دول تقدمون رحلات؟ | Which countries do you offer trips to?
+                    <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                        لأي دول تقدمون رحلات؟ | Which countries do you offer?
                     </button>
                 </h2>
-                <div id="faq4" class="accordion-collapse collapse" aria-labelledby="faqHeading4" data-bs-parent="#faqAccordion">
+                <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                        نرتب لك رحلات لروسيا، جورجيا، كازاخستان، أذربيجان، وأوزبكستان بكل راحة وسهولة.
-                        <br><br>
-                        We arrange trips to Russia, Georgia, Kazakhstan, Azerbaijan, and Uzbekistan with ease.
+                        أذربيجان، روسيا، جورجيا، ألبانيا، كازاخستان، أوزبكستان<br>
+                        Azerbaijan, Russia, Georgia, Albania, Kazakhstan, Uzbekistan
                     </div>
                 </div>
             </div>
-
-            <!-- سؤال 5 -->
-            <div class="accordion-item mb-3 wow fadeInUp" data-wow-delay="0.5s">
+            <div class="accordion-item mb-3">
                 <h2 class="accordion-header" id="faqHeading5">
-                    <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#faq5" aria-expanded="false" aria-controls="faq5">
-                        إذا اضطريت أكنسل الرحلة، شلون النظام؟ | What if I need to cancel?
+                    <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                        كيف ألغي الحجز؟ | What if I cancel?
                     </button>
                 </h2>
-                <div id="faq5" class="accordion-collapse collapse" aria-labelledby="faqHeading5" data-bs-parent="#faqAccordion">
+                <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                        تقدر تلغي حسب سياسة البرنامج، بنوضح لك كل الشروط من البداية عشان تكون بالصورة.
-                        <br><br>
-                        Cancellations depend on each program’s policy, and we always clarify the conditions in advance.
+                        الإلغاء حسب سياسة الشركة، تواصل معنا لمزيد من التفاصيل.<br>
+                        Cancellations depend on our policy. Please contact us for more details.
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
 </div>
 
-
-
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
-    const carousel = document.querySelector('#countryCarousel');
-    if (carousel) {
-        const carouselInstance = new bootstrap.Carousel(carousel, {
-            interval: 4000,
-            ride: 'carousel'
-        });
-    }
-</script>
+    var map = L.map('map', {
+        center: [41.8, 50.0],
+        zoom: 4.2,
+        maxBounds: [[30, 10], [60, 90]],
+        scrollWheelZoom: false
+    });
 
-<script>
-    const texts = [
-        "🌍 Explore the world with us!",
-        "✨ Luxury travel experiences",
-        "⏳ Over 10 years of trust",
-        "💼 Professional tourism services",
-        "📍 Gulf-based travel expertise"
-    ];
-    let count = 0;
-    let index = 0;
-    let currentText = '';
-    let letter = '';
-    (function type() {
-        if (count === texts.length) {
-            count = 0;
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '© OpenStreetMap'
+    }).addTo(map);
+
+    var countries = [
+        {
+            name: "Azerbaijan",
+            coords: [40.4093, 49.8671],
+            flag: "/img/azerbaijan.jpg.png",
+            link: "/Countries/Azerbaijan"
+        },
+        {
+            name: "Georgia",
+            coords: [41.7151, 44.8271],
+            flag: "/img/georgia.jpg.png",
+            link: "/Countries/Georgia"
+        },
+        {
+            name: "Albania",
+            coords: [41.3275, 19.8189],
+            flag: "/img/albania.jpg.png.png",
+            link: "/Countries/Albania"
+        },
+        {
+            name: "Kazakhstan",
+            coords: [51.1605, 71.4704],
+            flag: "/img/kazakhstan.jpg.png",
+            link: "/Countries/Kazakhstan"
+        },
+        {
+            name: "Russia",
+            coords: [55.7558, 37.6173],
+            flag: "/img/russia.jpg.png",
+            link: "/Countries/Russia"
+        },
+        {
+            name: "Uzbekistan",
+            coords: [41.3775, 64.5853],
+            flag: "/img/uzbekistan.jpg.png",
+            link: "/Countries/Uzbekistan"
         }
+    ];
+
+    countries.forEach(c => {
+        var popupHtml = `
+                <img src="${c.flag}" alt="${c.name} Flag" />
+                <h6 class="mt-1">${c.name}</h6>
+                <a href="${c.link}" class="btn btn-sm btn-primary">View Page</a>
+            `;
+        var marker = L.marker(c.coords).addTo(map).bindPopup(popupHtml);
+    });
+
+    const texts = ["🌍 Explore the world with us!", "✨ Luxury travel experiences", "⏳ Over 10 years of trust", "💼 Professional tourism services", "📍 Gulf-based travel expertise"];
+    let count = 0, index = 0, currentText = '', letter = '';
+    (function type() {
+        if (count === texts.length) count = 0;
         currentText = texts[count];
         letter = currentText.slice(0, ++index);
-
         document.querySelector(".typewriter").textContent = letter;
-        if (letter.length === currentText.length) {
-            count++;
-            index = 0;
-            setTimeout(type, 2000);
-        } else {
-            setTimeout(type, 80);
-        }
+        if (letter.length === currentText.length) { count++; index = 0; setTimeout(type, 2000); }
+        else { setTimeout(type, 80); }
     })();
 </script>

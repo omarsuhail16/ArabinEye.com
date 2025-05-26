@@ -1,59 +1,60 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using System.Text.Json;
+using Microsoft.AspNetCore.Http;
+using ByArabianEye.Data;
 using ByArabianEye.Models;
+using System;
+using System.Linq;
 
 namespace ByArabianEye.Controllers
 {
     public class DashboardController : Controller
     {
-        private readonly string bookingsPath;
-        private readonly string offersPath;
-        private readonly string clientsPath;
-        private readonly IWebHostEnvironment _env;
+        private readonly ApplicationDbContext _context;
 
-        public DashboardController(IWebHostEnvironment env)
+        public DashboardController(ApplicationDbContext context)
         {
-            _env = env;
-            bookingsPath = Path.Combine(env.WebRootPath, "data", "bookings.json");
-            offersPath = Path.Combine(env.WebRootPath, "data", "offers.json");
-            clientsPath = Path.Combine(env.WebRootPath, "data", "clients.json"); // ✅ جديد
+            _context = context;
         }
 
         public IActionResult Index()
         {
             var role = HttpContext.Session.GetString("Role");
-            ViewBag.Role = role ?? "client";
 
-            if (role == "admin")
-            {
-                // ✅ قراءة البيانات
-                var bookings = ReadList<Booking>(bookingsPath);
-                var offers = ReadList<Offer>(offersPath);
-                var clients = ReadList<Client>(clientsPath);
+            // حماية الصفحة: فقط الأدمن
+            if (role != "admin")
+                return RedirectToAction("Login", "Account");
 
-                ViewBag.TotalBookings = bookings.Count;
-                ViewBag.TotalOffers = offers.Count;
-                ViewBag.TotalClients = clients.Count;
+            ViewBag.Role = role;
 
-                // ✅ إرسال القائمة إذا حبيتِ تعرضي أسماءهم في الجدول
-                ViewBag.ClientList = clients;
-            }
-            else
-            {
-                var offers = ReadList<Offer>(offersPath);
-                ViewBag.AllOffers = offers.Select(o => o.Title).ToList();
-            }
+            // إحصائيات عامة
+            ViewBag.TotalBookings = _context.Bookings.Count();
+            ViewBag.TotalOffers = _context.Offers.Count();
+            ViewBag.TotalClients = _context.Customers.Count();
+
+            var today = DateTime.Today;
+
+            // قائمة العملاء كاملة (اختياري للعرض)
+            var customers = _context.Customers.ToList();
+            ViewBag.ClientList = customers;
+
+            // العملاء القادمين خلال يومين
+            ViewBag.UpcomingArrivals = customers
+                .Where(c => (c.ArrivalDate - today).TotalDays <= 2 && (c.ArrivalDate - today).TotalDays >= 0)
+                .ToList();
+
+            // العملاء المغادرين خلال يومين
+            ViewBag.UpcomingDepartures = customers
+                .Where(c => (c.DepartureDate - today).TotalDays <= 2 && (c.DepartureDate - today).TotalDays >= 0)
+                .ToList();
+
+            // جلب آخر 10 سجلات حذف حجوزات (إن وجدت)
+            var deletionLogs = _context.BookingDeletionLogs
+                .OrderByDescending(log => log.DeletedAt)
+                .Take(10)
+                .ToList();
+            ViewBag.DeletionLogs = deletionLogs;
 
             return View();
-        }
-
-        private List<T> ReadList<T>(string path)
-        {
-            if (!System.IO.File.Exists(path))
-                return new List<T>();
-
-            var json = System.IO.File.ReadAllText(path);
-            return JsonSerializer.Deserialize<List<T>>(json) ?? new List<T>();
         }
     }
 }

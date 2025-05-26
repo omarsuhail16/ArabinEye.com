@@ -5,107 +5,84 @@
     <title>@ViewData["Title"] - By Arabian Eye</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+
     <style>
-        .navbar-custom {
-            background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+        .navbar-brand img {
+            height: 60px;
+            max-height: 60px;
+            width: auto;
+            object-fit: contain;
+            border-radius: 10px;
+            margin-right: 10px;
+            box-shadow: 0 0 6px rgba(255, 255, 255, 0.2);
         }
 
-        .navbar-brand img {
-            height: 60px; /* حجم الشعار فقط */
-            width: auto;
-        }
 
         .navbar {
-            min-height: 70px; /* ارتفاع الشريط ما يتغير */
-            padding-top: 5px;
-            padding-bottom: 5px;
+            background: linear-gradient(to right, #1e1e2f, #2a2a3d);
+            border-bottom: 1px solid #333;
         }
 
-
         .nav-link {
-            color: #f1f1f1 !important;
+            color: #e0e0e0 !important;
             transition: 0.3s;
         }
 
             .nav-link:hover {
-                color: #ffd700 !important;
-                transform: scale(1.05);
+                color: #f8c146 !important;
+                text-decoration: underline;
             }
 
-        .btn-logout {
-            background-color: #dc3545;
-            color: white;
+        .dropdown-menu {
+            background-color: #2c2c3c;
             border: none;
-            padding: 6px 12px;
-            border-radius: 5px;
         }
 
-            .btn-logout:hover {
-                background-color: #c82333;
-            }
-
-        .whatsapp-float {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: #25D366;
-            color: white;
-            font-weight: bold;
-            padding: 12px 20px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-size: 16px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-            z-index: 1000;
-            transition: 0.3s ease;
+        .dropdown-item {
+            color: #fff;
         }
 
-            .whatsapp-float:hover {
-                background-color: #1ebea5;
-                transform: scale(1.05);
+            .dropdown-item:hover {
+                background-color: #3a3a4a;
             }
 
-            .whatsapp-float i {
-                margin-left: 8px;
-                font-size: 20px;
+        .btn-outline-light {
+            border-color: #fff;
+        }
+
+            .btn-outline-light:hover {
+                background-color: #f8c146;
+                color: #000;
             }
 
+        body {
+            background-color: #f7f7f7;
+        }
     </style>
 </head>
-<a href="https://wa.me/994708008007" target="_blank" class="whatsapp-float">
-    <i class="fab fa-whatsapp"></i> تواصلوا معنا-Contact us
-</a>
-
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom shadow-sm">
-        <div class="container-fluid d-flex align-items-center justify-content-between">
-            <!-- Logo لوحده -->
-            <a class="navbar-brand" asp-controller="Home" asp-action="Index">
-                <img src="~/img/1.gif" alt="Logo" style="height: 60px;">
+
+    <!-- ✅ Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top shadow-sm">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand d-flex align-items-center" asp-controller="Home" asp-action="Index">
+                <img src="~/img/logo..png" alt="Logo" />
+                <span class="fw-semibold text-light">By Arabian Eye</span>
             </a>
 
-            <!-- النص منفصل عن اللوقو -->
-            <div class="text-light text-center" style="line-height: 1.2;">
-                <span class="fw-bold" style="font-size: 1.1rem;">By Arabian Eye Group</span><br />
-                <small style="font-size: 0.8rem;">Since 2016 | أكثر من 10 سنوات خبرة</small>
-            </div>
-
-            <!-- Toggle -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <!-- Links -->
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+            <div class="collapse navbar-collapse" id="navbarMain">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item"><a class="nav-link" asp-controller="Home" asp-action="Index">🏠 Home</a></li>
                     <li class="nav-item"><a class="nav-link" asp-controller="Home" asp-action="Services">🛎️ Services</a></li>
 
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarCountries" role="button" data-bs-toggle="dropdown">
-                            🌍 Countries
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarCountries">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">🌍 Countries</a>
+                        <ul class="dropdown-menu dropdown-menu-dark">
                             <li><a class="dropdown-item" asp-controller="Countries" asp-action="Azerbaijan">Azerbaijan</a></li>
                             <li><a class="dropdown-item" asp-controller="Countries" asp-action="Georgia">Georgia</a></li>
                             <li><a class="dropdown-item" asp-controller="Countries" asp-action="Albania">Albania</a></li>
@@ -117,46 +94,43 @@
 
                     @if (Context.Session.GetString("Role") == "admin")
                     {
-                        <li class="nav-item">
-                            <a class="nav-link" asp-controller="Bookings" asp-action="Index">📅 Bookings</a>
-                        </li>
+                        <li class="nav-item"><a class="nav-link" asp-controller="Bookings" asp-action="Index">📅 Bookings</a></li>
+                        <li class="nav-item"><a class="nav-link" asp-controller="Dashboard" asp-action="Index">📊 Dashboard</a></li>
+                        <li class="nav-item"><a class="nav-link" asp-controller="Offers" asp-action="Index">🎁 Offers</a></li>
+                        <li class="nav-item"><a class="nav-link" asp-controller="Customers" asp-action="Index">👥 Customers</a></li>
                     }
-
-
-                    @* ✅ إظهار Dashboard & عروض الأدمن فقط إذا كان المستخدم Admin *@
-                    @if (Context.Session.GetString("Role") == "admin")
+                    else if (Context.Session.GetString("Role") == "client")
                     {
-                        <li class="nav-item">
-                            <a class="nav-link" asp-controller="Dashboard" asp-action="Index">📊 Dashboard</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" asp-controller="Offers" asp-action="Index">🎁 Offers</a>
-                        </li>
+                        <li class="nav-item"><a class="nav-link" asp-controller="Offers" asp-action="OffersClient">🎁 Offers</a></li>
+                        <li class="nav-item"><a class="nav-link" asp-controller="Account" asp-action="MyProfile">👤 My Profile</a></li>
                     }
                     else
                     {
-                        <li class="nav-item">
-                            <a class="nav-link" asp-controller="Offers" asp-action="OffersClient">🎁 Offers</a>
-                        </li>
+                        <li class="nav-item"><a class="nav-link" asp-controller="Account" asp-action="Login">🔐 Login</a></li>
+                        <li class="nav-item"><a class="nav-link" asp-controller="Account" asp-action="Register">📝 Register</a></li>
                     }
 
-                    <!-- Logout -->
-                    <li class="nav-item">
-                        <form method="post" asp-controller="Account" asp-action="Logout" class="d-flex">
-                            <button type="submit" class="btn btn-logout">🚪 Logout</button>
-                        </form>
-                    </li>
+                    @if (Context.Session.GetString("Role") != null)
+                    {
+                        <li class="nav-item ms-2">
+                            <form method="post" asp-controller="Account" asp-action="Logout">
+                                <button type="submit" class="btn btn-sm btn-outline-light">🚪 Logout</button>
+                            </form>
+                        </li>
+                    }
                 </ul>
             </div>
         </div>
     </nav>
 
+    <!-- ✅ محتوى الصفحة -->
     <div class="container mt-4">
         @RenderBody()
     </div>
 
+    <!-- ✅ سكربتات -->
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    @RenderSection("Scripts", required: false)
 </body>
 </html>

@@ -1,112 +1,193 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using ByArabianEye.Data;
 using ByArabianEye.Models;
-using System.Text.Json;
 
 namespace ByArabianEye.Controllers
 {
     public class BookingsController : Controller
     {
-        private readonly string _jsonPath;
+        private readonly ApplicationDbContext _context;
 
-        public BookingsController(IWebHostEnvironment env)
+        public BookingsController(ApplicationDbContext context)
         {
-            _jsonPath = Path.Combine(env.WebRootPath, "data", "bookings.json");
+            _context = context;
         }
 
-        // 🔹 قراءة كل الحجوزات من الملف
-        private List<Booking> ReadBookings()
+        // عرض الحجوزات (الإدمن فقط)
+        public async Task<IActionResult> Index()
         {
-            if (!System.IO.File.Exists(_jsonPath))
-                return new List<Booking>();
+            if (HttpContext.Session.GetString("Role") != "admin")
+                return RedirectToAction("Login", "Account");
 
-            var json = System.IO.File.ReadAllText(_jsonPath);
-            return JsonSerializer.Deserialize<List<Booking>>(json) ?? new List<Booking>();
-        }
-
-        // 🔸 حفظ الحجوزات في الملف
-        private void SaveBookings(List<Booking> bookings)
-        {
-            var json = JsonSerializer.Serialize(bookings, new JsonSerializerOptions { WriteIndented = true });
-            System.IO.File.WriteAllText(_jsonPath, json);
-        }
-
-        public IActionResult Index()
-        {
-            var bookings = ReadBookings();
+            var bookings = await _context.Bookings.ToListAsync();
             return View(bookings);
         }
 
-        public IActionResult Create(string country, string hotel)
+        // عرض صفحة إنشاء حجز (للعميل)
+        public IActionResult Create(string country = null, string hotel = null)
         {
-            ViewBag.Country = country;
-            ViewBag.Hotel = hotel;
+            if (HttpContext.Session.GetString("Role") != "client")
+            {
+                TempData["Error"] = "❌ يجب تسجيل الدخول كعميل للحجز.";
+                return RedirectToAction("Login", "Account");
+            }
+
+            var booking = new Booking
+            {
+                Country = country,
+                Hotel = hotel,
+                Date = DateTime.Today
+            };
+
+            return View(booking);
+        }
+
+        // تنفيذ الحجز (للعميل) - مع تعيين ClientName تلقائيًا
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Create(Booking booking)
+        {
+            if (HttpContext.Session.GetString("Role") != "client")
+            {
+                TempData["Error"] = "❌ يجب تسجيل الدخول كعميل للحجز.";
+                return RedirectToAction("Login", "Account");
+            }
+
+            if (ModelState.IsValid)
+            {
+                booking.Status = "قيد الانتظار";
+
+                // تعيين اسم العميل تلقائيًا من الجلسة
+                booking.ClientName = HttpContext.Session.GetString("FullName");
+
+                _context.Bookings.Add(booking);
+                await _context.SaveChangesAsync();
+                TempData["Success"] = "✅ تم إرسال الحجز بنجاح!";
+                return RedirectToAction("Success");
+            }
+
+            return View(booking);
+        }
+
+        // صفحة تأكيد الحجز
+        public IActionResult Success()
+        {
             return View();
         }
 
-        [HttpPost]
-        public IActionResult Create(Booking booking)
+        // تفاصيل الحجز (للإدمن فقط)
+        public async Task<IActionResult> Details(int id)
         {
-            var bookings = ReadBookings();
-            booking.Id = bookings.Any() ? bookings.Max(b => b.Id) + 1 : 1;
-            booking.Status = "Pending";
-            bookings.Add(booking);
-            SaveBookings(bookings);
-            return RedirectToAction("Index");
+            if (HttpContext.Session.GetString("Role") != "admin")
+                return RedirectToAction("Login", "Account");
+
+            var booking = await _context.Bookings.FindAsync(id);
+            return booking == null ? NotFound() : View(booking);
         }
 
-        public IActionResult Details(int id)
+        // تعديل الحجز (للإدمن والعميل مع تحقق)
+        public async Task<IActionResult> Edit(int id)
         {
-            var bookings = ReadBookings();
-            var booking = bookings.FirstOrDefault(b => b.Id == id);
-            return View(booking);
-        }
+            var role = HttpContext.Session.GetString("Role");
+            var booking = await _context.Bookings.FindAsync(id);
+            if (booking == null)
+                return NotFound();
 
-        public IActionResult Edit(int id)
-        {
-            var bookings = ReadBookings();
-            var booking = bookings.FirstOrDefault(b => b.Id == id);
-            return View(booking);
-        }
-
-        [HttpPost]
-        public IActionResult Edit(Booking updatedBooking)
-        {
-            var bookings = ReadBookings();
-            var existing = bookings.FirstOrDefault(b => b.Id == updatedBooking.Id);
-
-            if (existing != null)
+            if (role == "client")
             {
-                existing.ClientName = updatedBooking.ClientName;
-                existing.Country = updatedBooking.Country;
-                existing.PackageType = updatedBooking.PackageType;
-                existing.Date = updatedBooking.Date;
-                existing.PeopleCount = updatedBooking.PeopleCount;
-                existing.Status = updatedBooking.Status;
-
-                SaveBookings(bookings);
+                var name = HttpContext.Session.GetString("FullName");
+                if (booking.ClientName != name)
+                    return Unauthorized();
+            }
+            else if (role != "admin")
+            {
+                return RedirectToAction("Login", "Account");
             }
 
-            return RedirectToAction("Index");
-        }
-
-        public IActionResult Delete(int id)
-        {
-            var bookings = ReadBookings();
-            var booking = bookings.FirstOrDefault(b => b.Id == id);
             return View(booking);
         }
 
         [HttpPost]
-        public IActionResult ConfirmDelete(int id)
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit(Booking updatedBooking)
         {
-            var bookings = ReadBookings();
-            var booking = bookings.FirstOrDefault(b => b.Id == id);
-            if (booking != null)
+            var role = HttpContext.Session.GetString("Role");
+            var existing = await _context.Bookings.FindAsync(updatedBooking.Id);
+            if (existing == null)
+                return NotFound();
+
+            if (role == "client")
             {
-                bookings.Remove(booking);
-                SaveBookings(bookings);
+                var name = HttpContext.Session.GetString("FullName");
+                if (existing.ClientName != name)
+                    return Unauthorized();
             }
-            return RedirectToAction("Index");
+            else if (role != "admin")
+            {
+                return RedirectToAction("Login", "Account");
+            }
+
+            existing.Country = updatedBooking.Country;
+            existing.Hotel = updatedBooking.Hotel;
+            existing.PackageType = updatedBooking.PackageType;
+            existing.Date = updatedBooking.Date;
+            existing.PeopleCount = updatedBooking.PeopleCount;
+            existing.Status = updatedBooking.Status;
+
+            await _context.SaveChangesAsync();
+            TempData["Success"] = "✅ تم تحديث الحجز بنجاح!";
+
+            return role == "admin" ? RedirectToAction("Index") : RedirectToAction("MyProfile", "Account");
+        }
+
+        // حذف الحجز (للإدمن والعميل)
+        public async Task<IActionResult> Delete(int id)
+        {
+            var role = HttpContext.Session.GetString("Role");
+            var booking = await _context.Bookings.FindAsync(id);
+            if (booking == null)
+                return NotFound();
+
+            if (role == "client")
+            {
+                var name = HttpContext.Session.GetString("FullName");
+                if (booking.ClientName != name)
+                    return Unauthorized();
+            }
+            else if (role != "admin")
+            {
+                return RedirectToAction("Login", "Account");
+            }
+
+            return View(booking);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> ConfirmDelete(int id)
+        {
+            var role = HttpContext.Session.GetString("Role");
+            var booking = await _context.Bookings.FindAsync(id);
+            if (booking == null)
+                return NotFound();
+
+            if (role == "client")
+            {
+                var name = HttpContext.Session.GetString("FullName");
+                if (booking.ClientName != name)
+                    return Unauthorized();
+            }
+            else if (role != "admin")
+            {
+                return RedirectToAction("Login", "Account");
+            }
+
+            _context.Bookings.Remove(booking);
+            await _context.SaveChangesAsync();
+            TempData["Success"] = "🗑️ تم حذف الحجز بنجاح.";
+
+            return role == "admin" ? RedirectToAction("Index") : RedirectToAction("MyProfile", "Account");
         }
     }
 }

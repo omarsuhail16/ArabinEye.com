@@ -4,57 +4,82 @@
     ViewData["Title"] = "Edit Booking";
 }
 
-<div class="container my-5">
+<div class="container my-5" style="max-width: 700px;">
     <h2 class="text-center mb-4 fw-bold">✏️ تعديل الحجز | Edit Booking</h2>
+
+    @if (!ViewData.ModelState.IsValid)
+    {
+        <div class="alert alert-danger">
+            يرجى تصحيح الحقول قبل المتابعة.
+        </div>
+    }
 
     <form asp-action="Edit" method="post">
         <input type="hidden" asp-for="Id" />
 
         <div class="mb-3">
-            <label class="form-label">اسم العميل / Client Name</label>
+            <label class="form-label">👤 اسم العميل | Client Name</label>
             <input asp-for="ClientName" class="form-control" />
+            <span asp-validation-for="ClientName" class="text-danger"></span>
         </div>
 
         <div class="mb-3">
-            <label class="form-label">الدولة / Country</label>
+            <label class="form-label">🌍 الدولة | Country</label>
             <select asp-for="Country" class="form-select">
-                <option value="Azerbaijan">Azerbaijan</option>
-                <option value="Georgia">Georgia</option>
-                <option value="Russia">Russia</option>
-                <option value="Albania">Albania</option>
-                <option value="Kazakhstan">Kazakhstan</option>
-                <option value="Uzbekistan">Uzbekistan</option>
+                <option value="">اختر الدولة</option>
+                <option>Azerbaijan</option>
+                <option>Georgia</option>
+                <option>Russia</option>
+                <option>Albania</option>
+                <option>Kazakhstan</option>
+                <option>Uzbekistan</option>
             </select>
+            <span asp-validation-for="Country" class="text-danger"></span>
         </div>
 
         <div class="mb-3">
-            <label class="form-label">نوع الباقة / Package Type</label>
+            <label class="form-label">🏨 الفندق | Hotel</label>
+            <input asp-for="Hotel" class="form-control" />
+            <span asp-validation-for="Hotel" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">📦 نوع الباقة | Package Type</label>
             <select asp-for="PackageType" class="form-select">
-                <option value="Family Package">Family Package</option>
-                <option value="Youth Package">Youth Package</option>
-                <option value="Couple Package">Couple Package</option>
+                <option value="">اختر الباقة</option>
+                <option>Family Package</option>
+                <option>Youth Package</option>
+                <option>Couple Package</option>
             </select>
+            <span asp-validation-for="PackageType" class="text-danger"></span>
         </div>
 
         <div class="mb-3">
-            <label class="form-label">تاريخ الحجز / Booking Date</label>
+            <label class="form-label">📅 تاريخ الحجز | Booking Date</label>
             <input asp-for="Date" type="date" class="form-control" />
+            <span asp-validation-for="Date" class="text-danger"></span>
         </div>
 
         <div class="mb-3">
-            <label class="form-label">عدد الأشخاص / People</label>
-            <input asp-for="PeopleCount" type="number" class="form-control" />
+            <label class="form-label">👥 عدد الأشخاص | People Count</label>
+            <input asp-for="PeopleCount" type="number" class="form-control" min="1" />
+            <span asp-validation-for="PeopleCount" class="text-danger"></span>
         </div>
 
         <div class="mb-3">
-            <label class="form-label">الحالة / Status</label>
+            <label class="form-label">🟡 الحالة | Status</label>
             <select asp-for="Status" class="form-select">
-                <option value="Confirmed">Confirmed</option>
-                <option value="Pending">Pending</option>
-                <option value="Cancelled">Cancelled</option>
+                <option>Pending</option>
+                <option>Confirmed</option>
+                <option>Cancelled</option>
             </select>
+            <span asp-validation-for="Status" class="text-danger"></span>
         </div>
 
         <button type="submit" class="btn btn-success w-100">💾 حفظ التعديلات | Save Changes</button>
     </form>
 </div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

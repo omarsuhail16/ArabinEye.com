@@ -1,0 +1,49 @@
+﻿@model ByArabianEye.Models.Customer
+@{
+    ViewData["Title"] = "Edit Client";
+}
+
+<div class="container mt-4">
+    <h2>Edit Client</h2>
+
+    <form asp-action="Edit" method="post" class="mt-3">
+        <input type="hidden" asp-for="Id" />
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label class="form-label">Client Code</label>
+                <input asp-for="ClientCode" class="form-control" />
+            </div>
+            <div class="col-md-6 mb-3">
+                <label class="form-label">Client Name</label>
+                <input asp-for="ClientName" class="form-control" />
+            </div>
+            <div class="col-md-6 mb-3">
+                <label class="form-label">Phone Number</label>
+                <input asp-for="PhoneNumber" class="form-control" />
+            </div>
+            <div class="col-md-6 mb-3">
+                <label class="form-label">Country</label>
+                <input asp-for="Country" class="form-control" />
+            </div>
+            <div class="col-md-6 mb-3">
+                <label class="form-label">To</label>
+                <input asp-for="To" class="form-control" />
+            </div>
+            <div class="col-md-6 mb-3">
+                <label class="form-label">Driver Name</label>
+                <input asp-for="DriverName" class="form-control" />
+            </div>
+            <div class="col-md-6 mb-3">
+                <label class="form-label">Arrival Date</label>
+                <input asp-for="ArrivalDate" type="date" class="form-control" />
+            </div>
+            <div class="col-md-6 mb-3">
+                <label class="form-label">Departure Date</label>
+                <input asp-for="DepartureDate" type="date" class="form-control" />
+            </div>
+        </div>
+        <button type="submit" class="btn btn-warning">Save Changes</button>
+        <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+    </form>
+</div>
+ 

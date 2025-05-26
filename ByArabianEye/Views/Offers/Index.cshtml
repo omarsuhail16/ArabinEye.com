@@ -12,34 +12,117 @@
     return;
 }
 
-<div class="container my-5">
-    <h2 class="text-center fw-bold mb-4">🎁 عروض الشركة | Company Offers</h2>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
-    <div class="text-end mb-3">
-        <a asp-action="Create" class="btn btn-primary">➕ Add New Offer</a>
+<style>
+    body {
+        background: linear-gradient(to bottom right, #1b1f3b, #2b2d42);
+        font-family: 'Cairo', sans-serif;
+        color: white;
+    }
+
+    .offers-header {
+        padding: 30px 0;
+        text-align: center;
+    }
+
+        .offers-header h2 {
+            font-weight: bold;
+            color: #ffffff;
+        }
+
+    .card-offer {
+        background-color: #2b2d42;
+        color: white;
+        border: none;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+        transition: 0.3s;
+    }
+
+        .card-offer:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(255,255,255,0.15);
+        }
+
+    .card-img-top {
+        height: 220px;
+        object-fit: cover;
+    }
+
+    .btn-outline-warning, .btn-outline-danger, .btn-outline-info {
+        color: white;
+        border-color: white;
+    }
+
+        .btn-outline-warning:hover, .btn-outline-danger:hover, .btn-outline-info:hover {
+            background-color: white;
+            color: black;
+        }
+
+    .status-badge {
+        font-size: 0.75rem;
+        padding: 5px 10px;
+        border-radius: 20px;
+        font-weight: 600;
+        display: inline-block;
+        margin-top: 10px;
+    }
+
+    .badge-active {
+        background-color: #28a745;
+        color: white;
+    }
+
+    .badge-expired {
+        background-color: #dc3545;
+        color: white;
+    }
+</style>
+
+<div class="container my-5">
+    <div class="offers-header">
+        <h2>🎁 عروض الشركة | Company Offers</h2>
+        <p class="text-white-50">تحكم كامل في العروض المضافة من قبل الإدارة</p>
+        <a asp-action="Create" class="btn btn-light btn-sm mt-3">➕ إضافة عرض جديد</a>
     </div>
 
-    <div class="row">
-        @foreach (var offer in Model)
-        {
-            <div class="col-md-4 mb-4">
-                <div class="card h-100 shadow-sm">
-                    <img src="@offer.ImageUrl" class="card-img-top" style="height: 200px; object-fit: cover;" alt="Offer Image">
-                    <div class="card-body">
-                        <h5 class="card-title">@offer.Title</h5>
-                        <p class="card-text">@offer.Description</p>
-                        <p><strong>Country:</strong> @offer.Country</p>
-                        <p><strong>Type:</strong> @offer.OfferType</p>
-                        <p><strong>Days:</strong> @offer.Days</p>
-                        <p><strong>Price:</strong> $@offer.Price</p>
-                        <p><strong>Expiry:</strong> @offer.ExpiryDate.ToShortDateString()</p>
-                    </div>
-                    <div class="card-footer text-center">
-                        <a asp-action="Edit" asp-route-id="@offer.Id" class="btn btn-sm btn-outline-warning me-2">Edit</a>
-                        <a asp-action="Delete" asp-route-id="@offer.Id" class="btn btn-sm btn-outline-danger">Delete</a>
+    @if (!Model.Any())
+    {
+        <div class="alert alert-light text-center text-dark">لا توجد عروض حالياً.</div>
+    }
+    else
+    {
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+            @foreach (var offer in Model)
+            {
+                <div class="col">
+                    <div class="card card-offer h-100">
+                        <img src="@offer.ImageUrl" class="card-img-top" alt="Offer Image" />
+                        <div class="card-body">
+                            <h5 class="card-title">@offer.Title</h5>
+                            <p class="card-text">@offer.Description</p>
+                            <ul class="list-unstyled small">
+                                <li><strong>Country:</strong> @offer.Country</li>
+                                <li><strong>Type:</strong> @offer.OfferType</li>
+                                <li><strong>Days:</strong> @offer.Days</li>
+                                <li><strong>Price:</strong> $@offer.Price</li>
+                                <li><strong>Expiry:</strong> @offer.ExpiryDate.ToShortDateString()</li>
+                            </ul>
+                            <span class="status-badge @(offer.ExpiryDate >= DateTime.Today ? "badge-active" : "badge-expired")">
+                                @(offer.ExpiryDate >= DateTime.Today ? "ساري | Active" : "منتهي | Expired")
+                            </span>
+                        </div>
+                        <div class="card-footer text-center bg-transparent border-0">
+                            <a asp-action="Edit" asp-route-id="@offer.Id" class="btn btn-sm btn-outline-warning me-2"><i class="fas fa-edit"></i> Edit</a>
+                            <a asp-action="Details" asp-route-id="@offer.Id" class="btn btn-sm btn-outline-info me-2"><i class="fas fa-eye"></i> View</a>
+                            <a asp-action="Delete" asp-route-id="@offer.Id" class="btn btn-sm btn-outline-danger"><i class="fas fa-trash-alt"></i> Delete</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-        }
-    </div>
+            }
+        </div>
+    }
 </div>

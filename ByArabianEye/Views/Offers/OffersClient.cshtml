@@ -1,28 +1,104 @@
 ﻿@model List<ByArabianEye.Models.Offer>
 @{
-    ViewData["Title"] = "العروض السياحية | Travel Offers";
+    ViewData["Title"] = "Travel Offers | العروض السياحية";
 }
 
-<div class="container my-5">
-    <h2 class="mb-4 text-center fw-bold">🎁 العروض السياحية المتوفرة | Available Travel Offers</h2>
+<!-- Fonts + Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
-    <div class="row g-4">
+<div class="container-fluid dashboard-container">
+    <h2 class="text-center text-white fw-bold mb-5">🎁 Travel Offers | العروض السياحية</h2>
+
+    <div class="row justify-content-center g-4">
         @foreach (var offer in Model)
         {
-            <div class="col-md-4">
-                <div class="card h-100 shadow-sm">
-                    <img src="@offer.ImageUrl" class="card-img-top" alt="Offer Image" style="height: 200px; object-fit: cover;" />
-                    <div class="card-body text-center">
-                        <h5 class="card-title">@offer.Title</h5>
-                        <p class="text-muted">@offer.Country</p>
-                        <p class="card-text">@offer.Description</p>
-                        <p><strong>💰 السعر:</strong> $@offer.Price | <strong>⏳ الأيام:</strong> @offer.Days</p>
-                        <a asp-controller="Bookings" asp-action="Create" asp-route-country="@offer.Country" asp-route-hotel="@offer.Title" class="btn btn-success">
-                            احجز الآن | Book Now
-                        </a>
-                    </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="dashboard-card bg-dark-purple">
+                    <img src="@offer.ImageUrl" alt="Offer Image" class="img-fluid rounded mb-3" style="height: 200px; width: 100%; object-fit: cover;" />
+                    <h5>@offer.Title</h5>
+                    <p class="text-warning fw-semibold">@offer.Country</p>
+                    <p>@offer.Description</p>
+                    <p class="fw-bold mb-2">
+                        💰 $@offer.Price | ⏳ @offer.Days Days
+                    </p>
+                    <a asp-controller="Bookings" asp-action="Create"
+                       asp-route-country="@offer.Country" asp-route-hotel="@offer.Title">
+                        احجز الآن | Book Now
+                    </a>
                 </div>
             </div>
         }
     </div>
+
+    <footer class="text-center text-white mt-5 small">
+        &copy; 2025 By Arabian Eye
+    </footer>
 </div>
+
+<style>
+    body {
+        background: linear-gradient(to bottom right, #1b1f3b, #2b2d42);
+        font-family: 'Cairo', sans-serif;
+    }
+
+    .dashboard-container {
+        padding: 50px 30px;
+    }
+
+    .dashboard-card {
+        background: #fff;
+        border-radius: 15px;
+        padding: 25px 20px;
+        text-align: center;
+        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+        transition: transform 0.5s ease, box-shadow 0.5s ease;
+        color: white;
+    }
+
+        .dashboard-card:hover {
+            transform: translateY(-10px) scale(1.03);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+        }
+
+    .bg-dark-purple {
+        background: #5d3fd3;
+    }
+
+    .dashboard-card h5 {
+        font-size: 20px;
+    }
+
+    .dashboard-card a {
+        display: inline-block;
+        margin-top: 10px;
+        color: white;
+        text-decoration: none;
+        border: 1px solid white;
+        padding: 6px 15px;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+    }
+
+        .dashboard-card a:hover {
+            background-color: white;
+            color: #000;
+        }
+</style>
+
+@section Scripts {
+    <script>
+        window.onload = () => {
+            const cards = document.querySelectorAll(".dashboard-card");
+            cards.forEach((card, i) => {
+                card.style.opacity = 0;
+                card.style.transform = "translateY(20px) rotateX(10deg)";
+                setTimeout(() => {
+                    card.style.transition = "all 0.7s ease";
+                    card.style.opacity = 1;
+                    card.style.transform = "translateY(0) rotateX(0deg)";
+                }, i * 200);
+            });
+        };
+    </script>
+}

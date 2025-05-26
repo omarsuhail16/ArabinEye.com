@@ -1,101 +1,197 @@
 ﻿@{
     ViewData["Title"] = "Dashboard";
     var role = ViewBag.Role as string ?? "client";
-    var clients = ViewBag.ClientList as List<ByArabianEye.Models.Client>;
+    var clients = ViewBag.ClientList as List<ByArabianEye.Models.Customer>;
+    var arrivals = ViewBag.UpcomingArrivals as List<ByArabianEye.Models.Customer>;
+    var departures = ViewBag.UpcomingDepartures as List<ByArabianEye.Models.Customer>;
+    var deletionLogs = ViewBag.DeletionLogs as List<ByArabianEye.Models.BookingDeletionLog>;
 }
 
 @if (role == "admin")
 {
-    <div class="container my-5">
-        <h2 class="fw-bold mb-4 text-center">📊 لوحة تحكم الموظف | Admin Dashboard</h2>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
-        <div class="row g-4 text-center">
+    <div class="container-fluid dashboard-container">
+        <h2 class="text-center text-white fw-bold mb-5">لوحة تحكم الموظف | Admin Dashboard</h2>
+
+        <div class="row justify-content-center g-5">
+            <!-- الكروت الثلاثة -->
             <div class="col-md-4">
-                <div class="card shadow border-0">
-                    <div class="card-body">
-                        <h5 class="card-title">📅 Number of reservations-عدد الحجوزات</h5>
-                        <p class="display-6 fw-bold text-primary">@ViewBag.TotalBookings</p>
-                        <a asp-controller="Bookings" asp-action="Index" class="btn btn-outline-primary btn-sm">عرض الحجوزات</a>
-                    </div>
+                <div class="dashboard-card bg-dark-blue">
+                    <div class="icon"><i class="fas fa-calendar-check"></i></div>
+                    <h5> Number of bookings</h5>
+                    <h2>@ViewBag.TotalBookings</h2>
+                    <a asp-controller="Bookings" asp-action="Index">View bookings </a>
                 </div>
             </div>
 
             <div class="col-md-4">
-                <div class="card shadow border-0">
-                    <div class="card-body">
-                        <h5 class="card-title">🎁 Number of offers- عدد العروض</h5>
-                        <p class="display-6 fw-bold text-danger">@ViewBag.TotalOffers</p>
-                        <a asp-controller="Offers" asp-action="Index" class="btn btn-outline-danger btn-sm">عرض العروض</a>
-                    </div>
+                <div class="dashboard-card bg-dark-purple">
+                    <div class="icon"><i class="fas fa-gift"></i></div>
+                    <h5>Number of offers </h5>
+                    <h2>@ViewBag.TotalOffers</h2>
+                    <a asp-controller="Offers" asp-action="Index">Number of offers </a>
                 </div>
             </div>
 
             <div class="col-md-4">
-                <div class="card shadow border-0">
-                    <div class="card-body">
-                        <h5 class="card-title">👥Number of clients - عدد العملاء</h5>
-                        <p class="display-6 fw-bold text-success">@ViewBag.TotalClients</p>
-                        <a href="#clientsTable" class="btn btn-outline-success btn-sm">عرض العملاء</a>
-                    </div>
+                <div class="dashboard-card bg-dark-green">
+                    <div class="icon"><i class="fas fa-users"></i></div>
+                    <h5>Number of clients</h5>
+                    <h2>@ViewBag.TotalClients</h2>
+                    <a asp-controller="Customers" asp-action="Index">View clients</a>
                 </div>
             </div>
         </div>
 
-        <hr class="my-5" />
-
-        <!-- ✅ جدول العملاء -->
-        <div id="clientsTable">
-            <h4 class="text-center mb-4">👥 Customer list-قائمة العملاء</h4>
-
-            @if (clients != null && clients.Any())
+        <!-- 🔔 الإشعارات -->
+        <div class="row mt-5 justify-content-center">
+            @if (arrivals != null && arrivals.Count > 0)
             {
-                <table class="table table-bordered table-hover">
-                    <thead class="table-success">
-                        <tr>
-                            <th>#</th>
-                            <th> user name-اسم المستخدم</th>
-                            <th> Registration date-تاريخ التسجيل</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @for (int i = 0; i < clients.Count; i++)
-                        {
-                            <tr>
-                                <td>@(i + 1)</td>
-                                <td>@clients[i].Username</td>
-                                <td>@clients[i].RegistrationDate.ToString("yyyy-MM-dd")</td>
-                            </tr>
-                        }
-                    </tbody>
-                </table>
+                <div class="col-md-8">
+                    <div class="alert alert-info shadow">
+                        <h5 class="fw-bold"><i class="fas fa-plane-arrival"></i> Clients arriving in the next two days:</h5>
+                        <ul class="mb-0">
+                            @foreach (var c in arrivals)
+                            {
+                                <li><strong>@c.ClientCode</strong> - @c.ClientName (🛬 Arrival: @c.ArrivalDate.ToString("yyyy-MM-dd"))</li>
+                            }
+                        </ul>
+                    </div>
+                </div>
             }
-            else
+
+            @if (departures != null && departures.Count > 0)
             {
-                <p class="text-muted text-center">لا يوجد عملاء مسجلين حالياً.</p>
+                <div class="col-md-8">
+                    <div class="alert alert-warning shadow">
+                        <h5 class="fw-bold"><i class="fas fa-plane-departure"></i> Clients departing within two days:</h5>
+                        <ul class="mb-0">
+                            @foreach (var c in departures)
+                            {
+                                <li><strong>@c.ClientCode</strong> - @c.ClientName (🛫 Departure: @c.DepartureDate.ToString("yyyy-MM-dd"))</li>
+                            }
+                        </ul>
+                    </div>
+                </div>
             }
         </div>
-    </div>
-}
-else
-{
-    <div class="container my-5">
-        <h2 class="fw-bold mb-4 text-center">🎁 العروض المتوفرة | Available Offers</h2>
 
-        @if (ViewBag.AllOffers != null)
+        <!-- قسم جديد: سجل حذف الحجوزات -->
+        @if (deletionLogs != null && deletionLogs.Count > 0)
         {
-            <ul class="list-group">
-                @foreach (var offer in ViewBag.AllOffers as List<string>)
-                {
-                    <li class="list-group-item d-flex justify-content-between align-items-center">
-                        @offer
-                        <a asp-controller="Bookings" asp-action="Create" class="btn btn-sm btn-success">احجز الآن</a>
-                    </li>
-                }
-            </ul>
+            <div class="row mt-4 justify-content-center">
+                <div class="col-md-8">
+                    <div class="alert alert-warning shadow">
+                        <h5 class="fw-bold">⚠️ Recent Booking Deletions:</h5>
+                        <ul class="mb-0">
+                            @foreach (var log in deletionLogs)
+                            {
+                                <li>@log.ClientName deleted booking #@log.BookingId on @log.DeletedAt.ToString("yyyy-MM-dd HH:mm")</li>
+                            }
+                        </ul>
+                    </div>
+                </div>
+            </div>
         }
-        else
-        {
-            <p class="text-muted text-center">لا توجد عروض متاحة حالياً.</p>
-        }
+
+        <footer class="text-center text-white mt-5 small">
+            &copy; 2025 By Arabian Eye
+        </footer>
     </div>
+
+    <style>
+        body {
+            background: linear-gradient(to bottom right, #1b1f3b, #2b2d42);
+            font-family: 'Cairo', sans-serif;
+        }
+
+        .dashboard-container {
+            padding: 50px 30px;
+        }
+
+        .dashboard-card {
+            background: #fff;
+            border-radius: 15px;
+            padding: 30px 20px;
+            text-align: center;
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+            transition: transform 0.5s ease, box-shadow 0.5s ease;
+            color: white;
+        }
+
+            .dashboard-card:hover {
+                transform: translateY(-10px) scale(1.03) rotateZ(0deg);
+                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+            }
+
+        .bg-dark-blue:hover {
+            transform: translateY(-15px) rotateZ(2deg) scale(1.05);
+            box-shadow: 0 0 25px rgba(30, 61, 89, 0.6);
+        }
+
+        .bg-dark-purple:hover {
+            transform: translateY(-15px) rotateZ(-2deg) scale(1.05);
+            box-shadow: 0 0 25px rgba(93, 63, 211, 0.6);
+        }
+
+        .dashboard-card h2 {
+            font-size: 48px;
+            margin: 15px 0;
+        }
+
+        .dashboard-card h5 {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+
+        .dashboard-card a {
+            display: inline-block;
+            margin-top: 10px;
+            color: white;
+            text-decoration: none;
+            border: 1px solid white;
+            padding: 6px 15px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+            .dashboard-card a:hover {
+                background-color: white;
+                color: #000;
+            }
+
+        .icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .bg-dark-blue {
+            background: #1e3d59;
+        }
+
+        .bg-dark-purple {
+            background: #5d3fd3;
+        } 
+
+        .bg-dark-green {
+            background: #2c786c;
+        }
+    </style>
+
+    <script>
+        window.onload = () => {
+            const cards = document.querySelectorAll(".dashboard-card");
+            cards.forEach((card, i) => {
+                card.style.opacity = 0;
+                card.style.transform = "translateY(20px) rotateX(10deg)";
+                setTimeout(() => {
+                    card.style.transition = "all 0.7s ease";
+                    card.style.opacity = 1;
+                    card.style.transform = "translateY(0) rotateX(0deg)";
+                }, i * 200);
+            });
+        };
+    </script>
 }

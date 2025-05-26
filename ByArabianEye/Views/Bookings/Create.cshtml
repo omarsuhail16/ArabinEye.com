@@ -2,55 +2,75 @@
 
 @{
     ViewData["Title"] = "إضافة حجز | Create Booking";
+    var today = DateTime.Today.ToString("yyyy-MM-dd");
 }
 
 <div class="container my-5" style="max-width: 600px;">
     <h2 class="text-center mb-4 fw-bold">➕ إضافة حجز جديد | Add New Booking</h2>
 
+    @if (!ViewData.ModelState.IsValid && ViewContext.HttpContext.Request.Method == "POST")
+    {
+        <div class="alert alert-danger">
+            يرجى تصحيح الأخطاء أدناه قبل المتابعة.
+        </div>
+    }
+
     <form asp-action="Create" method="post">
+        @Html.AntiForgeryToken()
+
         <!-- اسم العميل -->
         <div class="mb-3">
-            <label class="form-label">اسم العميل | Client Name</label>
-            <input asp-for="ClientName" class="form-control" placeholder="أدخل اسم العميل" required />
+            <label asp-for="ClientName" class="form-label">👤 اسم العميل | Client Name</label>
+            <input asp-for="ClientName" class="form-control" placeholder="أدخل اسم العميل" />
+            <span asp-validation-for="ClientName" class="text-danger"></span>
         </div>
 
         <!-- الدولة -->
         <div class="mb-3">
-            <label class="form-label">الدولة | Country</label>
-            <input asp-for="Country" class="form-control" value="@ViewBag.Country" placeholder="أدخل الدولة" required />
+            <label asp-for="Country" class="form-label">🌍 الدولة | Country</label>
+            <input asp-for="Country" class="form-control" placeholder="أدخل الدولة" />
+            <span asp-validation-for="Country" class="text-danger"></span>
         </div>
 
         <!-- الفندق -->
         <div class="mb-3">
-            <label class="form-label">الفندق | Hotel</label>
-            <input asp-for="Hotel" class="form-control" value="@ViewBag.Hotel" placeholder="اسم الفندق" required />
+            <label asp-for="Hotel" class="form-label">🏨 الفندق | Hotel</label>
+            <input asp-for="Hotel" class="form-control" placeholder="اسم الفندق" />
+            <span asp-validation-for="Hotel" class="text-danger"></span>
         </div>
 
         <!-- نوع الباقة -->
         <div class="mb-3">
-            <label class="form-label">نوع الباقة | Package Type</label>
-            <select asp-for="PackageType" class="form-select" required>
-                <option value="">اختر الباقة</option>
+            <label asp-for="PackageType" class="form-label">📦 نوع الباقة | Package Type</label>
+            <select asp-for="PackageType" class="form-select">
+                <option value="">اختر نوع الباقة</option>
                 <option>Family</option>
                 <option>Youth</option>
                 <option>Luxury</option>
                 <option>Group</option>
             </select>
+            <span asp-validation-for="PackageType" class="text-danger"></span>
         </div>
 
         <!-- التاريخ -->
         <div class="mb-3">
-            <label class="form-label">📅 التاريخ | Date</label>
-            <input asp-for="Date" class="form-control" type="date" required />
+            <label asp-for="Date" class="form-label">📅 التاريخ | Date</label>
+            <input asp-for="Date" class="form-control" type="date" value="@Model.Date.ToString("yyyy-MM-dd")" />
+            <span asp-validation-for="Date" class="text-danger"></span>
         </div>
 
         <!-- عدد الأشخاص -->
         <div class="mb-3">
-            <label class="form-label">👥 عدد الأشخاص | People</label>
-            <input asp-for="PeopleCount" class="form-control" type="number" min="1" required />
+            <label asp-for="PeopleCount" class="form-label">👥 عدد الأشخاص | People</label>
+            <input asp-for="PeopleCount" class="form-control" type="number" min="1" />
+            <span asp-validation-for="PeopleCount" class="text-danger"></span>
         </div>
 
-        <!-- زر الإرسال -->
+        <!-- زر التأكيد -->
         <button type="submit" class="btn btn-success w-100">✔️ تأكيد الحجز | Confirm Booking</button>
     </form>
 </div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

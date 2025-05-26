@@ -1,0 +1,78 @@
+﻿@model ByArabianEye.Models.User
+
+@{
+    ViewData["Title"] = "Edit Profile";
+}
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+<div class="container mt-5 profile-container">
+    <h2 class="text-center text-white fw-bold mb-5">✏️ Edit Profile</h2>
+
+    <form asp-action="EditProfile" method="post" class="card shadow p-4 mx-auto" style="max-width: 600px; border-radius: 15px; background-color: #1e3d59;">
+        <div class="mb-3">
+            <label asp-for="FullName" class="form-label text-white">Full Name</label>
+            <input asp-for="FullName" class="form-control input-dark" />
+            <span asp-validation-for="FullName" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Email" class="form-label text-white">Email</label>
+            <input asp-for="Email" class="form-control input-dark" />
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Password" class="form-label text-white">Password (leave blank if no change)</label>
+            <input asp-for="Password" type="password" class="form-control input-dark" autocomplete="new-password" />
+            <span asp-validation-for="Password" class="text-danger"></span>
+        </div>
+
+        <button type="submit" class="btn btn-success w-100">💾 Save Changes</button>
+        <a asp-action="MyProfile" class="btn btn-outline-light w-100 mt-3">⬅️ Cancel</a>
+    </form>
+</div>
+
+<style>
+    body {
+        background: linear-gradient(to bottom right, #1b1f3b, #2b2d42);
+        font-family: 'Cairo', sans-serif;
+    }
+
+    .input-dark {
+        background-color: #244a7a;
+        color: white;
+        border: 1px solid #1e3d59;
+        border-radius: 6px;
+    }
+
+        .input-dark::placeholder {
+            color: #b0b7c3;
+        }
+
+        .input-dark:focus {
+            background-color: #1e3d59;
+            color: white;
+            border-color: #5d3fd3;
+            box-shadow: 0 0 8px #5d3fd3;
+        }
+
+    label {
+        font-weight: 600;
+    }
+
+    .btn-outline-light {
+        border-color: white;
+        color: white;
+    }
+
+        .btn-outline-light:hover {
+            background-color: white;
+            color: #000;
+        }
+</style>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

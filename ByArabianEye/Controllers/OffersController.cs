@@ -1,120 +1,146 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using ByArabianEye.Models;
-using System.Text.Json;
+using ByArabianEye.Data;
 
 namespace ByArabianEye.Controllers
 {
     public class OffersController : Controller
     {
-        private readonly string dataPath;
+        private readonly ApplicationDbContext _context;
+        private readonly IWebHostEnvironment _env;
 
-        public OffersController(IWebHostEnvironment env)
+        public OffersController(ApplicationDbContext context, IWebHostEnvironment env)
         {
-            dataPath = Path.Combine(env.WebRootPath, "data", "offers.json");
+            _context = context;
+            _env = env;
         }
 
-        public IActionResult Index()
+        // ✅ عرض العروض للعميل
+        public IActionResult OffersClient()
         {
-            var offers = ReadOffers();
+            var offers = _context.Offers.ToList();
+            return View(offers); // يتوقع OffersClient.cshtml في Views/Offers
+        }
+
+        // ✅ عرض كل العروض للمسؤول
+        public async Task<IActionResult> Index()
+        {
+            var offers = await _context.Offers.ToListAsync();
             return View(offers);
         }
 
-        public IActionResult OffersClient()
-        {
-            var offers = ReadOffers();
-            return View("OffersClient", offers);
-        }
-
+        // ✅ عرض صفحة إنشاء عرض جديد
         public IActionResult Create()
         {
             return View();
         }
 
+        // ✅ إضافة عرض جديد
         [HttpPost]
-        public IActionResult Create(Offer offer, IFormFile ImageFile)
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Create(Offer offer, IFormFile ImageFile)
         {
-            var offers = ReadOffers();
-            offer.Id = offers.Any() ? offers.Max(o => o.Id) + 1 : 1;
-
-            if (ImageFile != null && ImageFile.Length > 0)
+            if (ModelState.IsValid)
             {
-                var fileName = $"{Guid.NewGuid()}{Path.GetExtension(ImageFile.FileName)}";
-                var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "img", fileName);
-
-                using (var stream = new FileStream(filePath, FileMode.Create))
+                if (ImageFile != null && ImageFile.Length > 0)
                 {
-                    ImageFile.CopyTo(stream);
+                    var fileName = $"{Guid.NewGuid()}{Path.GetExtension(ImageFile.FileName)}";
+                    var filePath = Path.Combine(_env.WebRootPath, "img", fileName);
+
+                    using (var stream = new FileStream(filePath, FileMode.Create))
+                    {
+                        await ImageFile.CopyToAsync(stream);
+                    }
+
+                    offer.ImageUrl = $"/img/{fileName}";
                 }
 
-                offer.ImageUrl = $"/img/{fileName}";
+                _context.Offers.Add(offer);
+                await _context.SaveChangesAsync();
+
+                TempData["Success"] = "✅ Offer added successfully!";
+                return RedirectToAction(nameof(Index));
             }
 
-            offers.Add(offer);
-            System.IO.File.WriteAllText(dataPath, JsonSerializer.Serialize(offers, new JsonSerializerOptions { WriteIndented = true }));
-
-            TempData["Success"] = "✅ Offer added successfully!";
-            return RedirectToAction("Index");
+            return View(offer);
         }
 
-        public IActionResult Details(int id)
+        // ✅ عرض تفاصيل عرض معين
+        public async Task<IActionResult> Details(int id)
         {
-            var offer = ReadOffers().FirstOrDefault(o => o.Id == id);
+            var offer = await _context.Offers.FindAsync(id);
             return offer == null ? NotFound() : View(offer);
         }
 
-        public IActionResult Edit(int id)
+        // ✅ عرض صفحة تعديل عرض
+        public async Task<IActionResult> Edit(int id)
         {
-            var offer = ReadOffers().FirstOrDefault(o => o.Id == id);
+            var offer = await _context.Offers.FindAsync(id);
             return offer == null ? NotFound() : View(offer);
         }
 
+        // ✅ تنفيذ التعديل
         [HttpPost]
-        public IActionResult Edit(Offer updatedOffer)
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit(Offer updatedOffer, IFormFile? ImageFile)
         {
-            var offers = ReadOffers();
-            var existing = offers.FirstOrDefault(o => o.Id == updatedOffer.Id);
-            if (existing == null) return NotFound();
-
-            existing.Title = updatedOffer.Title;
-            existing.Description = updatedOffer.Description;
-            existing.Country = updatedOffer.Country;
-            existing.OfferType = updatedOffer.OfferType;
-            existing.Price = updatedOffer.Price;
-            existing.Days = updatedOffer.Days;
-            existing.ExpiryDate = updatedOffer.ExpiryDate;
-            // ملاحظة: لا نغير الصورة إلا إذا أضفنا رفع جديد
-
-            System.IO.File.WriteAllText(dataPath, JsonSerializer.Serialize(offers, new JsonSerializerOptions { WriteIndented = true }));
-            TempData["Success"] = "✅ Offer updated successfully!";
-            return RedirectToAction("Index");
-        }
-
-        public IActionResult Delete(int id)
-        {
-            var offer = ReadOffers().FirstOrDefault(o => o.Id == id);
-            return offer == null ? NotFound() : View(offer);
-        }
-
-        [HttpPost]
-        public IActionResult ConfirmDelete(int id)
-        {
-            var offers = ReadOffers();
-            var offer = offers.FirstOrDefault(o => o.Id == id);
+            var offer = await _context.Offers.FindAsync(updatedOffer.Id);
             if (offer == null) return NotFound();
 
-            offers.Remove(offer);
-            System.IO.File.WriteAllText(dataPath, JsonSerializer.Serialize(offers, new JsonSerializerOptions { WriteIndented = true }));
-            TempData["Success"] = "🗑️ Offer deleted successfully!";
-            return RedirectToAction("Index");
+            if (ModelState.IsValid)
+            {
+                offer.Title = updatedOffer.Title;
+                offer.Description = updatedOffer.Description;
+                offer.Country = updatedOffer.Country;
+                offer.OfferType = updatedOffer.OfferType;
+                offer.Price = updatedOffer.Price;
+                offer.Days = updatedOffer.Days;
+                offer.ExpiryDate = updatedOffer.ExpiryDate;
+
+                if (ImageFile != null && ImageFile.Length > 0)
+                {
+                    var fileName = $"{Guid.NewGuid()}{Path.GetExtension(ImageFile.FileName)}";
+                    var filePath = Path.Combine(_env.WebRootPath, "img", fileName);
+
+                    using (var stream = new FileStream(filePath, FileMode.Create))
+                    {
+                        await ImageFile.CopyToAsync(stream);
+                    }
+
+                    offer.ImageUrl = $"/img/{fileName}";
+                }
+
+                _context.Offers.Update(offer);
+                await _context.SaveChangesAsync();
+
+                TempData["Success"] = "✅ Offer updated successfully!";
+                return RedirectToAction(nameof(Index));
+            }
+
+            return View(updatedOffer);
         }
 
-        private List<Offer> ReadOffers()
+        // ✅ عرض صفحة تأكيد الحذف
+        public async Task<IActionResult> Delete(int id)
         {
-            if (!System.IO.File.Exists(dataPath))
-                return new List<Offer>();
+            var offer = await _context.Offers.FindAsync(id);
+            return offer == null ? NotFound() : View(offer);
+        }
 
-            var json = System.IO.File.ReadAllText(dataPath);
-            return JsonSerializer.Deserialize<List<Offer>>(json) ?? new List<Offer>();
+        // ✅ تنفيذ الحذف
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> ConfirmDelete(int id)
+        {
+            var offer = await _context.Offers.FindAsync(id);
+            if (offer == null) return NotFound();
+
+            _context.Offers.Remove(offer);
+            await _context.SaveChangesAsync();
+
+            TempData["Success"] = "🗑️ Offer deleted successfully!";
+            return RedirectToAction(nameof(Index));
         }
     }
 }

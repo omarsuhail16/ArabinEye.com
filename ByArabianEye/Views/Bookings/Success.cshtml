@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "تأكيد الحجز | Booking Confirmation";
+}
+
+<div class="container text-center my-5" style="max-width: 600px;">
+    <h2 class="fw-bold text-success mb-4">
+        ✅ تم تأكيد الحجز بنجاح! <br />
+        <small class="text-muted">Booking Confirmed Successfully!</small>
+    </h2>
+
+    <p class="lead mb-4">
+        شكرًا لتواصلك معنا، سيتم التواصل معك قريبًا لتأكيد التفاصيل.<br />
+        <span class="text-muted">Thank you for your booking. We will contact you soon to confirm the details.</span>
+    </p>
+
+    <div class="mt-4">
+        <a asp-controller="Home" asp-action="Index" class="btn btn-primary me-2">
+            🏠 العودة للصفحة الرئيسية | Home
+        </a>
+        <a asp-controller="Bookings" asp-action="Create" class="btn btn-outline-secondary">
+            ➕ إضافة حجز جديد | Book Another
+        </a>
+    </div>
+</div>
