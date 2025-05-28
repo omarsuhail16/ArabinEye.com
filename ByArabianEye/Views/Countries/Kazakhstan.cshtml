@@ -3,8 +3,19 @@
 }
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 
 <style>
+    body {
+        font-family: 'Cairo', sans-serif;
+        background: linear-gradient(to right, #141e30, #243b55);
+        color: #fff;
+        overflow-x: hidden;
+    }
+
     .section {
         margin-bottom: 60px;
     }
@@ -12,106 +23,166 @@
         .section h3 {
             font-weight: bold;
             margin-bottom: 20px;
+            color: #00d4ff;
+        }
+
+    .card {
+        background-color: #1e2a38;
+        color: #fff;
+        border: none;
+        border-radius: 15px;
+        transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+        .card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 12px 30px rgba(0, 212, 255, 0.3);
         }
 
     .card-img-top {
         height: 200px;
         object-fit: cover;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
     }
 
     .carousel {
-        max-width: 700px;
+        max-width: 900px;
         margin: auto;
     }
 
     .carousel-item img {
-        width: 640px;
-        height: 427px;
+        width: 100%;
+        height: 450px;
         object-fit: cover;
         border-radius: 15px;
-        margin: auto;
+        animation: fadeIn 1.5s ease-in-out;
     }
+
+    keyframes fadeIn {
+        from
+
+    {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    }
+
+    .highlight-box {
+        background: #00d4ff;
+        color: #000;
+        padding: 30px;
+        border-radius: 15px;
+        text-align: center;
+        animation: pulse 2s infinite;
+    }
+
+    keyframes pulse {
+        0%, 100%
+
+    {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.03);
+    }
+
+    }
+
+    .btn-custom {
+        background-color: #00d4ff;
+        border: none;
+        color: #000;
+        padding: 10px 25px;
+        font-weight: bold;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+    }
+
+        .btn-custom:hover {
+            background-color: #fff;
+            color: #00d4ff;
+            transform: scale(1.08) rotate(1deg);
+        }
 </style>
 
 <div class="container mt-5">
-
-    <!-- 🇰🇿 مقدمة -->
-    <div class="section text-center">
-        <h3>🇰🇿 كازاخستان | Kazakhstan</h3>
-        <p class="fs-5">
-            كازاخستان دولة رائعة ذات تاريخ غني ومناظر طبيعية خلابة ومدن عصرية.
-            <br />Kazakhstan is a beautiful country with rich history, stunning nature, and modern cities.
+    <!-- Hero Section -->
+    <div class="section text-center mb-5" data-aos="zoom-in" data-aos-duration="1200">
+        <img src="/img/kazakhstan_header_resized.jpg" class="img-fluid rounded shadow mb-4 animate__animated animate__fadeInDown" style="max-height: 400px; object-fit: cover;">
+        <h1 class="fw-bold text-info animate__animated animate__fadeInUp"> Kazakhstan</h1>
+        <p class="fs-5 text-light animate__animated animate__fadeInUp animate__delay-1s">
+            كازاخستان هي لؤلؤة القوقاز، تجمع بين الثقافة الإسلامية والحداثة مع طبيعة ساحرة.
+            <br />Kazakhstan is the pearl of the Caucasus, blending Islamic culture with modernity and nature.
         </p>
     </div>
 
-    <!-- 📸 سلايدر صور -->
-    <div class="section">
-        <div id="kazakhstanCarousel" class="carousel slide" data-bs-ride="carousel">
+    <!-- Image Slider -->
+    <div class="section" data-aos="fade-up" data-aos-delay="200">
+        <div id="azerCarousel" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="~/img/almaty.jpg" class="d-block w-100" alt="Almaty" />
+                    <img src="~/img/almaty.jpg" class="d-block w-100" alt="Baku" />
                 </div>
                 <div class="carousel-item">
-                    <img src="~/img/astana.jpg" class="d-block w-100" alt="Astana" />
+                    <img src="~/img/astana.jpg" class="d-block w-100" alt="Nature" />
                 </div>
                 <div class="carousel-item">
-                    <img src="~/img/shymkent.jpg" class="d-block w-100" alt="Shymkent" />
+                    <img src="~/img/shymkent.jpg" class="d-block w-100" alt="Culture" />
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#kazakhstanCarousel" data-bs-slide="prev">
+            <button class="carousel-control-prev" type="button" data-bs-target="#azerCarousel" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon bg-dark rounded-circle"></span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#kazakhstanCarousel" data-bs-slide="next">
+            <button class="carousel-control-next" type="button" data-bs-target="#azerCarousel" data-bs-slide="next">
                 <span class="carousel-control-next-icon bg-dark rounded-circle"></span>
             </button>
         </div>
     </div>
 
-    <!-- 🏙️ المدن السياحية -->
-    <div class="section">
+    <!-- Cities Section -->
+    <div class="section" data-aos="fade-up">
         <h3 class="text-center">🏙️ المدن السياحية | Famous Cities</h3>
         <div class="row g-4">
             <div class="col-md-4">
                 <div class="card h-100">
-                    <img src="~/img/almaty.jpg" class="card-img-top" alt="Almaty" />
+                    <img src="~/img/almaty.jpg" class="card-img-top" alt="Baku" />
                     <div class="card-body text-center">
                         <h5 class="card-title">ألماتي | Almaty</h5>
-                        <p>
-                            أكبر مدينة في كازاخستان ومركز ثقافي وتجاري
-                            <br />Kazakhstan’s largest city, cultural and business hub.
-                        </p>
+                        <p>أكبر مدن كازاخستان، تجمع بين الطبيعة والحداثة.</p>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="card h-100">
-                    <img src="~/img/astana.jpg" class="card-img-top" alt="Astana" />
+                    <img src="~/img/astana.jpg" class="card-img-top" alt="Gabala" />
                     <div class="card-body text-center">
                         <h5 class="card-title">أستانا | Astana</h5>
-                        <p>
-                            العاصمة الحديثة، مشهورة بمعمارها المستقبلي
-                            <br />Modern capital with futuristic architecture.
-                        </p>
+                        <p>العاصمة الحديثة ذات الأبراج الزجاجية والمشاريع المستقبلية.</p>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="card h-100">
-                    <img src="~/img/shymkent.jpg" class="card-img-top" alt="Shymkent" />
+                    <img src="~/img/shymkent.jpg" class="card-img-top" alt="Quba" />
                     <div class="card-body text-center">
                         <h5 class="card-title">شيمكنت | Shymkent</h5>
-                        <p>
-                            مدينة تاريخية ذات ثقافة نابضة وأسواق تقليدية
-                            <br />Historic city with vibrant culture and markets.
-                        </p>
+                        <p>مدينة ثقافية تقع جنوب كازاخستان، مليئة بالأسواق والطبيعة.</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- 🏨 أفضل الفنادق -->
-    <div class="section">
+    <!-- Hotels Section -->
+    <div class="section" data-aos="fade-up">
         <h3 class="text-center">🏨 أفضل الفنادق | Top Hotels</h3>
         <div class="row g-4">
             <div class="col-md-4">
@@ -120,6 +191,7 @@
                     <div class="card-body text-center">
                         <h5 class="card-title">Ritz-Carlton Almaty</h5>
                         <a href="#" class="btn btn-outline-primary btn-sm">Visit Hotel</a>
+
                     </div>
                 </div>
             </div>
@@ -129,6 +201,7 @@
                     <div class="card-body text-center">
                         <h5 class="card-title">Rixos President Hotel Astana</h5>
                         <a href="#" class="btn btn-outline-primary btn-sm">Visit Hotel</a>
+
                     </div>
                 </div>
             </div>
@@ -138,52 +211,120 @@
                     <div class="card-body text-center">
                         <h5 class="card-title">Rixos Khadisha Shymkent</h5>
                         <a href="#" class="btn btn-outline-primary btn-sm">Visit Hotel</a>
+
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- 🎁 العرض السياحي الخاص بكازاخستان -->
-    <div class="section">
-        <h3 class="text-center">🎁 العرض السياحي الخاص بكازاخستان | Special Offer</h3>
-        <div class="row justify-content-center align-items-center">
-            <!-- صورة العرض -->
-            <div class="col-lg-6 text-center mb-4 mb-lg-0">
-                <img src="~/img/kazakhstan_offer.jpg.png"
-                     alt="Kazakhstan Offer"
-                     style="width: 640px; height: 550px; object-fit: cover; border-radius: 15px;"
-                     class="shadow" />
-            </div>
-
-            <!-- شرح العرض وزر الحجز -->
-            <div class="col-lg-6">
-                <div class="card shadow border-0 p-4">
+    <!-- 🧳 Activities Section -->
+    <div class="section" data-aos="fade-up">
+        <h3 class="text-center">🧳 أنشطة لا تفوّت | Must-See Activities</h3>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img src="~/img/Charyn-Canyon.jpg" class="card-img-top" alt="Shopping in Baku" />
                     <div class="card-body text-center">
-                        <h5 class="card-title mb-3">
-                            رحلة 7 أيام إلى ألماتي وأستانا
-                            <br />7-day trip to Almaty & Astana
-                        </h5>
-                        <p class="card-text fs-5">
-                            يشمل الإقامة بفندق 5 نجوم، رحلات سياحية ومواصلات
-                            <br />Includes 5-star hotel stay, tours & transport
-                        </p>
-                        <a href="/Bookings/Create?country=Kazakhstan&hotel=The Ritz-Carlton Almaty" class="btn btn-primary btn-lg mt-3">
-                            احجز الآن | Book Now
-                        </a>
+                        <h5 class="card-title">زيارة وادي شارين | Charyn Canyon</h5>
+                        <p>مناظر طبيعية خلابة في وادٍ يشبه جراند كانيون.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img src="~/img/Falcon-Show.jpg" class="card-img-top" alt="Azeri Hammam" />
+                    <div class="card-body text-center">
+                        <h5 class="card-title">عرض الصقور الكازاخية | Falcon Show</h5>
+                        <p>تعرف على تقاليد صيد الصقور في الريف الكازاخي.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img src="~/img/almaty-mountains.jpg" class="card-img-top" alt="Caucasus Mountains" />
+                    <div class="card-body text-center">
+                        <h5 class="card-title">جبال ألماتي | Almaty Mountains</h5>
+                        <p>استمتع برحلات مشي وتسلق في جبال تيان شان.</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
+    <!-- 🥘 Food Section -->
+    <div class="section" data-aos="fade-up">
+        <h3 class="text-center">🥘 أطباق مشهورة | Famous Dishes</h3>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img src="~/img/Beshbarmak.jpg" class="card-img-top" alt="Dolma" />
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Beshbarmak | بشبارماق</h5>
+                        <p>الطبق الوطني الكازاخي المكون من لحم مسلوق مع معكرونة.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img src="~/img/kazy.jpeg" class="card-img-top" alt="Plov" />
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Kazy | كازي</h5>
+                        <p>سجق تقليدي مصنوع من لحم الحصان – طعام شعبي.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img src="~/img/Baursak.jpg" class="card-img-top" alt="Kebab" />
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Baursak | باورساق</h5>
+                        <p>أسياخ لحم مشوية لذيذة – لا بد أن تجربها في كازاخستان.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <!-- 📸 إنستقرام وزر تواصل -->
-    <div class="section text-center">
-        <a href="https://www.instagram.com/kazakhstan_by_arabian_eye?igsh=MXdqM3Vpazl2c3E0aQ==" target="_blank" class="btn btn-danger btn-lg">
+    <!-- 🎭 Culture Section -->
+    <div class="section" data-aos="fade-up">
+        <h3 class="text-center">🎭 ثقافة كازاخستان | Kazakhstani Culture</h3>
+        <div class="text-center fs-5">
+            <p>🇦🇿 اللغة الرسمية: الكازاخستانية | Official Language: Kazakhstani</p>
+            <p>👘 اللباس التقليدي: اللباس الكازاخي المطرز | Traditional Dress: Kazakh Embroidery</p>
+            <p>🎵 الموسيقى: دومبرا وأغاني الرحّل | Music: Dombra & Nomadic Songs</p>
+        </div>
+    </div>
+
+
+    <!-- Special Offer -->
+    <div class="section" data-aos="zoom-in">
+        <h3 class="text-center">🎁 عرض مميز لكازاخستان | Special Offer</h3>
+        <div class="row align-items-center">
+            <div class="col-md-6 text-center mb-4 mb-md-0">
+                <img src="~/img/Kazakhstan.offer.jpg.png" class="img-fluid rounded shadow" alt="Kazakhstan Offer" />
+            </div>
+            <div class="col-md-6">
+                <div class="highlight-box">
+                    <h4 class="mb-3">رحلة 5 أيام إلى باكو وقوبا</h4>
+                    <p class="fs-5">يشمل الإقامة بفندق 5 نجوم، جولات يومية ومواصلات</p>
+                    <a href="/Bookings/Create?country=Kazakhstan&hotel=The Ritz-Carlton Almaty" class="btn btn-dark btn-lg">احجز الآن | Book Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Instagram and Contact -->
+    <div class="section text-center" data-aos="fade-up">
+        <a href="https://www.instagram.com/kazakhstan_by_arabian_eye" target="_blank" class="btn btn-danger btn-lg mb-3">
             📸 زورونا على إنستقرام | Visit us on Instagram
-        </a>
-        <br /><br />
-        <a href="tel:+994999009003" class="btn btn-outline-success btn-lg">📞 تواصل معنا | Contact Us</a>
+        </a><br />
+        <a href="tel:+994999009001" class="btn btn-outline-light btn-lg">📞 تواصل معنا | Contact Us</a>
     </div>
 </div>
+
+
+
+<script>
+    AOS.init();
+</script>

@@ -1,0 +1,1029 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\obj\\Release\\net7.0\\scopedcss\\projectbundle\\ByArabianEye.bundle.scp.css",
+      "PackagePath": "staticwebassets\\ByArabianEye.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\binaryadmin\\assets\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\binaryadmin\\assets\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\binaryadmin\\assets\\css\\custom.css",
+      "PackagePath": "staticwebassets\\binaryadmin\\assets\\css\\custom.css"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\binaryadmin\\assets\\css\\font-awesome.css",
+      "PackagePath": "staticwebassets\\binaryadmin\\assets\\css\\font-awesome.css"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\binaryadmin\\assets\\font-awesome\\fonts\\fontawesome-webfontba72.eot",
+      "PackagePath": "staticwebassets\\binaryadmin\\assets\\font-awesome\\fonts\\fontawesome-webfontba72.eot"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\binaryadmin\\assets\\font-awesome\\fonts\\fontawesome-webfontba72.svg",
+      "PackagePath": "staticwebassets\\binaryadmin\\assets\\font-awesome\\fonts\\fontawesome-webfontba72.svg"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\binaryadmin\\assets\\font-awesome\\fonts\\fontawesome-webfontba72.ttf",
+      "PackagePath": "staticwebassets\\binaryadmin\\assets\\font-awesome\\fonts\\fontawesome-webfontba72.ttf"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\binaryadmin\\assets\\font-awesome\\fonts\\fontawesome-webfontba72.woff",
+      "PackagePath": "staticwebassets\\binaryadmin\\assets\\font-awesome\\fonts\\fontawesome-webfontba72.woff"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\binaryadmin\\assets\\font-awesome\\fonts\\fontawesome-webfontd41d.eot",
+      "PackagePath": "staticwebassets\\binaryadmin\\assets\\font-awesome\\fonts\\fontawesome-webfontd41d.eot"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\binaryadmin\\assets\\fonts\\glyphicons-halflings-regular.eot",
+      "PackagePath": "staticwebassets\\binaryadmin\\assets\\fonts\\glyphicons-halflings-regular.eot"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\binaryadmin\\assets\\fonts\\glyphicons-halflings-regular.svg",
+      "PackagePath": "staticwebassets\\binaryadmin\\assets\\fonts\\glyphicons-halflings-regular.svg"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\binaryadmin\\assets\\fonts\\glyphicons-halflings-regular.ttf",
+      "PackagePath": "staticwebassets\\binaryadmin\\assets\\fonts\\glyphicons-halflings-regular.ttf"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\binaryadmin\\assets\\fonts\\glyphicons-halflings-regular.woff",
+      "PackagePath": "staticwebassets\\binaryadmin\\assets\\fonts\\glyphicons-halflings-regular.woff"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\binaryadmin\\assets\\fonts\\glyphicons-halflings-regulard41d.eot",
+      "PackagePath": "staticwebassets\\binaryadmin\\assets\\fonts\\glyphicons-halflings-regulard41d.eot"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\binaryadmin\\assets\\img\\1.png",
+      "PackagePath": "staticwebassets\\binaryadmin\\assets\\img\\1.png"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\binaryadmin\\assets\\img\\2.png",
+      "PackagePath": "staticwebassets\\binaryadmin\\assets\\img\\2.png"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\binaryadmin\\assets\\img\\3.png",
+      "PackagePath": "staticwebassets\\binaryadmin\\assets\\img\\3.png"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\binaryadmin\\assets\\img\\4.png",
+      "PackagePath": "staticwebassets\\binaryadmin\\assets\\img\\4.png"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\binaryadmin\\assets\\img\\find_user.png",
+      "PackagePath": "staticwebassets\\binaryadmin\\assets\\img\\find_user.png"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\binaryadmin\\assets\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\binaryadmin\\assets\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\binaryadmin\\assets\\js\\custom.js",
+      "PackagePath": "staticwebassets\\binaryadmin\\assets\\js\\custom.js"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\binaryadmin\\assets\\js\\dataTables\\dataTables.bootstrap.css",
+      "PackagePath": "staticwebassets\\binaryadmin\\assets\\js\\dataTables\\dataTables.bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\binaryadmin\\assets\\js\\dataTables\\dataTables.bootstrap.js",
+      "PackagePath": "staticwebassets\\binaryadmin\\assets\\js\\dataTables\\dataTables.bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\binaryadmin\\assets\\js\\dataTables\\jquery.dataTables.js",
+      "PackagePath": "staticwebassets\\binaryadmin\\assets\\js\\dataTables\\jquery.dataTables.js"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\binaryadmin\\assets\\js\\jquery-1.10.2.js",
+      "PackagePath": "staticwebassets\\binaryadmin\\assets\\js\\jquery-1.10.2.js"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\binaryadmin\\assets\\js\\jquery.metisMenu.js",
+      "PackagePath": "staticwebassets\\binaryadmin\\assets\\js\\jquery.metisMenu.js"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\binaryadmin\\assets\\js\\morris\\morris-0.4.3.min.css",
+      "PackagePath": "staticwebassets\\binaryadmin\\assets\\js\\morris\\morris-0.4.3.min.css"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\binaryadmin\\assets\\js\\morris\\morris.js",
+      "PackagePath": "staticwebassets\\binaryadmin\\assets\\js\\morris\\morris.js"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\binaryadmin\\assets\\js\\morris\\raphael-2.1.0.min.js",
+      "PackagePath": "staticwebassets\\binaryadmin\\assets\\js\\morris\\raphael-2.1.0.min.js"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\1.gif",
+      "PackagePath": "staticwebassets\\img\\1.gif"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\66a14746-4c14-403f-8f3e-0ccb3aa74e60.png",
+      "PackagePath": "staticwebassets\\img\\66a14746-4c14-403f-8f3e-0ccb3aa74e60.png"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\9f5a3897-6edf-48e0-96aa-bb915378f745.png",
+      "PackagePath": "staticwebassets\\img\\9f5a3897-6edf-48e0-96aa-bb915378f745.png"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\Albania.header.webp",
+      "PackagePath": "staticwebassets\\img\\Albania.header.webp"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\Azerbaijan.offer.jpg.png",
+      "PackagePath": "staticwebassets\\img\\Azerbaijan.offer.jpg.png"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\Baursak.jpg",
+      "PackagePath": "staticwebassets\\img\\Baursak.jpg"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\Beach-Relaxation.jpeg",
+      "PackagePath": "staticwebassets\\img\\Beach-Relaxation.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\Beef-Stroganoff.jpg",
+      "PackagePath": "staticwebassets\\img\\Beef-Stroganoff.jpg"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\Berat-Castle.png",
+      "PackagePath": "staticwebassets\\img\\Berat-Castle.png"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\Beshbarmak.jpg",
+      "PackagePath": "staticwebassets\\img\\Beshbarmak.jpg"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\Borscht.jpg",
+      "PackagePath": "staticwebassets\\img\\Borscht.jpg"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\Bukhara.jpg",
+      "PackagePath": "staticwebassets\\img\\Bukhara.jpg"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\Butrint-Ruins.jpg",
+      "PackagePath": "staticwebassets\\img\\Butrint-Ruins.jpg"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\Byrek.jpg",
+      "PackagePath": "staticwebassets\\img\\Byrek.jpg"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\Charyn-Canyon.jpg",
+      "PackagePath": "staticwebassets\\img\\Charyn-Canyon.jpg"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\Chorsu-uz.jpg",
+      "PackagePath": "staticwebassets\\img\\Chorsu-uz.jpg"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\Chorsu.jpeg",
+      "PackagePath": "staticwebassets\\img\\Chorsu.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\Falcon-Show.jpg",
+      "PackagePath": "staticwebassets\\img\\Falcon-Show.jpg"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\Fërgesë.jpg",
+      "PackagePath": "staticwebassets\\img\\Fërgesë.jpg"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\Georgia.header.jpg",
+      "PackagePath": "staticwebassets\\img\\Georgia.header.jpg"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\Hotel Grand SamarKanad.jpg",
+      "PackagePath": "staticwebassets\\img\\Hotel Grand SamarKanad.jpg"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\Hyatt-Regency-Tashkent.jpg",
+      "PackagePath": "staticwebassets\\img\\Hyatt-Regency-Tashkent.jpg"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\Kazakhstan.header.jpg",
+      "PackagePath": "staticwebassets\\img\\Kazakhstan.header.jpg"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\Khachapuri.avif",
+      "PackagePath": "staticwebassets\\img\\Khachapuri.avif"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\Khachapuri1.jpg",
+      "PackagePath": "staticwebassets\\img\\Khachapuri1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\Khinkali.jpg",
+      "PackagePath": "staticwebassets\\img\\Khinkali.jpg"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\Lobio.jpg",
+      "PackagePath": "staticwebassets\\img\\Lobio.jpg"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\Lotte City Hotel.jpg",
+      "PackagePath": "staticwebassets\\img\\Lotte City Hotel.jpg"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\Narikala_Fortress.jpg",
+      "PackagePath": "staticwebassets\\img\\Narikala_Fortress.jpg"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\Osh.jpg",
+      "PackagePath": "staticwebassets\\img\\Osh.jpg"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\Pelmeni.webp",
+      "PackagePath": "staticwebassets\\img\\Pelmeni.webp"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\Russian-allet.jpg",
+      "PackagePath": "staticwebassets\\img\\Russian-allet.jpg"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\Samarkand.jpg",
+      "PackagePath": "staticwebassets\\img\\Samarkand.jpg"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\Seeing-from-Gergeti.jpg",
+      "PackagePath": "staticwebassets\\img\\Seeing-from-Gergeti.jpg"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\Shashlik.jpg",
+      "PackagePath": "staticwebassets\\img\\Shashlik.jpg"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\Sulfur_Baths.jpg",
+      "PackagePath": "staticwebassets\\img\\Sulfur_Baths.jpg"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\Tashkent.jpg",
+      "PackagePath": "staticwebassets\\img\\Tashkent.jpg"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\Tavë-Kosi.jpg",
+      "PackagePath": "staticwebassets\\img\\Tavë-Kosi.jpg"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\Uzbekistan,slide1.jpg",
+      "PackagePath": "staticwebassets\\img\\Uzbekistan,slide1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\Uzbekistan,slide2.webp",
+      "PackagePath": "staticwebassets\\img\\Uzbekistan,slide2.webp"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\Uzbekistan_header.png",
+      "PackagePath": "staticwebassets\\img\\Uzbekistan_header.png"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\Winter-Palace.jpg",
+      "PackagePath": "staticwebassets\\img\\Winter-Palace.jpg"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\_russia2.jpg.jpg",
+      "PackagePath": "staticwebassets\\img\\_russia2.jpg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\_russia3.jpg.jpg",
+      "PackagePath": "staticwebassets\\img\\_russia3.jpg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\_russia4.jpg.jpg",
+      "PackagePath": "staticwebassets\\img\\_russia4.jpg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\airport_transfer.png",
+      "PackagePath": "staticwebassets\\img\\airport_transfer.png"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\alb.webp",
+      "PackagePath": "staticwebassets\\img\\alb.webp"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\albaina.offerr.png.png",
+      "PackagePath": "staticwebassets\\img\\albaina.offerr.png.png"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\albaina.slide1.webp",
+      "PackagePath": "staticwebassets\\img\\albaina.slide1.webp"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\albaina.slide2.webp",
+      "PackagePath": "staticwebassets\\img\\albaina.slide2.webp"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\albania.jpg.png.png",
+      "PackagePath": "staticwebassets\\img\\albania.jpg.png.png"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\albania_header_resized.jpg",
+      "PackagePath": "staticwebassets\\img\\albania_header_resized.jpg"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\almaty-mountains.jpg",
+      "PackagePath": "staticwebassets\\img\\almaty-mountains.jpg"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\almaty.jpg",
+      "PackagePath": "staticwebassets\\img\\almaty.jpg"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\alogin.png",
+      "PackagePath": "staticwebassets\\img\\alogin.png"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\astana.jpg",
+      "PackagePath": "staticwebassets\\img\\astana.jpg"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\aze.png",
+      "PackagePath": "staticwebassets\\img\\aze.png"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\aze.slide1.png",
+      "PackagePath": "staticwebassets\\img\\aze.slide1.png"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\aze.slide2.jpg",
+      "PackagePath": "staticwebassets\\img\\aze.slide2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\aze.slide3.jpg",
+      "PackagePath": "staticwebassets\\img\\aze.slide3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\azerbaijan.jpg.png",
+      "PackagePath": "staticwebassets\\img\\azerbaijan.jpg.png"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\azerbaijan1.jpg",
+      "PackagePath": "staticwebassets\\img\\azerbaijan1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\azerbaijan2.jpg",
+      "PackagePath": "staticwebassets\\img\\azerbaijan2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\azerbaijan3.jpg",
+      "PackagePath": "staticwebassets\\img\\azerbaijan3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\azerbaijan_header_resized.jpg",
+      "PackagePath": "staticwebassets\\img\\azerbaijan_header_resized.jpg"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\azerbijan.2.jpg",
+      "PackagePath": "staticwebassets\\img\\azerbijan.2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\b37ce491-5d4f-4451-8d73-6f08708b3b24.png",
+      "PackagePath": "staticwebassets\\img\\b37ce491-5d4f-4451-8d73-6f08708b3b24.png"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\back.png",
+      "PackagePath": "staticwebassets\\img\\back.png"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\baku.jpg",
+      "PackagePath": "staticwebassets\\img\\baku.jpg"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\batumi.jpg",
+      "PackagePath": "staticwebassets\\img\\batumi.jpg"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\berat.jpg",
+      "PackagePath": "staticwebassets\\img\\berat.jpg"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\bg-login.jpg.png",
+      "PackagePath": "staticwebassets\\img\\bg-login.jpg.png"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\biltmore.jpg",
+      "PackagePath": "staticwebassets\\img\\biltmore.jpg"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\borjomi.jpg",
+      "PackagePath": "staticwebassets\\img\\borjomi.jpg"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\bougainville.jpg",
+      "PackagePath": "staticwebassets\\img\\bougainville.jpg"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\caucasus.jpg",
+      "PackagePath": "staticwebassets\\img\\caucasus.jpg"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\client1.jpg",
+      "PackagePath": "staticwebassets\\img\\client1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\client2.jpg",
+      "PackagePath": "staticwebassets\\img\\client2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\client3.jpg",
+      "PackagePath": "staticwebassets\\img\\client3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\client4.jpg",
+      "PackagePath": "staticwebassets\\img\\client4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\dolma.png",
+      "PackagePath": "staticwebassets\\img\\dolma.png"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\e2b2fc9f-12ad-4b25-aa19-cc95b2523a0e.png",
+      "PackagePath": "staticwebassets\\img\\e2b2fc9f-12ad-4b25-aa19-cc95b2523a0e.png"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\family_car.jpg",
+      "PackagePath": "staticwebassets\\img\\family_car.jpg"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\family_trip.jpg",
+      "PackagePath": "staticwebassets\\img\\family_trip.jpg"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\fourseasons.jpg",
+      "PackagePath": "staticwebassets\\img\\fourseasons.jpg"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\georgia.jpg.png",
+      "PackagePath": "staticwebassets\\img\\georgia.jpg.png"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\georgia.slide1.webp",
+      "PackagePath": "staticwebassets\\img\\georgia.slide1.webp"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\georgia.slide2.webp",
+      "PackagePath": "staticwebassets\\img\\georgia.slide2.webp"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\georgia.slide3.jpeg",
+      "PackagePath": "staticwebassets\\img\\georgia.slide3.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\georgia.slide3.jpg",
+      "PackagePath": "staticwebassets\\img\\georgia.slide3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\georgia_offer.jpg.png",
+      "PackagePath": "staticwebassets\\img\\georgia_offer.jpg.png"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\group_bus.png",
+      "PackagePath": "staticwebassets\\img\\group_bus.png"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\group_tour.png",
+      "PackagePath": "staticwebassets\\img\\group_tour.png"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\group_tour1.jpg",
+      "PackagePath": "staticwebassets\\img\\group_tour1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\hammam.jpg",
+      "PackagePath": "staticwebassets\\img\\hammam.jpg"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\hilton.jpg",
+      "PackagePath": "staticwebassets\\img\\hilton.jpg"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\hilton_garden.jpg",
+      "PackagePath": "staticwebassets\\img\\hilton_garden.jpg"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\hotel_offer.png",
+      "PackagePath": "staticwebassets\\img\\hotel_offer.png"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\img2.png",
+      "PackagePath": "staticwebassets\\img\\img2.png"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\img3.png",
+      "PackagePath": "staticwebassets\\img\\img3.png"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\img4.png",
+      "PackagePath": "staticwebassets\\img\\img4.png"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\img5.png",
+      "PackagePath": "staticwebassets\\img\\img5.png"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\img6.png",
+      "PackagePath": "staticwebassets\\img\\img6.png"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\imgg.png",
+      "PackagePath": "staticwebassets\\img\\imgg.png"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\kazakhstan.jpg.png",
+      "PackagePath": "staticwebassets\\img\\kazakhstan.jpg.png"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\kazakhstan_header_resized.jpg",
+      "PackagePath": "staticwebassets\\img\\kazakhstan_header_resized.jpg"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\kazakhstan_offer.jpg.png",
+      "PackagePath": "staticwebassets\\img\\kazakhstan_offer.jpg.png"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\kazan.jpg",
+      "PackagePath": "staticwebassets\\img\\kazan.jpg"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\kazy.jpeg",
+      "PackagePath": "staticwebassets\\img\\kazy.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\kebab.jpg",
+      "PackagePath": "staticwebassets\\img\\kebab.jpg"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\khz.png",
+      "PackagePath": "staticwebassets\\img\\khz.png"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\log.png",
+      "PackagePath": "staticwebassets\\img\\log.png"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\log1.png",
+      "PackagePath": "staticwebassets\\img\\log1.png"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\log2.png",
+      "PackagePath": "staticwebassets\\img\\log2.png"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\logg.png",
+      "PackagePath": "staticwebassets\\img\\logg.png"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\logg2.png",
+      "PackagePath": "staticwebassets\\img\\logg2.png"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\logg3.png",
+      "PackagePath": "staticwebassets\\img\\logg3.png"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\login.ar.png",
+      "PackagePath": "staticwebassets\\img\\login.ar.png"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\logo..png",
+      "PackagePath": "staticwebassets\\img\\logo..png"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\luxury_car.jpg",
+      "PackagePath": "staticwebassets\\img\\luxury_car.jpg"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\mangalemi.jpg",
+      "PackagePath": "staticwebassets\\img\\mangalemi.jpg"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\manti.jpg",
+      "PackagePath": "staticwebassets\\img\\manti.jpg"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\marriot.jpg",
+      "PackagePath": "staticwebassets\\img\\marriot.jpg"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\metropol.jpg",
+      "PackagePath": "staticwebassets\\img\\metropol.jpg"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\mohammed.client.jpg",
+      "PackagePath": "staticwebassets\\img\\mohammed.client.jpg"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\moscow.jpg",
+      "PackagePath": "staticwebassets\\img\\moscow.jpg"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\plaza-tirana.jpg",
+      "PackagePath": "staticwebassets\\img\\plaza-tirana.jpg"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\plov.png",
+      "PackagePath": "staticwebassets\\img\\plov.png"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\qapala.jpg",
+      "PackagePath": "staticwebassets\\img\\qapala.jpg"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\quba.jpg",
+      "PackagePath": "staticwebassets\\img\\quba.jpg"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\quba.palace.jpg",
+      "PackagePath": "staticwebassets\\img\\quba.palace.jpg"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\ritz-almaty.jpg",
+      "PackagePath": "staticwebassets\\img\\ritz-almaty.jpg"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\ritz.jpg",
+      "PackagePath": "staticwebassets\\img\\ritz.jpg"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\ritzcarlton.jpg",
+      "PackagePath": "staticwebassets\\img\\ritzcarlton.jpg"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\ritzmoscow.jpeg",
+      "PackagePath": "staticwebassets\\img\\ritzmoscow.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\rixos-astana.jpg",
+      "PackagePath": "staticwebassets\\img\\rixos-astana.jpg"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\rixos-shymkent.jpg",
+      "PackagePath": "staticwebassets\\img\\rixos-shymkent.jpg"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\rus.png",
+      "PackagePath": "staticwebassets\\img\\rus.png"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\russia.header.jpeg",
+      "PackagePath": "staticwebassets\\img\\russia.header.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\russia.jpg.png",
+      "PackagePath": "staticwebassets\\img\\russia.jpg.png"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\russia.slide2.jpg",
+      "PackagePath": "staticwebassets\\img\\russia.slide2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\russia.slide3.jpg",
+      "PackagePath": "staticwebassets\\img\\russia.slide3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\russia_offer.jpg.png",
+      "PackagePath": "staticwebassets\\img\\russia_offer.jpg.png"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\russia_red_square_resized.jpg",
+      "PackagePath": "staticwebassets\\img\\russia_red_square_resized.jpg"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\saintpetersburg.jpg",
+      "PackagePath": "staticwebassets\\img\\saintpetersburg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\saranda.jpg",
+      "PackagePath": "staticwebassets\\img\\saranda.jpg"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\service_travel.png",
+      "PackagePath": "staticwebassets\\img\\service_travel.png"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\sheraton.jpg",
+      "PackagePath": "staticwebassets\\img\\sheraton.jpg"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\shopping.jpg",
+      "PackagePath": "staticwebassets\\img\\shopping.jpg"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\shymkent.jpg",
+      "PackagePath": "staticwebassets\\img\\shymkent.jpg"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\slider_russia1.jpg",
+      "PackagePath": "staticwebassets\\img\\slider_russia1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\slider_russia2.jpg",
+      "PackagePath": "staticwebassets\\img\\slider_russia2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\slider_russia2_main.jpg.jpg",
+      "PackagePath": "staticwebassets\\img\\slider_russia2_main.jpg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\slider_russia3.jpg",
+      "PackagePath": "staticwebassets\\img\\slider_russia3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\slider_russia_main.jpg",
+      "PackagePath": "staticwebassets\\img\\slider_russia_main.jpg"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\support.png",
+      "PackagePath": "staticwebassets\\img\\support.png"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\tbilisi.jpg",
+      "PackagePath": "staticwebassets\\img\\tbilisi.jpg"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\tirana.jpg",
+      "PackagePath": "staticwebassets\\img\\tirana.jpg"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\uzb.1.jpg",
+      "PackagePath": "staticwebassets\\img\\uzb.1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\uzb.png",
+      "PackagePath": "staticwebassets\\img\\uzb.png"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\uzbekistan.jpg.png",
+      "PackagePath": "staticwebassets\\img\\uzbekistan.jpg.png"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\uzbekistan_header_resized.jpg",
+      "PackagePath": "staticwebassets\\img\\uzbekistan_header_resized.jpg"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\uzbekistan_offer.jpg.png",
+      "PackagePath": "staticwebassets\\img\\uzbekistan_offer.jpg.png"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Release\\net7.0\\staticwebassets\\msbuild.ByArabianEye.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Release\\net7.0\\staticwebassets\\msbuild.build.ByArabianEye.props",
+      "PackagePath": "build\\ByArabianEye.props"
+    },
+    {
+      "Id": "obj\\Release\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.ByArabianEye.props",
+      "PackagePath": "buildMultiTargeting\\ByArabianEye.props"
+    },
+    {
+      "Id": "obj\\Release\\net7.0\\staticwebassets\\msbuild.buildTransitive.ByArabianEye.props",
+      "PackagePath": "buildTransitive\\ByArabianEye.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
