@@ -38,21 +38,26 @@
         border-radius: 8px;
     }
 
-    .section-about, .testimonial {
+    .section-about, .testimonial-carousel {
         background-color: #ffffff10;
         border-radius: 10px;
         padding: 30px;
         margin-bottom: 40px;
     }
 
-        .testimonial img {
-            width: 70px;
-            height: 70px;
-            border-radius: 50%;
-        }
+    .testimonial img {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        margin: auto;
+    }
 
-    .accordion-button {
-        font-weight: bold;
+    .testimonial p {
+        color: #fff;
+    }
+
+    .carousel-item {
+        text-align: center;
     }
 </style>
 
@@ -84,6 +89,50 @@
                 Countries we operate in: Azerbaijan, Russia, Georgia, Albania, Kazakhstan, Uzbekistan.
             </p>
         </div>
+    </div>
+</div>
+
+<!-- Testimonials Carousel -->
+<div class="container testimonial-carousel">
+    <h3 class="text-center mb-4 fw-bold">👥 آراء العملاء | What Our Clients Say</h3>
+    <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="testimonial">
+                    <img src="/img/client1.jpg" alt="User 1" />
+                    <p class="mt-3">
+                        "خدمة ممتازة وتجربة لا تُنسى في جورجيا!"
+                        <br />- عبدالعزيز
+                    </p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="testimonial">
+                    <img src="/img/user2.jpg" alt="User 2" />
+                    <p class="mt-3">"Everything was perfect from arrival to departure!"<br />- Sarah</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="testimonial">
+                    <img src="/img/user3.jpg" alt="User 3" />
+                    <p class="mt-3">
+                        رحلة ممتازة وتنظيم احترافي في روسيا!<br />- فهد
+                    </p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="testimonial">
+                    <img src="/img/user4.jpg" alt="User 4" />
+                    <p class="mt-3">Professional team & beautiful hotels<br />- Lina</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
     </div>
 </div>
 
@@ -155,6 +204,7 @@
                         الإلغاء حسب سياسة الشركة، تواصل معنا لمزيد من التفاصيل.<br>
                         Cancellations depend on our policy. Please contact us for more details.
                     </div>
+
                 </div>
             </div>
         </div>
@@ -175,51 +225,17 @@
     }).addTo(map);
 
     var countries = [
-        {
-            name: "Azerbaijan",
-            coords: [40.4093, 49.8671],
-            flag: "/img/azerbaijan.jpg.png",
-            link: "/Countries/Azerbaijan"
-        },
-        {
-            name: "Georgia",
-            coords: [41.7151, 44.8271],
-            flag: "/img/georgia.jpg.png",
-            link: "/Countries/Georgia"
-        },
-        {
-            name: "Albania",
-            coords: [41.3275, 19.8189],
-            flag: "/img/albania.jpg.png.png",
-            link: "/Countries/Albania"
-        },
-        {
-            name: "Kazakhstan",
-            coords: [51.1605, 71.4704],
-            flag: "/img/kazakhstan.jpg.png",
-            link: "/Countries/Kazakhstan"
-        },
-        {
-            name: "Russia",
-            coords: [55.7558, 37.6173],
-            flag: "/img/russia.jpg.png",
-            link: "/Countries/Russia"
-        },
-        {
-            name: "Uzbekistan",
-            coords: [41.3775, 64.5853],
-            flag: "/img/uzbekistan.jpg.png",
-            link: "/Countries/Uzbekistan"
-        }
+        { name: "Azerbaijan", coords: [40.4093, 49.8671], flag: "/img/azerbaijan.jpg.png", link: "/Countries/Azerbaijan" },
+        { name: "Georgia", coords: [41.7151, 44.8271], flag: "/img/georgia.jpg.png", link: "/Countries/Georgia" },
+        { name: "Albania", coords: [41.3275, 19.8189], flag: "/img/albania.jpg.png.png", link: "/Countries/Albania" },
+        { name: "Kazakhstan", coords: [51.1605, 71.4704], flag: "/img/kazakhstan.jpg.png", link: "/Countries/Kazakhstan" },
+        { name: "Russia", coords: [55.7558, 37.6173], flag: "/img/russia.jpg.png", link: "/Countries/Russia" },
+        { name: "Uzbekistan", coords: [41.3775, 64.5853], flag: "/img/uzbekistan.jpg.png", link: "/Countries/Uzbekistan" }
     ];
 
     countries.forEach(c => {
-        var popupHtml = `
-                <img src="${c.flag}" alt="${c.name} Flag" />
-                <h6 class="mt-1">${c.name}</h6>
-                <a href="${c.link}" class="btn btn-sm btn-primary">View Page</a>
-            `;
-        var marker = L.marker(c.coords).addTo(map).bindPopup(popupHtml);
+        var popupHtml = `<img src="${c.flag}" alt="${c.name} Flag" /><h6 class="mt-1">${c.name}</h6><a href="${c.link}" class="btn btn-sm btn-primary">View Page</a>`;
+        L.marker(c.coords).addTo(map).bindPopup(popupHtml);
     });
 
     const texts = ["🌍 Explore the world with us!", "✨ Luxury travel experiences", "⏳ Over 10 years of trust", "💼 Professional tourism services", "📍 Gulf-based travel expertise"];

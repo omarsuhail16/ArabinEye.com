@@ -1,6 +1,4 @@
-﻿@{
-    ViewData["Title"] = "Booking Details";
-}
+﻿@model ByArabianEye.Models.Booking
 
 <div class="container my-5">
     <h2 class="text-center mb-4 fw-bold">🔍 تفاصيل الحجز | Booking Details</h2>
@@ -9,22 +7,25 @@
         <div class="card-body">
             <dl class="row">
                 <dt class="col-sm-3">Client Name</dt>
-                <dd class="col-sm-9">Ali Al-Mutairi</dd>
+                <dd class="col-sm-9">@Model.ClientName</dd>
 
                 <dt class="col-sm-3">Country</dt>
-                <dd class="col-sm-9">Azerbaijan</dd>
+                <dd class="col-sm-9">@Model.Country</dd>
+
+                <dt class="col-sm-3">Hotel</dt>
+                <dd class="col-sm-9">@Model.Hotel</dd>
 
                 <dt class="col-sm-3">Package Type</dt>
-                <dd class="col-sm-9">Family Package</dd>
+                <dd class="col-sm-9">@Model.PackageType</dd>
 
                 <dt class="col-sm-3">Booking Date</dt>
-                <dd class="col-sm-9">2025-06-10</dd>
+                <dd class="col-sm-9">@Model.Date.ToString("yyyy-MM-dd")</dd>
 
                 <dt class="col-sm-3">People Count</dt>
-                <dd class="col-sm-9">4</dd>
+                <dd class="col-sm-9">@Model.PeopleCount</dd>
 
                 <dt class="col-sm-3">Status</dt>
-                <dd class="col-sm-9"><span class="badge bg-success">Confirmed</span></dd>
+                <dd class="col-sm-9"><span class="badge bg-success">@Model.Status</span></dd>
             </dl>
 
             <div class="text-center mt-4">

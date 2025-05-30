@@ -213,8 +213,8 @@
       "PackagePath": "staticwebassets\\img\\Hyatt-Regency-Tashkent.jpg"
     },
     {
-      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\Kazakhstan.header.jpg",
-      "PackagePath": "staticwebassets\\img\\Kazakhstan.header.jpg"
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\Kazakhstan.header.resized.jpg",
+      "PackagePath": "staticwebassets\\img\\Kazakhstan.header.resized.jpg"
     },
     {
       "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\Khachapuri.avif",
@@ -293,24 +293,8 @@
       "PackagePath": "staticwebassets\\img\\Winter-Palace.jpg"
     },
     {
-      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\_russia2.jpg.jpg",
-      "PackagePath": "staticwebassets\\img\\_russia2.jpg.jpg"
-    },
-    {
-      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\_russia3.jpg.jpg",
-      "PackagePath": "staticwebassets\\img\\_russia3.jpg.jpg"
-    },
-    {
-      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\_russia4.jpg.jpg",
-      "PackagePath": "staticwebassets\\img\\_russia4.jpg.jpg"
-    },
-    {
       "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\airport_transfer.png",
       "PackagePath": "staticwebassets\\img\\airport_transfer.png"
-    },
-    {
-      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\alb.webp",
-      "PackagePath": "staticwebassets\\img\\alb.webp"
     },
     {
       "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\albaina.offerr.png.png",
@@ -323,6 +307,10 @@
     {
       "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\albaina.slide2.webp",
       "PackagePath": "staticwebassets\\img\\albaina.slide2.webp"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\albaina.slide3.webp",
+      "PackagePath": "staticwebassets\\img\\albaina.slide3.webp"
     },
     {
       "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\albania.jpg.png.png",
@@ -339,10 +327,6 @@
     {
       "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\almaty.jpg",
       "PackagePath": "staticwebassets\\img\\almaty.jpg"
-    },
-    {
-      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\alogin.png",
-      "PackagePath": "staticwebassets\\img\\alogin.png"
     },
     {
       "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\astana.jpg",
@@ -365,14 +349,6 @@
       "PackagePath": "staticwebassets\\img\\aze.slide3.jpg"
     },
     {
-      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\azerbaijan.jpg.png",
-      "PackagePath": "staticwebassets\\img\\azerbaijan.jpg.png"
-    },
-    {
-      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\azerbaijan1.jpg",
-      "PackagePath": "staticwebassets\\img\\azerbaijan1.jpg"
-    },
-    {
       "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\azerbaijan2.jpg",
       "PackagePath": "staticwebassets\\img\\azerbaijan2.jpg"
     },
@@ -385,16 +361,16 @@
       "PackagePath": "staticwebassets\\img\\azerbaijan_header_resized.jpg"
     },
     {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\azerbaijan_view_resized.jpg",
+      "PackagePath": "staticwebassets\\img\\azerbaijan_view_resized.jpg"
+    },
+    {
       "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\azerbijan.2.jpg",
       "PackagePath": "staticwebassets\\img\\azerbijan.2.jpg"
     },
     {
       "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\b37ce491-5d4f-4451-8d73-6f08708b3b24.png",
       "PackagePath": "staticwebassets\\img\\b37ce491-5d4f-4451-8d73-6f08708b3b24.png"
-    },
-    {
-      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\back.png",
-      "PackagePath": "staticwebassets\\img\\back.png"
     },
     {
       "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\baku.jpg",
@@ -489,14 +465,6 @@
       "PackagePath": "staticwebassets\\img\\georgia_offer.jpg.png"
     },
     {
-      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\group_bus.png",
-      "PackagePath": "staticwebassets\\img\\group_bus.png"
-    },
-    {
-      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\group_tour.png",
-      "PackagePath": "staticwebassets\\img\\group_tour.png"
-    },
-    {
       "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\group_tour1.jpg",
       "PackagePath": "staticwebassets\\img\\group_tour1.jpg"
     },
@@ -517,36 +485,12 @@
       "PackagePath": "staticwebassets\\img\\hotel_offer.png"
     },
     {
-      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\img2.png",
-      "PackagePath": "staticwebassets\\img\\img2.png"
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\ist2.png",
+      "PackagePath": "staticwebassets\\img\\ist2.png"
     },
     {
-      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\img3.png",
-      "PackagePath": "staticwebassets\\img\\img3.png"
-    },
-    {
-      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\img4.png",
-      "PackagePath": "staticwebassets\\img\\img4.png"
-    },
-    {
-      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\img5.png",
-      "PackagePath": "staticwebassets\\img\\img5.png"
-    },
-    {
-      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\img6.png",
-      "PackagePath": "staticwebassets\\img\\img6.png"
-    },
-    {
-      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\imgg.png",
-      "PackagePath": "staticwebassets\\img\\imgg.png"
-    },
-    {
-      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\kazakhstan.jpg.png",
-      "PackagePath": "staticwebassets\\img\\kazakhstan.jpg.png"
-    },
-    {
-      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\kazakhstan_header_resized.jpg",
-      "PackagePath": "staticwebassets\\img\\kazakhstan_header_resized.jpg"
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\ist3.png",
+      "PackagePath": "staticwebassets\\img\\ist3.png"
     },
     {
       "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\kazakhstan_offer.jpg.png",
@@ -723,6 +667,10 @@
     {
       "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\shymkent.jpg",
       "PackagePath": "staticwebassets\\img\\shymkent.jpg"
+    },
+    {
+      "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\slide.aze.jpg",
+      "PackagePath": "staticwebassets\\img\\slide.aze.jpg"
     },
     {
       "Id": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\slider_russia1.jpg",

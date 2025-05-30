@@ -2,205 +2,121 @@
     ViewData["Title"] = "Our Services";
 }
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+<div class="container-fluid dashboard-container">
+    <h2 class="text-center text-white fw-bold mb-5">خدماتنا | Our Services</h2>
+
+    <div class="row justify-content-center g-4">
+        <!-- سيارة فخمة -->
+        <div class="col-md-4">
+            <div class="dashboard-card bg-dark-blue">
+                <img src="~/img/luxury_car.jpg" alt="Luxury Car" class="img-fluid rounded mb-3" style="height: 220px; object-fit: cover;">
+                <h5>🚗 سيارة فخمة | Luxury Car</h5>
+                <p>استأجر سيارات فخمة ومريحة مع سائقين محترفين.<br />Rent luxury and comfortable cars with professional drivers.</p>
+            </div>
+        </div>
+
+        <!-- سيارة عائلية -->
+        <div class="col-md-4">
+            <div class="dashboard-card bg-dark-blue">
+                <img src="~/img/family_car.jpg" alt="Family Car" class="img-fluid rounded mb-3" style="height: 220px; object-fit: cover;">
+                <h5>🚙 سيارة عائلية | Family Car</h5>
+                <p>سيارات واسعة ومناسبة للعائلات.<br />Spacious and family-friendly vehicles.</p>
+            </div>
+        </div>
+
+        <!-- رحلات سياحية -->
+        <div class="col-md-4">
+            <div class="dashboard-card bg-dark-blue">
+                <img src="~/img/service_travel.png" alt="Travel" class="img-fluid rounded mb-3" style="height: 220px; object-fit: cover;">
+                <h5>🧳 رحلات سياحية | Sightseeing Tours</h5>
+                <p>جولات منظمة لاكتشاف أجمل الأماكن السياحية.<br />Organized tours to explore top tourist destinations.</p>
+            </div>
+        </div>
+
+        <!-- جولات جماعية -->
+        <div class="col-md-4">
+            <div class="dashboard-card bg-dark-blue">
+                <img src="~/img/group_tour1.jpg" alt="Group Tours" class="img-fluid rounded mb-3" style="height: 220px; object-fit: cover;">
+                <h5>👥 جولات جماعية | Group Tours</h5>
+                <p>استمتع بجولات مع مجموعات ومرشدين محترفين.<br />Join guided group tours and make new connections.</p>
+            </div>
+        </div>
+
+        <!-- استقبال وتوديع -->
+        <div class="col-md-4">
+            <div class="dashboard-card bg-dark-blue">
+                <img src="~/img/airport_transfer.png" alt="Airport Transfer" class="img-fluid rounded mb-3" style="height: 220px; object-fit: cover;">
+                <h5>✈️ استقبال وتوديع | Airport Transfers</h5>
+                <p>نقل مريح من وإلى المطار بأعلى جودة.<br />Comfortable airport pick-up and drop-off service.</p>
+            </div>
+        </div>
+
+        <!-- دعم واستفسارات -->
+        <div class="col-md-4">
+            <div class="dashboard-card bg-dark-blue">
+                <img src="~/img/support.png" alt="Support" class="img-fluid rounded mb-3" style="height: 220px; object-fit: cover;">
+                <h5>☎️ دعم واستفسارات | Support & Inquiries</h5>
+                <p>فريق الدعم متوفر على مدار الساعة لمساعدتكم.<br />Our support team is available 24/7 to assist you.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center text-white mt-5 small">
+        &copy; 2025 By Arabian Eye
+    </footer>
+</div>
 
 <style>
     body {
+        background: linear-gradient(to bottom right, #1b1f3b, #2b2d42);
         font-family: 'Cairo', sans-serif;
-        background-color: #f4f6f9;
-        color: #333;
-    }
-
-    .hero-header {
-        background: url('/img/services_banner.jpg') no-repeat center center;
-        background-size: cover;
-        height: 350px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
         color: white;
+    }
+
+    .dashboard-container {
+        padding: 50px 30px;
+    }
+
+    .dashboard-card {
+        background: #1e3d59;
+        border-radius: 15px;
+        padding: 20px 15px;
         text-align: center;
+        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+        transition: transform 0.5s ease, box-shadow 0.5s ease;
+        color: white;
     }
 
-        .hero-header h1 {
-            font-size: 2.8rem;
-            background-color: rgba(0,0,0,0.6);
-            padding: 20px 30px;
-            border-radius: 15px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        .dashboard-card:hover {
+            transform: translateY(-10px) scale(1.03);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
         }
 
-    .section-title {
-        font-weight: bold;
-        color: #2c3e50;
-        margin: 40px 0 20px;
-        text-align: center;
-        font-size: 2rem;
-    }
-
-    .filters {
-        text-align: center;
-        margin-bottom: 30px;
-    }
-
-        .filters button {
-            margin: 0 10px;
-            border: none;
-            padding: 8px 16px;
-            border-radius: 20px;
-            background-color: #2c3e50;
-            color: white;
-            cursor: pointer;
+        .dashboard-card h5 {
+            font-size: 18px;
+            opacity: 0.95;
         }
 
-            .filters button.active, .filters button:hover {
-                background-color: #007bff;
-            }
-
-    .service-card {
-        border: none;
-        border-radius: 16px;
-        overflow: hidden;
-        box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-        transition: 0.3s ease-in-out;
-    }
-
-        .service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+        .dashboard-card p {
+            font-size: 15px;
+            opacity: 0.85;
+            margin-top: 10px;
         }
-
-        .service-card img {
-            height: 250px;
-            object-fit: cover;
-        }
-
-    .card-body h5 {
-        font-weight: bold;
-    }
-
-    .btn-book {
-        margin-top: 10px;
-    }
-
-    .rating {
-        color: #ffc107;
-        font-size: 0.95rem;
-    }
 </style>
 
-<div class="hero-header">
-    <h1>🌟 Explore Our Premium Services</h1>
-</div>
-
-<div class="container">
-    <h2 class="section-title">خدماتنا المميزة | Our Services</h2>
-
-    <div class="filters">
-        <button class="filter-btn active" data-category="all">الكل</button>
-        <button class="filter-btn" data-category="cars">🚗 سيارات</button>
-        <button class="filter-btn" data-category="tours">🧳 رحلات</button>
-        <button class="filter-btn" data-category="transfers">✈️ استقبال</button>
-        <button class="filter-btn" data-category="support">☎️ دعم</button>
-    </div>
-
-    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-        <div class="col service-item" data-category="tours" data-aos="fade-up">
-            <div class="card service-card">
-                <img src="~/img/service_travel.png" class="card-img-top" alt="Travel Packages">
-                <div class="card-body text-center">
-                    <h5>🧳 رحلات سياحية</h5>
-                    <p class="text-muted small">Travel Packages</p>
-                    <p>Custom adventures for unforgettable memories.</p>
-                    
-                </div>
-            </div>
-        </div>
-
-        <div class="col service-item" data-category="cars" data-aos="fade-up">
-            <div class="card service-card">
-                <img src="~/img/luxury_car.jpg" class="card-img-top" alt="Luxury Car">
-                <div class="card-body text-center">
-                    <h5>🚗 سيارة فخمة</h5>
-                    <p class="text-muted small">Luxury Car</p>
-                    <p>Enjoy premium rides with professional drivers.</p>
-                
-                </div>
-            </div>
-        </div>
-
-        <div class="col service-item" data-category="cars" data-aos="fade-up">
-            <div class="card service-card">
-                <img src="~/img/family_car.jpg" class="card-img-top" alt="Family Car">
-                <div class="card-body text-center">
-                    <h5>🚙 سيارة عائلية</h5>
-                    <p class="text-muted small">Family Car</p>
-                    <p>Spacious cars for family comfort.</p>
-                   
-                </div>
-            </div>
-        </div>
-
-        <div class="col service-item" data-category="tours" data-aos="fade-up">
-            <div class="card service-card">
-                <img src="~/img/group_tour1.jpg" class="card-img-top" alt="Group Tours">
-                <div class="card-body text-center">
-                    <h5>👥 جولات جماعية</h5>
-                    <p class="text-muted small">Group Tours</p>
-                    <p>Explore in groups with experienced guides.</p>
-                  
-                </div>
-            </div>
-        </div>
-
-        <div class="col service-item" data-category="transfers" data-aos="fade-up">
-            <div class="card service-card">
-                <img src="~/img/airport_transfer.png" class="card-img-top" alt="Airport Transfers">
-                <div class="card-body text-center">
-                    <h5>✈️ استقبال وتوديع</h5>
-                    <p class="text-muted small">Airport Transfers</p>
-                    <p>Comfortable and on-time airport pickups.</p>
-                    
-                </div>
-            </div>
-        </div>
-
-        <div class="col service-item" data-category="support" data-aos="fade-up">
-            <div class="card service-card">
-                <img src="~/img/support.png" class="card-img-top" alt="24/7 Support">
-                <div class="card-body text-center">
-                    <h5>☎️ دعم واستفسارات</h5>
-                    <p class="text-muted small">24/7 Support</p>
-                    <p>Dedicated support team around the clock.</p>
-                 
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 <script>
-    AOS.init({ duration: 1000, once: true });
-
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    const serviceItems = document.querySelectorAll('.service-item');
-
-    filterButtons.forEach(btn => {
-        btn.addEventListener('click', () => {
-            document.querySelector('.filter-btn.active').classList.remove('active');
-            btn.classList.add('active');
-
-            const category = btn.getAttribute('data-category');
-            serviceItems.forEach(item => {
-                const itemCat = item.getAttribute('data-category');
-                if (category === 'all' || itemCat === category) {
-                    item.style.display = 'block';
-                } else {
-                    item.style.display = 'none';
-                }
-            });
+    window.onload = () => {
+        const cards = document.querySelectorAll(".dashboard-card");
+        cards.forEach((card, i) => {
+            card.style.opacity = 0;
+            card.style.transform = "translateY(20px) rotateX(10deg)";
+            setTimeout(() => {
+                card.style.transition = "all 0.7s ease";
+                card.style.opacity = 1;
+                card.style.transform = "translateY(0) rotateX(0deg)";
+            }, i * 200);
         });
-    });
+    };
 </script>
