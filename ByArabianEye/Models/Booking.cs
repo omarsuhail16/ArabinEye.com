@@ -7,26 +7,28 @@ namespace ByArabianEye.Models
     {
         public int Id { get; set; }
 
-        [Required(ErrorMessage = "اسم العميل مطلوب")]
         public string ClientName { get; set; }
 
-        [Required(ErrorMessage = "الدولة مطلوبة")]
+        [Required(ErrorMessage = "Country is required")]
         public string Country { get; set; }
 
-        [Required(ErrorMessage = "الفندق مطلوب")]
+        [Required(ErrorMessage = "Hotel is required")]
         public string Hotel { get; set; }
 
-        [Required(ErrorMessage = "نوع الباقة مطلوب")]
+        [Required(ErrorMessage = "Package type is required")]
         public string PackageType { get; set; }
 
-        [Required(ErrorMessage = "التاريخ مطلوب")]
+        [Required(ErrorMessage = "Date is required")]
         public DateTime Date { get; set; }
 
-        [Required(ErrorMessage = "عدد الأشخاص مطلوب")]
-        [Range(1, int.MaxValue, ErrorMessage = "يجب أن يكون العدد أكبر من صفر")]
+        [Required(ErrorMessage = "Number of people is required")]
+        [Range(1, int.MaxValue, ErrorMessage = "People count must be at least 1")]
         public int PeopleCount { get; set; }
 
-        // ✅ نضيف القيمة الافتراضية هنا مباشرة
-        public string Status { get; set; } = "قيد الانتظار";
+        [Required(ErrorMessage = "Contact number is required")]
+        [Phone(ErrorMessage = "Invalid contact number format")]
+        public string ContactNumber { get; set; }
+
+        public string Status { get; set; } = "Pending";
     }
 }

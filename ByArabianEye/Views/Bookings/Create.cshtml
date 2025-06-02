@@ -18,12 +18,8 @@
     <form asp-action="Create" method="post">
         @Html.AntiForgeryToken()
 
-        <!-- اسم العميل -->
-        <div class="mb-3">
-            <label asp-for="ClientName" class="form-label">👤 اسم العميل | Client Name</label>
-            <input asp-for="ClientName" class="form-control" placeholder="أدخل اسم العميل" />
-            <span asp-validation-for="ClientName" class="text-danger"></span>
-        </div>
+        <input type="hidden" name="ClientName" value="@Context.Session.GetString("FullName")" />
+
 
         <!-- الدولة -->
         <div class="mb-3">
@@ -64,6 +60,11 @@
             <label asp-for="PeopleCount" class="form-label">👥 عدد الأشخاص | People</label>
             <input asp-for="PeopleCount" class="form-control" type="number" min="1" />
             <span asp-validation-for="PeopleCount" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="ContactNumber" class="form-label">📞 Contact Number</label>
+            <input asp-for="ContactNumber" class="form-control" placeholder="Enter contact number" />
+            <span asp-validation-for="ContactNumber" class="text-danger"></span>
         </div>
 
         <!-- زر التأكيد -->

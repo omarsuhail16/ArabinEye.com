@@ -96,11 +96,13 @@
                     <th>Client Name</th>
                     <th>Country</th>
                     <th>Hotel</th>
-                    <th>Package</th>
-                    <th>Date</th>
-                    <th>People</th>
+                    <th>Package Type</th>
+                    <th>Booking Date</th>
+                    <th>People Count</th>
+                    <th>Contact Number</th>
                     <th>Status</th>
                     <th>Actions</th>
+
                 </tr>
             </thead>
             <tbody>
@@ -117,6 +119,8 @@
                             <td>@item.PackageType</td>
                             <td>@item.Date.ToShortDateString()</td>
                             <td>@item.PeopleCount</td>
+                            <td>@item.ContactNumber</td>
+
                             <td>
                                 @switch (item.Status.ToLower())
                                 {
@@ -146,7 +150,7 @@
                                      Delete
                                 </a>
                             </td>
-
+                             
                         </tr>
                         index++;
                     }
