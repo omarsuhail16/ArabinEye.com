@@ -1,0 +1,65 @@
+﻿@model List<ByArabianEye.Models.CountryOffer>
+@{
+    ViewData["Title"] = "إدارة العروض";
+}
+
+<h2 class="text-center mt-4">🛠️ إدارة العروض السياحية</h2>
+
+<div class="container mt-4">
+    <form asp-action="Manage" method="post" enctype="multipart/form-data">
+        <input type="hidden" name="Id" value="0" />
+        <div class="row g-3">
+            <div class="col-md-3">
+                <input type="text" name="Title" class="form-control" placeholder="عنوان العرض" required />
+            </div>
+            <div class="col-md-3">
+                <input type="text" name="Description" class="form-control" placeholder="الوصف" required />
+            </div>
+            <div class="col-md-2">
+                <input type="number" name="Price" class="form-control" placeholder="السعر $" required />
+            </div>
+            <div class="col-md-2">
+                <select name="Country" class="form-select" required>
+                    <option value="">اختر الدولة</option>
+                    <option value="Azerbaijan">Azerbaijan</option>
+                    <option value="Russia">Russia</option>
+                    <option value="Kazakhstan">Kazakhstan</option>
+                    <option value="Albania">Albania</option>
+                    <option value="Georgia">Georgia</option>
+                    <option value="Uzbekistan">Uzbekistan</option>
+                </select>
+            </div>
+            <div class="col-md-2">
+                <input type="file" name="ImageFile" class="form-control" required />
+            </div>
+            <div class="col-md-12 text-center">
+                <button type="submit" class="btn btn-success px-5">➕ إضافة عرض جديد</button>
+            </div>
+        </div>
+    </form>
+
+    <hr class="my-4" />
+
+    <div class="row">
+        @foreach (var offer in Model)
+        {
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <img src="@offer.ImageUrl" class="card-img-top" style="height: 200px; object-fit: cover;" />
+                    <div class="card-body">
+                        <h5 class="card-title">@offer.Title</h5>
+                        <p class="card-text">@offer.Description</p>
+                        <p class="fw-bold text-info">$@offer.Price</p>
+                        <p class="text-muted"><small>@offer.Country</small></p>
+                        <div class="d-flex justify-content-between">
+                            <form asp-action="Delete" asp-route-id="@offer.Id" method="post" onsubmit="return confirm('هل أنت متأكد من حذف هذا العرض؟');">
+                                <button class="btn btn-danger btn-sm">🗑️ حذف</button>
+                            </form>
+                            <a asp-action="Edit" asp-route-id="@offer.Id" class="btn btn-primary btn-sm">✏️ تعديل</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

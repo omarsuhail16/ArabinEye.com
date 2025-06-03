@@ -16,6 +16,8 @@ namespace ByArabianEye.Data
         public DbSet<Offer> Offers { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<CustomerNote> CustomerNotes { get; set; }
+        public DbSet<CountryOffer> CountryOffers { get; set; }
+
 
         // إضافة DbSet لجدول سجل حذف الحجوزات
         public DbSet<BookingDeletionLog> BookingDeletionLogs { get; set; }
