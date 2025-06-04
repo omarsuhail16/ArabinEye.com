@@ -1,5 +1,8 @@
-﻿@{
+﻿@model List<ByArabianEye.Models.CountryOffer>
+@{
     ViewData["Title"] = "Kazakhstan";
+    var role = Context.Session.GetString("Role");
+    Layout = "_Layout";
 }
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
@@ -330,20 +333,32 @@
     </div>
 
 
-    <!-- Special Offer -->
-    <div class="section" data-aos="zoom-in">
-        <h3 class="text-center">🎁 عرض مميز لكازاخستان | Special Offer</h3>
-        <div class="row align-items-center">
-            <div class="col-md-6 text-center mb-4 mb-md-0">
-                <img src="~/img/Kazakhstan.offer.jpg.png" class="img-fluid rounded shadow" alt="Kazakhstan Offer" />
+    <div class="section" data-aos="fade-up">
+        @if (role == "admin")
+        {
+            <div class="text-end mb-3">
+                <a href="/CountryOffers/Manage" class="btn btn-warning fw-bold">
+                    ⚙️ إدارة عروض كازاخستان
+                </a>
             </div>
-            <div class="col-md-6">
-                <div class="highlight-box">
-                    <h4 class="mb-3">رحلة 5 أيام إلى باكو وقوبا</h4>
-                    <p class="fs-5">يشمل الإقامة بفندق 5 نجوم، جولات يومية ومواصلات</p>
-                    <a href="/Bookings/Create?country=Kazakhstan&hotel=The Ritz-Carlton Almaty" class="btn btn-dark btn-lg">احجز الآن | Book Now</a>
+        }
+
+        <h3 class="text-center">✨ عروض كازاخستان السياحية من قاعدة البيانات</h3>
+        <div class="row g-4">
+            @foreach (var offer in Model.Where(o => o.Country == "Kazakhstan"))
+            {
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <img src="@offer.ImageUrl" class="card-img-top" style="height: 300px; object-fit: cover;" alt="@offer.Title" />
+                        <div class="card-body text-center">
+                            <h5 class="card-title">@offer.Title</h5>
+                            <p class="card-text">@offer.Description</p>
+                            <p class="text-info fw-bold">$@offer.Price</p>
+                            <a href="/Bookings/Create?country=Kazakhstan&hotel=@offer.Title" class="btn btn-custom mt-2">احجز الآن | Book Now</a>
+                        </div>
+                    </div>
                 </div>
-            </div>
+            }
         </div>
     </div>
 

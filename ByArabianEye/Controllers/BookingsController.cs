@@ -29,7 +29,7 @@ namespace ByArabianEye.Controllers
         {
             if (HttpContext.Session.GetString("Role") != "client")
             {
-                TempData["Error"] = "❌ يجب تسجيل الدخول كعميل للحجز.";
+                TempData["Error"] = " يجب تسجيل الدخول كعميل للحجز.";
                 return RedirectToAction("Login", "Account");
             }
 
@@ -50,7 +50,7 @@ namespace ByArabianEye.Controllers
         {
             if (HttpContext.Session.GetString("Role") != "client")
             {
-                TempData["Error"] = "❌ يجب تسجيل الدخول كعميل للحجز.";
+                TempData["Error"] = " You must be logged in as a customer to book..";
                 return RedirectToAction("Login", "Account");
             }
 
@@ -63,7 +63,7 @@ namespace ByArabianEye.Controllers
 
                 _context.Bookings.Add(booking);
                 await _context.SaveChangesAsync();
-                TempData["Success"] = "✅ تم إرسال الحجز بنجاح!";
+                TempData["Success"] = " Reservation sent successfully!";
                 return RedirectToAction("Success");
             }
 
@@ -136,7 +136,7 @@ namespace ByArabianEye.Controllers
             existing.Status = updatedBooking.Status;
 
             await _context.SaveChangesAsync();
-            TempData["Success"] = "✅ تم تحديث الحجز بنجاح!";
+            TempData["Success"] = " reservation has been updated successfully!!";
 
             return role == "admin" ? RedirectToAction("Index") : RedirectToAction("MyProfile", "Account");
         }
@@ -185,7 +185,7 @@ namespace ByArabianEye.Controllers
 
             _context.Bookings.Remove(booking);
             await _context.SaveChangesAsync();
-            TempData["Success"] = "🗑️ تم حذف الحجز بنجاح.";
+            TempData["Success"] = " تم حذف الحجز بنجاح.";
 
             return role == "admin" ? RedirectToAction("Index") : RedirectToAction("MyProfile", "Account");
         }
