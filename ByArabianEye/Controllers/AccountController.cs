@@ -42,7 +42,7 @@ namespace ByArabianEye.Controllers
                 return RedirectToAction("Index", "Home");
             }
 
-            ViewBag.Error = "❌ البريد الإلكتروني أو كلمة المرور غير صحيحة.";
+            ViewBag.Error = " Incorrect email or password.";
             return View();
         }
 
@@ -58,14 +58,14 @@ namespace ByArabianEye.Controllers
         {
             if (password != confirmPassword)
             {
-                ViewBag.Error = "❌ كلمات المرور غير متطابقة.";
+                ViewBag.Error = " Passwords do not match.";
                 return View();
             }
 
             var existingUser = _context.Users.FirstOrDefault(u => u.Email == email);
             if (existingUser != null)
             {
-                ViewBag.Error = "❌ البريد الإلكتروني مستخدم مسبقًا.";
+                ViewBag.Error = "Email already in use.";
                 return View();
             }
 
@@ -80,7 +80,7 @@ namespace ByArabianEye.Controllers
             _context.Users.Add(newUser);
             _context.SaveChanges();
 
-            TempData["Success"] = "✅ تم إنشاء الحساب بنجاح، يمكنك الآن تسجيل الدخول.";
+            TempData["Success"] = "Your account has been created successfully.";
             return RedirectToAction("Login");
         }
 

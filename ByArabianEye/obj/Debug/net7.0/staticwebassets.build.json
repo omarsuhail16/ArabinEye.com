@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Q6/0qDJ4SrtaRcPenkhHciZCQ8aq+iQzh+7WYYiSxPA=",
+  "Hash": "R0UcEYAUD2k9raqpBHhRw5TPMxcnkyLh4tsiZIZYPfE=",
   "Source": "ByArabianEye",
   "BasePath": "_content/ByArabianEye",
   "Mode": "Default",
@@ -561,12 +561,12 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\1.gif",
+      "Identity": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\012baa6a-79f6-46e0-93e0-667619521446.png",
       "SourceId": "ByArabianEye",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\",
       "BasePath": "_content/ByArabianEye",
-      "RelativePath": "img/1.gif",
+      "RelativePath": "img/012baa6a-79f6-46e0-93e0-667619521446.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -575,7 +575,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\1.gif"
+      "OriginalItemSpec": "wwwroot\\img\\012baa6a-79f6-46e0-93e0-667619521446.png"
     },
     {
       "Identity": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\12e40a55-62ec-42be-9216-10fcf01f1d93.png",
@@ -593,6 +593,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\12e40a55-62ec-42be-9216-10fcf01f1d93.png"
+    },
+    {
+      "Identity": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\1366336e-7204-4d9c-a4e5-8974b973b43e.png",
+      "SourceId": "ByArabianEye",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\",
+      "BasePath": "_content/ByArabianEye",
+      "RelativePath": "img/1366336e-7204-4d9c-a4e5-8974b973b43e.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\1366336e-7204-4d9c-a4e5-8974b973b43e.png"
+    },
+    {
+      "Identity": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\44397a34-49b8-42a1-91cc-d2c92870c693.png",
+      "SourceId": "ByArabianEye",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\",
+      "BasePath": "_content/ByArabianEye",
+      "RelativePath": "img/44397a34-49b8-42a1-91cc-d2c92870c693.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\44397a34-49b8-42a1-91cc-d2c92870c693.png"
     },
     {
       "Identity": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\5a154aa2-0732-42ab-92a9-80fc98dc3135.png",
@@ -1343,6 +1377,23 @@
       "OriginalItemSpec": "wwwroot\\img\\c4bfd983-28e5-4d27-aca5-b236e30e7621.png"
     },
     {
+      "Identity": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\cab80d9b-45a0-4019-ac32-0f5f0e0c89b6.png",
+      "SourceId": "ByArabianEye",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\",
+      "BasePath": "_content/ByArabianEye",
+      "RelativePath": "img/cab80d9b-45a0-4019-ac32-0f5f0e0c89b6.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\cab80d9b-45a0-4019-ac32-0f5f0e0c89b6.png"
+    },
+    {
       "Identity": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\caucasus.jpg",
       "SourceId": "ByArabianEye",
       "SourceType": "Discovered",
@@ -1511,6 +1562,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\e2b2fc9f-12ad-4b25-aa19-cc95b2523a0e.png"
+    },
+    {
+      "Identity": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\ea5e8d66-94ea-4f34-9955-929f3a091fd5.png",
+      "SourceId": "ByArabianEye",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\",
+      "BasePath": "_content/ByArabianEye",
+      "RelativePath": "img/ea5e8d66-94ea-4f34-9955-929f3a091fd5.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\ea5e8d66-94ea-4f34-9955-929f3a091fd5.png"
+    },
+    {
+      "Identity": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\ece790bd-6379-4c1d-821c-02ce22c043cc.png",
+      "SourceId": "ByArabianEye",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\",
+      "BasePath": "_content/ByArabianEye",
+      "RelativePath": "img/ece790bd-6379-4c1d-821c-02ce22c043cc.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\ece790bd-6379-4c1d-821c-02ce22c043cc.png"
     },
     {
       "Identity": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\Falcon-Show.jpg",
@@ -1887,6 +1972,23 @@
       "OriginalItemSpec": "wwwroot\\img\\Kazakhstan.header.resized.jpg"
     },
     {
+      "Identity": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\kazakhstan.jpg.png",
+      "SourceId": "ByArabianEye",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\",
+      "BasePath": "_content/ByArabianEye",
+      "RelativePath": "img/kazakhstan.jpg.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\kazakhstan.jpg.png"
+    },
+    {
       "Identity": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\kazakhstan_offer.jpg.png",
       "SourceId": "ByArabianEye",
       "SourceType": "Discovered",
@@ -2055,6 +2157,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\logo..png"
+    },
+    {
+      "Identity": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\logo.png",
+      "SourceId": "ByArabianEye",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\",
+      "BasePath": "_content/ByArabianEye",
+      "RelativePath": "img/logo.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\logo.png"
     },
     {
       "Identity": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\img\\Lotte City Hotel.jpg",
@@ -4061,6 +4180,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Identity": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\manifest.json",
+      "SourceId": "ByArabianEye",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\",
+      "BasePath": "_content/ByArabianEye",
+      "RelativePath": "manifest.json",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\manifest.json"
+    },
+    {
+      "Identity": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\service-worker.js",
+      "SourceId": "ByArabianEye",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\moham\\OneDrive\\Desktop\\OMAR-PROJECT-ARABİAN\\ByArabianEye\\ByArabianEye\\wwwroot\\",
+      "BasePath": "_content/ByArabianEye",
+      "RelativePath": "service-worker.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\service-worker.js"
     }
   ]
 }
